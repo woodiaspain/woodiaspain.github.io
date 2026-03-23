@@ -244,6 +244,12 @@
       transition: opacity 0.25s ease;
     }
     .nav-logo-img:hover { opacity: 0.85; }
+    .nav-logo-text {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: -0.01em;
+    }
 
     .nav-cta {
       padding: 10px 22px;
@@ -923,6 +929,8 @@
     footer {
       background: var(--navy);
       padding: 40px 0;
+      position: relative;
+      z-index: 1;
     }
 
     .footer-inner {
@@ -1023,7 +1031,9 @@
   <nav id="navbar" aria-label="Navegación principal">
     <div class="container nav-inner">
       <a href="#" class="nav-logo" aria-label="Woodia Spain - Inicio">
-        <img src="logo.png" alt="Woodia Spain" class="nav-logo-img">
+        <img src="logo.png" alt="Woodia Spain" class="nav-logo-img"
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+        <span class="nav-logo-text" style="display:none;"><span style="color:var(--gold)">W</span>oodia Spain</span>
       </a>
       <a href="#contacto" class="btn btn-primary nav-cta">Solicitar presupuesto</a>
     </div>
