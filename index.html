@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Creo tiendas Shopify profesionales para negocios locales de A Coruña. Precio fijo, sin sorpresas, con garantía de devolución. Lista en 48 horas.">
+  <meta name="description" content="Creamos tiendas Shopify profesionales para negocios locales de A Coruña. Precio fijo, sin sorpresas, con garantía de devolución. Lista en 48 horas.">
 
   <!-- Open Graph (WhatsApp / Facebook preview) -->
-  <meta property="og:title" content="Woodia Spain — Tu tienda Shopify, lista en 48 horas">
-  <meta property="og:description" content="Creo tiendas Shopify profesionales para negocios locales de A Coruña. Precio fijo, sin sorpresas, con garantía de devolución.">
+  <meta property="og:title" content="Woodia Spain — Su tienda Shopify, lista en 48 horas">
+  <meta property="og:description" content="Creamos tiendas Shopify profesionales para negocios locales de A Coruña. Precio fijo, sin sorpresas, con garantía de devolución.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.woodiaspain.com">
   <meta property="og:locale" content="es_ES">
@@ -15,8 +15,8 @@
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Woodia Spain — Tu tienda Shopify, lista en 48 horas">
-  <meta name="twitter:description" content="Creo tiendas Shopify profesionales para negocios locales de A Coruña. Precio fijo 300€, entrega 48h.">
+  <meta name="twitter:title" content="Woodia Spain — Su tienda Shopify, lista en 48 horas">
+  <meta name="twitter:description" content="Creamos tiendas Shopify profesionales para negocios locales de A Coruña. Precio fijo 300€, entrega 48h.">
 
   <!-- SEO additional -->
   <meta name="robots" content="index, follow">
@@ -47,7 +47,7 @@
   }
   </script>
 
-  <title>Woodia Spain — Tu tienda Shopify, lista en 48 horas</title>
+  <title>Woodia Spain — Su tienda Shopify, lista en 48 horas</title>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='2' y='8' width='6' height='18' fill='%231a1a2e'/%3E%3Crect x='10' y='4' width='6' height='22' fill='%23444'/%3E%3Crect x='18' y='10' width='6' height='16' fill='%23888'/%3E%3Cline x1='4' y1='24' x2='26' y2='6' stroke='%23e8c547' stroke-width='2.5' stroke-linecap='round'/%3E%3Ccircle cx='26' cy='6' r='2' fill='%23e8c547'/%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -58,15 +58,15 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --navy: #1a1a2e;
-      --navy-light: #252542;
-      --gold: #e8c547;
-      --gold-dark: #c9a82e;
-      --surface: #f8f8f6;
+      --navy: #0f1923;
+      --navy-light: #1a2737;
+      --gold: #2563eb;
+      --gold-dark: #1d4ed8;
+      --surface: #f4f6f9;
       --text: #1a1a1e;
       --text-muted: #6b6b80;
       --white: #ffffff;
-      --border: #e2e2e0;
+      --border: #dde3ec;
 
       --radius-sm: 8px;
       --radius-md: 14px;
@@ -134,15 +134,15 @@
     }
 
     .btn-primary {
-      background: var(--gold);
-      color: var(--navy);
-      border-color: var(--gold);
+      background: #2563eb;
+      color: #ffffff;
+      border-color: #2563eb;
     }
     .btn-primary:hover {
-      background: var(--gold-dark);
-      border-color: var(--gold-dark);
+      background: #1d4ed8;
+      border-color: #1d4ed8;
       transform: translateY(-1px);
-      box-shadow: 0 6px 20px rgba(232,197,71,0.35);
+      box-shadow: 0 6px 20px rgba(37,99,235,0.35);
     }
 
     .btn-outline {
@@ -237,7 +237,7 @@
     }
 
     .nav-logo-img {
-      height: 36px;
+      height: 32px;
       width: auto;
       display: block;
       filter: brightness(0) invert(1);
@@ -253,9 +253,10 @@
     /* ===== HERO ===== */
     #hero {
       background-color: var(--navy);
+      position: relative;
       background-image:
-        radial-gradient(circle at 20% 50%, rgba(232,197,71,0.06) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(232,197,71,0.04) 0%, transparent 40%),
+        radial-gradient(circle at 20% 50%, rgba(37,99,235,0.06) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(37,99,235,0.04) 0%, transparent 40%),
         linear-gradient(135deg, transparent 40%, rgba(255,255,255,0.015) 40%, rgba(255,255,255,0.015) 60%, transparent 60%),
         repeating-linear-gradient(
           45deg,
@@ -279,14 +280,25 @@
 
     .hero-content {
       max-width: 720px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-bg-image {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      background: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1600&q=80') center/cover no-repeat;
+      opacity: 0.08;
+      pointer-events: none;
     }
 
     .hero-tag {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: rgba(232,197,71,0.12);
-      border: 1px solid rgba(232,197,71,0.25);
+      background: rgba(37,99,235,0.12);
+      border: 1px solid rgba(37,99,235,0.25);
       color: var(--gold);
       padding: 6px 14px;
       border-radius: 100px;
@@ -334,7 +346,7 @@
 
     /* ===== SOCIAL PROOF BAR ===== */
     #proof {
-      background: var(--gold);
+      background: #0f1923;
       padding: 28px 0;
     }
 
@@ -361,13 +373,13 @@
       transform: translateY(-50%);
       height: 40px;
       width: 1px;
-      background: rgba(26,26,46,0.2);
+      background: rgba(255,255,255,0.2);
     }
 
     .proof-number {
       font-size: 2rem;
       font-weight: 700;
-      color: var(--navy);
+      color: #ffffff;
       line-height: 1;
       margin-bottom: 4px;
     }
@@ -375,7 +387,7 @@
     .proof-label {
       font-size: 0.82rem;
       font-weight: 500;
-      color: rgba(26,26,46,0.7);
+      color: rgba(255,255,255,0.7);
       text-align: center;
       letter-spacing: 0.02em;
     }
@@ -413,7 +425,7 @@
     .include-icon {
       width: 44px;
       height: 44px;
-      background: rgba(232,197,71,0.12);
+      background: rgba(37,99,235,0.1);
       border-radius: var(--radius-sm);
       display: flex;
       align-items: center;
@@ -502,49 +514,8 @@
     }
 
     .browser-screen {
-      height: 200px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
+      height: 220px;
       overflow: hidden;
-    }
-
-    .browser-screen-moda { background: #c9b8a8; }
-    .browser-screen-cosmetica { background: #a8c4c9; }
-    .browser-screen-suplementos { background: var(--navy); }
-
-    .browser-screen-label {
-      font-size: 0.85rem;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      opacity: 0.7;
-    }
-
-    .browser-screen-moda .browser-screen-label { color: #6b5744; }
-    .browser-screen-cosmetica .browser-screen-label { color: #3d6b73; }
-    .browser-screen-suplementos .browser-screen-label { color: rgba(255,255,255,0.6); }
-
-    /* Decorative product grid inside screens */
-    .screen-decoration {
-      position: absolute;
-      inset: 0;
-      opacity: 0.15;
-      background-image: repeating-linear-gradient(
-        0deg,
-        transparent,
-        transparent 30px,
-        rgba(0,0,0,0.1) 30px,
-        rgba(0,0,0,0.1) 31px
-      ),
-      repeating-linear-gradient(
-        90deg,
-        transparent,
-        transparent 30px,
-        rgba(0,0,0,0.1) 30px,
-        rgba(0,0,0,0.1) 31px
-      );
     }
 
     .demo-info {
@@ -568,7 +539,8 @@
       transition: gap var(--transition);
     }
 
-    .demo-btn:hover { gap: 10px; color: var(--gold-dark); }
+    .demo-btn { background: none; border: none; cursor: pointer; padding: 0; }
+    .demo-btn:hover { gap: 10px; color: #1d4ed8; }
 
     /* ===== HOW IT WORKS ===== */
     #como-funciona {
@@ -641,9 +613,9 @@
     }
 
     .pricing-card.popular {
-      border-color: var(--gold);
+      border-color: #2563eb;
       border-width: 2px;
-      box-shadow: 0 8px 40px rgba(232,197,71,0.15);
+      box-shadow: 0 8px 40px rgba(37,99,235,0.12);
     }
 
     .popular-badge {
@@ -651,8 +623,8 @@
       top: -13px;
       left: 50%;
       transform: translateX(-50%);
-      background: var(--gold);
-      color: var(--navy);
+      background: #2563eb;
+      color: #ffffff;
       font-size: 0.75rem;
       font-weight: 700;
       padding: 4px 16px;
@@ -715,7 +687,7 @@
       border-radius: 50%;
       flex-shrink: 0;
       margin-top: 2px;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18'%3E%3Cpath d='M4 9l3.5 3.5L14 6' stroke='%23c9a82e' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E");
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18'%3E%3Cpath d='M4 9l3.5 3.5L14 6' stroke='%232563eb' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E");
     }
 
     .pricing-cta { width: 100%; justify-content: center; }
@@ -778,7 +750,7 @@
     }
 
     .faq-question:hover {
-      background: rgba(232,197,71,0.04);
+      background: rgba(37,99,235,0.04);
     }
 
     .faq-icon {
@@ -795,7 +767,8 @@
     }
 
     .faq-item.open .faq-icon {
-      background: var(--gold);
+      background: #2563eb;
+      color: #ffffff;
       transform: rotate(45deg);
     }
 
@@ -839,7 +812,7 @@
     .contact-item-icon {
       width: 40px;
       height: 40px;
-      background: rgba(232,197,71,0.12);
+      background: rgba(37,99,235,0.1);
       border-radius: var(--radius-sm);
       display: flex;
       align-items: center;
@@ -897,8 +870,8 @@
     }
 
     input:focus, textarea:focus {
-      border-color: var(--gold);
-      box-shadow: 0 0 0 3px rgba(232,197,71,0.12);
+      border-color: #2563eb;
+      box-shadow: 0 0 0 3px rgba(37,99,235,0.12);
     }
 
     textarea {
@@ -1035,6 +1008,13 @@
       .step:first-child { padding-left: 0; }
       .step:last-child { padding-right: 0; border-right: none; }
     }
+
+    /* ===== LIGHTBOX ===== */
+    .lightbox { position:fixed;inset:0;z-index:1000;display:flex;align-items:center;justify-content:center; }
+    .lightbox-overlay { position:absolute;inset:0;background:rgba(0,0,0,0.85);cursor:pointer; }
+    .lightbox-content { position:relative;z-index:1;display:flex;align-items:center;justify-content:center; }
+    .lightbox-close { position:absolute;top:-44px;right:0;background:rgba(255,255,255,0.15);border:none;color:white;width:36px;height:36px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background 0.2s; }
+    .lightbox-close:hover { background:rgba(255,255,255,0.3); }
   </style>
 </head>
 <body>
@@ -1051,14 +1031,15 @@
 
   <!-- ===== HERO ===== -->
   <section id="hero" aria-label="Sección principal">
+    <div class="hero-bg-image" aria-hidden="true"></div>
     <div class="container">
       <div class="hero-content">
-        <div class="hero-tag fade-in">Tu tienda Shopify, lista en 48 horas</div>
+        <div class="hero-tag fade-in">Su tienda Shopify, lista en 48 horas</div>
         <h1 class="hero-title fade-in fade-in-delay-1">
-          Tu negocio local,<br>en internet en <em>48 horas</em>
+          Su negocio local,<br>en internet en <em>48 horas</em>
         </h1>
         <p class="hero-subtitle fade-in fade-in-delay-2">
-          Creo tiendas Shopify profesionales para negocios locales de A Coruña. Precio fijo, sin sorpresas, con garantía de devolución.
+          Creamos tiendas Shopify profesionales para negocios locales de A Coruña. Precio fijo, sin sorpresas, con garantía de devolución.
         </p>
         <div class="hero-actions fade-in fade-in-delay-3">
           <a href="#demos" class="btn btn-primary">Ver ejemplos</a>
@@ -1110,7 +1091,7 @@
             </svg>
           </div>
           <h3>Tienda Shopify completa</h3>
-          <p>Hasta 20 productos configurados, diseño adaptado a tu marca y sector.</p>
+          <p>Hasta 20 productos configurados, diseño adaptado a su marca y sector.</p>
         </div>
 
         <div class="include-card fade-in fade-in-delay-2">
@@ -1120,7 +1101,7 @@
             </svg>
           </div>
           <h3>Adaptada a móvil</h3>
-          <p>El 80% de tus clientes compra desde el teléfono. Tu tienda se verá perfecta en cualquier pantalla.</p>
+          <p>El 80% de sus clientes compra desde el teléfono. Su tienda se verá perfecta en cualquier pantalla.</p>
         </div>
 
         <div class="include-card fade-in fade-in-delay-3">
@@ -1140,7 +1121,7 @@
             </svg>
           </div>
           <h3>Formación incluida</h3>
-          <p>30 minutos de videollamada para que gestiones tu tienda de forma totalmente autónoma desde el primer día.</p>
+          <p>30 minutos de videollamada para que gestione su tienda de forma totalmente autónoma desde el primer día.</p>
         </div>
 
         <div class="include-card fade-in fade-in-delay-2">
@@ -1150,7 +1131,7 @@
             </svg>
           </div>
           <h3>Entrega en 48h</h3>
-          <p>Desde que me envías los materiales (fotos, textos y productos) hasta que tu tienda está online.</p>
+          <p>Desde que nos envía los materiales (fotos, textos y productos) hasta que su tienda está online.</p>
         </div>
 
         <div class="include-card fade-in fade-in-delay-3">
@@ -1160,7 +1141,7 @@
             </svg>
           </div>
           <h3>Garantía 7 días</h3>
-          <p>Si no estás satisfecho con el resultado, te devuelvo el dinero completo, sin preguntas.</p>
+          <p>Si no está satisfecho con el resultado, le devolvemos el dinero completo, sin preguntas.</p>
         </div>
 
       </div>
@@ -1172,7 +1153,7 @@
     <div class="container">
       <div class="section-header fade-in">
         <span class="section-label">Ejemplos reales</span>
-        <h2 class="section-title" id="demos-title">Tiendas que he creado</h2>
+        <h2 class="section-title" id="demos-title">Tiendas que hemos creado</h2>
         <p class="section-subtitle">Cada tienda está diseñada y adaptada al sector y estilo del negocio.</p>
       </div>
       <div class="demos-grid">
@@ -1184,18 +1165,17 @@
               <div class="browser-dot dot-yellow"></div>
               <div class="browser-dot dot-green"></div>
             </div>
-            <div class="browser-url">moda-coruña.myshopify.com</div>
+            <div class="browser-url">lumiere-skincare.myshopify.com</div>
           </div>
-          <div class="browser-screen browser-screen-moda">
-            <div class="screen-decoration"></div>
-            <span class="browser-screen-label">Moda</span>
+          <div class="browser-screen">
+            <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&q=80" alt="Tienda de moda demo" style="width:100%;height:100%;object-fit:cover;">
           </div>
           <div class="demo-info">
             <h3>Tienda de Moda</h3>
-            <a href="#" class="demo-btn" aria-label="Ver demo tienda de moda">
+            <button class="demo-btn" onclick="openLightbox('lumiere.png', 'LUMIÈRE Skincare')" aria-label="Ver demo tienda de moda">
               Ver demo
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </a>
+            </button>
           </div>
         </div>
 
@@ -1208,16 +1188,15 @@
             </div>
             <div class="browser-url">cosmetica-coruña.myshopify.com</div>
           </div>
-          <div class="browser-screen browser-screen-cosmetica">
-            <div class="screen-decoration"></div>
-            <span class="browser-screen-label">Cosmética</span>
+          <div class="browser-screen">
+            <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=600&q=80" alt="Tienda de cosmética demo" style="width:100%;height:100%;object-fit:cover;">
           </div>
           <div class="demo-info">
             <h3>Tienda de Cosmética</h3>
-            <a href="#" class="demo-btn" aria-label="Ver demo tienda de cosmética">
+            <button class="demo-btn" onclick="openLightbox('https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=1200&q=80', 'Tienda de Cosmética')" aria-label="Ver demo tienda de cosmética">
               Ver demo
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </a>
+            </button>
           </div>
         </div>
 
@@ -1228,18 +1207,17 @@
               <div class="browser-dot dot-yellow"></div>
               <div class="browser-dot dot-green"></div>
             </div>
-            <div class="browser-url">suplementos-coruña.myshopify.com</div>
+            <div class="browser-url">apex-performance.myshopify.com</div>
           </div>
-          <div class="browser-screen browser-screen-suplementos">
-            <div class="screen-decoration"></div>
-            <span class="browser-screen-label">Suplementos</span>
+          <div class="browser-screen">
+            <img src="https://images.unsplash.com/photo-1593095948071-474c5cc2989d?w=600&q=80" alt="Tienda de suplementos demo" style="width:100%;height:100%;object-fit:cover;">
           </div>
           <div class="demo-info">
             <h3>Tienda de Suplementos</h3>
-            <a href="#" class="demo-btn" aria-label="Ver demo tienda de suplementos">
+            <button class="demo-btn" onclick="openLightbox('apex.png', 'APEX Performance')" aria-label="Ver demo tienda de suplementos">
               Ver demo
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </a>
+            </button>
           </div>
         </div>
 
@@ -1259,20 +1237,20 @@
 
         <div class="step fade-in fade-in-delay-1">
           <div class="step-number">01</div>
-          <h3>Me contactas</h3>
-          <p>Cuéntame tu negocio en 5 minutos por WhatsApp o email. Sin reuniones previas ni formularios largos.</p>
+          <h3>Nos contacta</h3>
+          <p>Cuéntenos su negocio en 5 minutos por WhatsApp o email. Sin reuniones previas ni formularios largos.</p>
         </div>
 
         <div class="step fade-in fade-in-delay-2">
           <div class="step-number">02</div>
-          <h3>Creo tu tienda</h3>
-          <p>En 48 horas tienes tu tienda Shopify profesional lista para vender. Tú me envías los materiales, yo me encargo del resto.</p>
+          <h3>Creamos su tienda</h3>
+          <p>En 48 horas tiene su tienda Shopify profesional lista para vender. Usted nos envía los materiales, nosotros nos encargamos del resto.</p>
         </div>
 
         <div class="step fade-in fade-in-delay-3">
           <div class="step-number">03</div>
-          <h3>Empiezas a vender</h3>
-          <p>Te formo, te entrego el acceso completo y ya puedes vender online desde el primer día sin depender de nadie.</p>
+          <h3>Empieza a vender</h3>
+          <p>Le formamos, le entregamos el acceso completo y ya puede vender online desde el primer día sin depender de nadie.</p>
         </div>
 
       </div>
@@ -1297,7 +1275,7 @@
           <ul class="pricing-features">
             <li class="pricing-feature">Tienda Shopify completa</li>
             <li class="pricing-feature">Hasta 20 productos configurados</li>
-            <li class="pricing-feature">Diseño personalizado a tu marca</li>
+            <li class="pricing-feature">Diseño personalizado a su marca</li>
             <li class="pricing-feature">Pago activado (Stripe + Bizum)</li>
             <li class="pricing-feature">Formación en videollamada (30 min)</li>
             <li class="pricing-feature">Garantía de devolución 7 días</li>
@@ -1314,14 +1292,14 @@
             <li class="pricing-feature">Gestión técnica mensual</li>
             <li class="pricing-feature">Actualizaciones de diseño</li>
             <li class="pricing-feature">Soporte prioritario por WhatsApp</li>
-            <li class="pricing-feature">Añado productos nuevos tú solo</li>
+            <li class="pricing-feature">Añadimos productos nuevos por usted</li>
           </ul>
           <a href="#contacto" class="btn btn-outline-dark pricing-cta">Quiero este plan</a>
         </div>
 
       </div>
       <p class="pricing-note fade-in">
-        Shopify tiene un coste de 27€/mes que pagas directamente a ellos. Mis honorarios son aparte.
+        Shopify tiene un coste de 27€/mes que pagas directamente a ellos. Nuestros honorarios son aparte.
       </p>
     </div>
   </section>
@@ -1343,7 +1321,7 @@
             </span>
           </button>
           <div class="faq-answer" role="region">
-            <div class="faq-answer-inner">No. Te entrego la tienda completamente lista y te enseño a usarla en 30 minutos. No necesitas ningún conocimiento técnico previo. Si tienes dudas después, estoy disponible.</div>
+            <div class="faq-answer-inner">No. Le entregamos la tienda completamente lista y le enseñamos a usarla en 30 minutos. No necesita ningún conocimiento técnico previo. Si tiene dudas después, estamos disponibles.</div>
           </div>
         </li>
 
@@ -1355,7 +1333,7 @@
             </span>
           </button>
           <div class="faq-answer" role="region">
-            <div class="faq-answer-inner">El único coste adicional es el de Shopify: 27€/mes que pagas directamente a ellos. Yo no cobro nada más aparte de mis honorarios, salvo que elijas el plan con mantenimiento mensual (50€/mes).</div>
+            <div class="faq-answer-inner">El único coste adicional es el de Shopify: 27€/mes que paga directamente a ellos. No cobramos nada más aparte de nuestros honorarios, salvo que elija el plan con mantenimiento mensual (50€/mes).</div>
           </div>
         </li>
 
@@ -1367,7 +1345,7 @@
             </span>
           </button>
           <div class="faq-answer" role="region">
-            <div class="faq-answer-inner">48 horas desde que recibo tus materiales: fotos de productos, textos descriptivos y lista de productos con precios. El proceso está optimizado para que sea lo más rápido y sencillo posible para ti.</div>
+            <div class="faq-answer-inner">48 horas desde que recibimos sus materiales: fotos de productos, textos descriptivos y lista de productos con precios. El proceso está optimizado para que sea lo más rápido y sencillo posible para usted.</div>
           </div>
         </li>
 
@@ -1379,7 +1357,7 @@
             </span>
           </button>
           <div class="faq-answer" role="region">
-            <div class="faq-answer-inner">Tienes 7 días de garantía total. Si no estás satisfecho con el resultado por cualquier motivo, te devuelvo el dinero íntegro sin hacer preguntas. Tu satisfacción es mi reputación.</div>
+            <div class="faq-answer-inner">Tiene 7 días de garantía total. Si no está satisfecho con el resultado por cualquier motivo, le devolvemos el dinero íntegro sin hacer preguntas. Su satisfacción es nuestra reputación.</div>
           </div>
         </li>
 
@@ -1391,7 +1369,7 @@
             </span>
           </button>
           <div class="faq-answer" role="region">
-            <div class="faq-answer-inner">Sí, Shopify es muy intuitivo para la gestión diaria. En la formación incluida te enseño exactamente cómo añadir productos, cambiar precios y gestionar pedidos de forma autónoma.</div>
+            <div class="faq-answer-inner">Sí, Shopify es muy intuitivo para la gestión diaria. En la formación incluida le enseñamos exactamente cómo añadir productos, cambiar precios y gestionar pedidos de forma autónoma.</div>
           </div>
         </li>
 
@@ -1408,12 +1386,12 @@
           <div class="fade-in">
             <span class="section-label">Contacto</span>
             <h2 class="section-title" id="contacto-title">Hablemos</h2>
-            <p class="section-subtitle">Cuéntame tu negocio y te digo si puedo ayudarte. Sin compromiso.</p>
+            <p class="section-subtitle">Cuéntenos su negocio y le diremos si podemos ayudarle. Sin compromiso.</p>
           </div>
 
           <div class="contact-item fade-in fade-in-delay-1">
             <div class="contact-item-icon">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c9a82e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/>
               </svg>
             </div>
@@ -1425,7 +1403,7 @@
 
           <div class="contact-item fade-in fade-in-delay-2">
             <div class="contact-item-icon">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c9a82e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
               </svg>
             </div>
@@ -1437,13 +1415,13 @@
 
           <div class="contact-item fade-in fade-in-delay-3">
             <div class="contact-item-icon">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="#c9a82e" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="#2563eb" aria-hidden="true">
                 <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
               </svg>
             </div>
             <div class="contact-item-text">
               <p>WhatsApp</p>
-              <p>+34 XXX XXX XXX</p>
+              <p>+34 624 594 551</p>
             </div>
           </div>
         </div>
@@ -1453,11 +1431,11 @@
             <div class="form-row">
               <div class="form-group">
                 <label for="nombre">Nombre</label>
-                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                <input type="text" id="nombre" name="nombre" placeholder="Su nombre" required>
               </div>
               <div class="form-group">
                 <label for="negocio">Nombre del negocio</label>
-                <input type="text" id="negocio" name="negocio" placeholder="Nombre de tu negocio" required>
+                <input type="text" id="negocio" name="negocio" placeholder="Nombre de su negocio" required>
               </div>
             </div>
             <div class="form-row">
@@ -1471,12 +1449,12 @@
               </div>
             </div>
             <div class="form-group">
-              <label for="mensaje">Cuéntame tu negocio</label>
-              <textarea id="mensaje" name="mensaje" placeholder="¿A qué te dedicas? ¿Qué productos venderías? ¿Tienes ya fotos y descripción de productos?"></textarea>
+              <label for="mensaje">Cuéntenos su negocio</label>
+              <textarea id="mensaje" name="mensaje" placeholder="¿A qué se dedica? ¿Qué productos vendería? ¿Tiene ya fotos y descripción de productos?"></textarea>
             </div>
             <button type="submit" class="btn btn-primary form-submit">Enviar mensaje</button>
             <div class="success-message" id="success-msg" role="alert" aria-live="polite">
-              Mensaje enviado correctamente. Te respondo en menos de 24 horas.
+              Mensaje enviado correctamente. Le respondemos en menos de 24 horas.
             </div>
           </form>
           <div class="whatsapp-alt">
@@ -1562,7 +1540,35 @@
       });
       this.reset();
     });
+
+    // ===== LIGHTBOX =====
+    function openLightbox(src, alt) {
+      const lb = document.getElementById('lightbox');
+      const img = document.getElementById('lightbox-img');
+      img.src = src;
+      img.alt = alt;
+      lb.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    }
+    function closeLightbox() {
+      document.getElementById('lightbox').style.display = 'none';
+      document.body.style.overflow = '';
+    }
+    document.querySelector('.lightbox-close').addEventListener('click', closeLightbox);
+    document.querySelector('.lightbox-overlay').addEventListener('click', closeLightbox);
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
   </script>
+
+  <!-- ===== LIGHTBOX ===== -->
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Vista previa de tienda" style="display:none;">
+    <div class="lightbox-overlay"></div>
+    <div class="lightbox-content">
+      <button class="lightbox-close" aria-label="Cerrar">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+      <img id="lightbox-img" src="" alt="" style="max-width:90vw;max-height:85vh;border-radius:12px;box-shadow:0 25px 80px rgba(0,0,0,0.5);">
+    </div>
+  </div>
 
 </body>
 </html>
