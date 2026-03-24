@@ -137,19 +137,9 @@
       -webkit-backdrop-filter: blur(12px);
       border-bottom: 1px solid rgba(255,255,255,0.06);
     }
-    .nav-logo-img {
-      height: 32px;
-      width: auto;
-      display: block;
-      filter: brightness(0) invert(1);
-    }
-    .nav-logo-text {
-      display: none;
-      font-family: 'Syne', sans-serif;
-      font-weight: 700;
-      font-size: 1.2rem;
-      color: #ffffff;
-    }
+    .nav-logo { display: flex; align-items: center; text-decoration: none; }
+    .nav-logo-img { height: 32px; width: auto; display: block; filter: brightness(0) invert(1); }
+    .nav-logo-text { display: none; font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1.2rem; color: #ffffff; letter-spacing: -0.02em; }
     .nav-logo .logo-fallback {
       font-family: var(--font-display);
       font-size: 1.25rem;
@@ -996,9 +986,9 @@
     <h2 class="section-title fade fade-delay-1" id="demos-title">Tiendas que hemos<br>lanzado para nuestros clientes</h2>
     <p class="section-sub fade fade-delay-2">Ejemplos reales de lo que creamos. Haga clic para ver la tienda completa.</p>
     <div class="demos-grid">
-      <div class="demo-card fade fade-delay-1" onclick="openLightbox('lumiere-mockup.png','LUMIÈRE Skincare')" role="button" tabindex="0" aria-label="Ver demo LUMIÈRE Skincare">
+      <div class="demo-card fade fade-delay-1" onclick="openLightbox('lumiere.png','LUMIÈRE Skincare')" role="button" tabindex="0" aria-label="Ver demo LUMIÈRE Skincare">
         <div class="demo-img-wrap">
-          <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=600&q=80" alt="Demo tienda LUMIÈRE Skincare en Shopify" loading="lazy" width="600" height="375">
+          <img src="lumiere-mockup.png" alt="Demo tienda LUMIÈRE Skincare en Shopify" loading="lazy" width="600" height="375">
           <div class="demo-overlay" aria-hidden="true">
             <button class="demo-overlay-btn" tabindex="-1">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"></path></svg>
@@ -1012,9 +1002,9 @@
           <span class="demo-url">lumiere-skincare.myshopify.com</span>
         </div>
       </div>
-      <div class="demo-card fade fade-delay-2" onclick="openLightbox('apex-mockup.png','APEX Performance')" role="button" tabindex="0" aria-label="Ver demo APEX Performance">
+      <div class="demo-card fade fade-delay-2" onclick="openLightbox('apex.png','APEX Performance')" role="button" tabindex="0" aria-label="Ver demo APEX Performance">
         <div class="demo-img-wrap">
-          <img src="https://images.unsplash.com/photo-1593095948071-474c5cc2989d?w=600&q=80" alt="Demo tienda APEX Performance en Shopify" loading="lazy" width="600" height="375">
+          <img src="apex-mockup.png" alt="Demo tienda APEX Performance en Shopify" loading="lazy" width="600" height="375">
           <div class="demo-overlay" aria-hidden="true">
             <button class="demo-overlay-btn" tabindex="-1">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"></path></svg>
