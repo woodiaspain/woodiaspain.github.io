@@ -1,1554 +1,1345 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Creamos tiendas Shopify profesionales para negocios locales de A Coruña. Precio fijo, sin sorpresas, con garantía de devolución. Lista en 48 horas.">
-
-  <!-- Open Graph (WhatsApp / Facebook preview) -->
-  <meta property="og:title" content="Woodia Spain — Su tienda Shopify, lista en 48 horas">
-  <meta property="og:description" content="Creamos tiendas Shopify profesionales para negocios locales de A Coruña. Precio fijo, sin sorpresas, con garantía de devolución.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.woodiaspain.com">
-  <meta property="og:locale" content="es_ES">
-  <meta property="og:site_name" content="Woodia Spain">
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Woodia Spain — Su tienda Shopify, lista en 48 horas">
-  <meta name="twitter:description" content="Creamos tiendas Shopify profesionales para negocios locales de A Coruña. Precio fijo 300€, entrega 48h.">
-
-  <!-- SEO additional -->
-  <meta name="robots" content="index, follow">
-  <meta name="author" content="Woodia Spain">
-  <meta name="geo.region" content="ES-C">
-  <meta name="geo.placename" content="A Coruña">
-  <link rel="canonical" href="https://www.woodiaspain.com">
-
-  <!-- Structured Data (Local Business) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Woodia Spain",
-    "description": "Desarrollo de tiendas Shopify para negocios locales en A Coruña. Precio fijo 300€, entrega en 48 horas.",
-    "url": "https://www.woodiaspain.com",
-    "telephone": "+34624594551",
-    "email": "info@woodiaspain.com",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "A Coruña",
-      "addressRegion": "Galicia",
-      "addressCountry": "ES"
-    },
-    "priceRange": "€€",
-    "openingHours": "Mo-Fr 09:00-19:00",
-    "sameAs": []
-  }
-  </script>
-
-  <title>Woodia Spain — Su tienda Shopify, lista en 48 horas</title>
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230f1923'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='central' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-weight='700' font-size='20' fill='%232563eb'%3EW%3C/text%3E%3C/svg%3E">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-  <style>
-    /* ===== RESET & BASE ===== */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    :root {
-      --navy: #0f1923;
-      --navy-light: #1a2737;
-      --blue: #2563eb;
-      --blue-dark: #1d4ed8;
-      --surface: #f4f6f9;
-      --text: #1a1a1e;
-      --text-muted: #6b6b80;
-      --white: #ffffff;
-      --border: #dde3ec;
-
-      --radius-sm: 8px;
-      --radius-md: 14px;
-      --radius-lg: 20px;
-
-      --shadow-sm: 0 2px 8px rgba(0,0,0,0.06);
-      --shadow-md: 0 8px 32px rgba(0,0,0,0.10);
-      --shadow-lg: 0 20px 60px rgba(0,0,0,0.14);
-
-      --transition: 0.25s ease;
-    }
-
-    html { scroll-behavior: smooth; }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      color: var(--text);
-      background: var(--white);
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    a { text-decoration: none; color: inherit; }
-    ul { list-style: none; }
-    img { display: block; max-width: 100%; }
-
-    .container {
-      width: 100%;
-      max-width: 1160px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
-
-    /* ===== FADE-IN ANIMATIONS ===== */
-    .fade-in {
-      opacity: 0;
-      transform: translateY(28px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
-    }
-    .fade-in.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    .fade-in-delay-1 { transition-delay: 0.1s; }
-    .fade-in-delay-2 { transition-delay: 0.2s; }
-    .fade-in-delay-3 { transition-delay: 0.3s; }
-    .fade-in-delay-4 { transition-delay: 0.4s; }
-    .fade-in-delay-5 { transition-delay: 0.5s; }
-
-    /* ===== BUTTONS ===== */
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 14px 28px;
-      border-radius: var(--radius-sm);
-      font-family: 'Inter', sans-serif;
-      font-size: 0.95rem;
-      font-weight: 600;
-      cursor: pointer;
-      border: 2px solid transparent;
-      transition: all var(--transition);
-      white-space: nowrap;
-      text-align: center;
-    }
-
-    .btn-primary {
-      background: var(--blue);
-      color: var(--white);
-      border-color: var(--blue);
-    }
-    .btn-primary:hover {
-      background: var(--blue-dark);
-      border-color: var(--blue-dark);
-      transform: translateY(-1px);
-      box-shadow: 0 6px 20px rgba(37,99,235,0.35);
-    }
-
-    .btn-outline {
-      background: transparent;
-      color: var(--white);
-      border-color: rgba(255,255,255,0.4);
-    }
-    .btn-outline:hover {
-      background: rgba(255,255,255,0.1);
-      border-color: rgba(255,255,255,0.7);
-    }
-
-    .btn-outline-dark {
-      background: transparent;
-      color: var(--navy);
-      border-color: var(--navy);
-    }
-    .btn-outline-dark:hover {
-      background: var(--navy);
-      color: var(--white);
-    }
-
-    .btn-whatsapp {
-      background: #25D366;
-      color: var(--white);
-      border-color: #25D366;
-    }
-    .btn-whatsapp:hover {
-      background: #20b858;
-      border-color: #20b858;
-      transform: translateY(-1px);
-    }
-
-    /* ===== SECTION LABELS & TITLES ===== */
-    .section-label {
-      display: inline-block;
-      font-size: 0.78rem;
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--blue);
-      margin-bottom: 12px;
-    }
-
-    .section-title {
-      font-size: clamp(1.75rem, 3.5vw, 2.5rem);
-      font-weight: 700;
-      color: var(--navy);
-      line-height: 1.2;
-      margin-bottom: 16px;
-    }
-
-    .section-subtitle {
-      font-size: 1.05rem;
-      color: var(--text-muted);
-      max-width: 540px;
-      line-height: 1.7;
-    }
-
-    .section-header { margin-bottom: 56px; }
-
-    /* ===== NAV ===== */
-    nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 100;
-      padding: 20px 0;
-      transition: background var(--transition), padding var(--transition), box-shadow var(--transition);
-    }
-
-    nav.scrolled {
-      background: var(--navy);
-      padding: 14px 0;
-      box-shadow: 0 2px 20px rgba(0,0,0,0.3);
-    }
-
-    .nav-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .nav-logo {
-      font-size: 1.25rem;
-      font-weight: 700;
-      color: var(--white);
-      letter-spacing: -0.01em;
-    }
-
-    .nav-logo-text {
-      font-size: 1.25rem;
-      font-weight: 700;
-      color: var(--white);
-      letter-spacing: -0.01em;
-    }
-
-    .nav-cta {
-      padding: 10px 22px;
-      font-size: 0.88rem;
-    }
-
-    /* ===== HERO ===== */
-    #hero {
-      background-color: var(--navy);
-      position: relative;
-      background-image:
-        radial-gradient(circle at 20% 50%, rgba(37,99,235,0.06) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(37,99,235,0.04) 0%, transparent 40%),
-        linear-gradient(135deg, transparent 40%, rgba(255,255,255,0.015) 40%, rgba(255,255,255,0.015) 60%, transparent 60%),
-        repeating-linear-gradient(
-          45deg,
-          transparent,
-          transparent 60px,
-          rgba(255,255,255,0.018) 60px,
-          rgba(255,255,255,0.018) 61px
-        ),
-        repeating-linear-gradient(
-          -45deg,
-          transparent,
-          transparent 60px,
-          rgba(255,255,255,0.018) 60px,
-          rgba(255,255,255,0.018) 61px
-        );
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      padding: 140px 0 100px;
-    }
-
-    .hero-bg-image {
-      position: absolute;
-      inset: 0;
-      z-index: 0;
-      background: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1600&q=80') center/cover no-repeat;
-      opacity: 0.08;
-      pointer-events: none;
-    }
-
-    .hero-content {
-      max-width: 720px;
-      position: relative;
-      z-index: 1;
-    }
-
-    .hero-tag {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: rgba(37,99,235,0.12);
-      border: 1px solid rgba(37,99,235,0.25);
-      color: var(--blue);
-      padding: 6px 14px;
-      border-radius: 100px;
-      font-size: 0.82rem;
-      font-weight: 500;
-      margin-bottom: 28px;
-      letter-spacing: 0.02em;
-    }
-
-    .hero-tag::before {
-      content: '';
-      width: 6px;
-      height: 6px;
-      background: var(--blue);
-      border-radius: 50%;
-    }
-
-    .hero-title {
-      font-size: clamp(2.2rem, 5.5vw, 4rem);
-      font-weight: 700;
-      color: var(--white);
-      line-height: 1.1;
-      margin-bottom: 24px;
-      letter-spacing: -0.02em;
-    }
-
-    .hero-title em {
-      font-style: normal;
-      color: var(--blue);
-    }
-
-    .hero-subtitle {
-      font-size: clamp(1rem, 2vw, 1.15rem);
-      color: rgba(255,255,255,0.72);
-      line-height: 1.75;
-      margin-bottom: 40px;
-      max-width: 580px;
-    }
-
-    .hero-actions {
-      display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
-    }
-
-    /* ===== SOCIAL PROOF BAR ===== */
-    #proof {
-      background: var(--navy);
-      padding: 28px 0;
-    }
-
-    .proof-inner {
-      display: flex;
-      justify-content: center;
-      gap: 0;
-      flex-wrap: wrap;
-    }
-
-    .proof-item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 12px 48px;
-      position: relative;
-    }
-
-    .proof-item:not(:last-child)::after {
-      content: '';
-      position: absolute;
-      right: 0;
-      top: 50%;
-      transform: translateY(-50%);
-      height: 40px;
-      width: 1px;
-      background: rgba(255,255,255,0.2);
-    }
-
-    .proof-number {
-      font-size: 2rem;
-      font-weight: 700;
-      color: var(--white);
-      line-height: 1;
-      margin-bottom: 4px;
-    }
-
-    .proof-label {
-      font-size: 0.82rem;
-      font-weight: 500;
-      color: rgba(255,255,255,0.7);
-      text-align: center;
-      letter-spacing: 0.02em;
-    }
-
-    /* ===== INCLUDES ===== */
-    #includes {
-      padding: 96px 0;
-      background: var(--surface);
-    }
-
-    .includes-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 20px;
-    }
-
-    .include-card {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-md);
-      padding: 32px;
-      transition: all var(--transition);
-    }
-
-    .include-card:hover {
-      border-color: var(--blue);
-      box-shadow: var(--shadow-md);
-      transform: translateY(-2px);
-    }
-
-    .include-icon {
-      width: 44px;
-      height: 44px;
-      background: rgba(37,99,235,0.1);
-      border-radius: var(--radius-sm);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 18px;
-      color: var(--blue-dark);
-    }
-
-    .include-card h3 {
-      font-size: 1rem;
-      font-weight: 600;
-      color: var(--navy);
-      margin-bottom: 8px;
-    }
-
-    .include-card p {
-      font-size: 0.9rem;
-      color: var(--text-muted);
-      line-height: 1.6;
-    }
-
-    /* ===== DEMOS ===== */
-    #demos {
-      padding: 96px 0;
-      background: var(--white);
-    }
-
-    .demos-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 24px;
-      margin-top: 56px;
-    }
-
-    .demo-card {
-      border: 1px solid var(--border);
-      border-radius: var(--radius-md);
-      overflow: hidden;
-      transition: all var(--transition);
-      background: var(--white);
-    }
-
-    .demo-card:hover {
-      box-shadow: var(--shadow-lg);
-      transform: translateY(-4px);
-    }
-
-    .browser-chrome {
-      background: #f0f0f0;
-      padding: 10px 14px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      border-bottom: 1px solid #ddd;
-    }
-
-    .browser-dots {
-      display: flex;
-      gap: 6px;
-      flex-shrink: 0;
-    }
-
-    .browser-dot {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-    }
-
-    .dot-red { background: #ff5f57; }
-    .dot-yellow { background: #febc2e; }
-    .dot-green { background: #28c840; }
-
-    .browser-url {
-      background: var(--white);
-      border: 1px solid #ddd;
-      border-radius: 4px;
-      padding: 4px 12px;
-      font-size: 0.72rem;
-      color: var(--text-muted);
-      flex: 1;
-      font-family: monospace;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-
-    .browser-screen {
-      height: 220px;
-      overflow: hidden;
-    }
-
-    .demo-info { padding: 24px; }
-
-    .demo-info h3 {
-      font-size: 1rem;
-      font-weight: 600;
-      color: var(--navy);
-      margin-bottom: 12px;
-    }
-
-    .demo-btn {
-      font-size: 0.88rem;
-      font-weight: 600;
-      color: var(--navy);
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      background: none;
-      border: none;
-      cursor: pointer;
-      padding: 0;
-      transition: gap var(--transition), color var(--transition);
-    }
-    .demo-btn:hover { gap: 10px; color: var(--blue-dark); }
-
-    /* ===== HOW IT WORKS ===== */
-    #como-funciona {
-      padding: 96px 0;
-      background: var(--surface);
-    }
-
-    .steps-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 40px;
-      margin-top: 56px;
-      position: relative;
-    }
-
-    .step {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-
-    .step-number {
-      font-size: 3.5rem;
-      font-weight: 700;
-      color: var(--blue);
-      line-height: 1;
-      opacity: 0.9;
-      letter-spacing: -0.02em;
-    }
-
-    .step h3 {
-      font-size: 1.2rem;
-      font-weight: 600;
-      color: var(--navy);
-    }
-
-    .step p {
-      font-size: 0.95rem;
-      color: var(--text-muted);
-      line-height: 1.65;
-    }
-
-    /* ===== PRICING ===== */
-    #precios {
-      padding: 96px 0;
-      background: var(--white);
-    }
-
-    .pricing-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 24px;
-      margin-top: 56px;
-      max-width: 840px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .pricing-card {
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      padding: 40px;
-      position: relative;
-      transition: all var(--transition);
-      background: var(--white);
-    }
-
-    .pricing-card:hover { box-shadow: var(--shadow-md); }
-
-    .pricing-card.popular {
-      border-color: var(--blue);
-      border-width: 2px;
-      box-shadow: 0 8px 40px rgba(37,99,235,0.12);
-    }
-
-    .popular-badge {
-      position: absolute;
-      top: -13px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: var(--blue);
-      color: var(--white);
-      font-size: 0.75rem;
-      font-weight: 700;
-      padding: 4px 16px;
-      border-radius: 100px;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      white-space: nowrap;
-    }
-
-    .pricing-name {
-      font-size: 1.1rem;
-      font-weight: 600;
-      color: var(--navy);
-      margin-bottom: 8px;
-    }
-
-    .pricing-price {
-      font-size: 2.8rem;
-      font-weight: 700;
-      color: var(--navy);
-      line-height: 1;
-      margin-bottom: 6px;
-      letter-spacing: -0.02em;
-    }
-
-    .pricing-price span {
-      font-size: 1rem;
-      font-weight: 500;
-      color: var(--text-muted);
-    }
-
-    .pricing-desc {
-      font-size: 0.88rem;
-      color: var(--text-muted);
-      margin-bottom: 28px;
-      padding-bottom: 28px;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .pricing-features {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      margin-bottom: 32px;
-    }
-
-    .pricing-feature {
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      font-size: 0.92rem;
-      color: var(--text);
-    }
-
-    .pricing-feature::before {
-      content: '';
-      width: 18px;
-      height: 18px;
-      background: rgba(37,99,235,0.12);
-      border-radius: 50%;
-      flex-shrink: 0;
-      margin-top: 2px;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18'%3E%3Cpath d='M4 9l3.5 3.5L14 6' stroke='%232563eb' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E");
-    }
-
-    .pricing-cta { width: 100%; justify-content: center; }
-
-    .pricing-note {
-      text-align: center;
-      margin-top: 36px;
-      font-size: 0.85rem;
-      color: var(--text-muted);
-      background: var(--surface);
-      border-radius: var(--radius-sm);
-      padding: 14px 24px;
-      max-width: 540px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    /* ===== FAQ ===== */
-    #faq {
-      padding: 96px 0;
-      background: var(--surface);
-    }
-
-    .faq-list {
-      max-width: 720px;
-      margin: 56px auto 0;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    .faq-item {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-md);
-      overflow: hidden;
-      transition: border-color var(--transition);
-    }
-
-    .faq-item.open { border-color: var(--blue); }
-
-    .faq-question {
-      width: 100%;
-      text-align: left;
-      padding: 22px 28px;
-      background: none;
-      border: none;
-      cursor: pointer;
-      font-family: 'Inter', sans-serif;
-      font-size: 0.98rem;
-      font-weight: 600;
-      color: var(--navy);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 16px;
-      transition: background var(--transition);
-    }
-
-    .faq-question:hover { background: rgba(37,99,235,0.04); }
-
-    .faq-icon {
-      width: 24px;
-      height: 24px;
-      flex-shrink: 0;
-      border-radius: 50%;
-      background: var(--surface);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: all var(--transition);
-      color: var(--navy);
-    }
-
-    .faq-item.open .faq-icon {
-      background: var(--blue);
-      color: var(--white);
-      transform: rotate(45deg);
-    }
-
-    .faq-answer {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.35s ease;
-    }
-
-    .faq-answer-inner {
-      padding: 0 28px 24px;
-      font-size: 0.92rem;
-      color: var(--text-muted);
-      line-height: 1.7;
-    }
-
-    /* ===== CONTACT ===== */
-    #contacto {
-      padding: 96px 0;
-      background: var(--white);
-    }
-
-    .contact-inner {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 56px;
-    }
-
-    .contact-info {
-      display: flex;
-      flex-direction: column;
-      gap: 28px;
-    }
-
-    .contact-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 14px;
-    }
-
-    .contact-item-icon {
-      width: 40px;
-      height: 40px;
-      background: rgba(37,99,235,0.1);
-      border-radius: var(--radius-sm);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-    }
-
-    .contact-item-text p:first-child {
-      font-weight: 600;
-      color: var(--navy);
-      font-size: 0.9rem;
-      margin-bottom: 2px;
-    }
-
-    .contact-item-text p:last-child {
-      font-size: 0.88rem;
-      color: var(--text-muted);
-    }
-
-    .contact-form {
-      background: var(--surface);
-      border-radius: var(--radius-lg);
-      padding: 40px;
-    }
-
-    .form-group { margin-bottom: 20px; }
-
-    .form-row {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 16px;
-    }
-
-    label {
-      display: block;
-      font-size: 0.85rem;
-      font-weight: 500;
-      color: var(--navy);
-      margin-bottom: 6px;
-    }
-
-    input, textarea, select {
-      width: 100%;
-      padding: 12px 16px;
-      border: 1.5px solid var(--border);
-      border-radius: var(--radius-sm);
-      font-family: 'Inter', sans-serif;
-      font-size: 0.92rem;
-      color: var(--text);
-      background: var(--white);
-      transition: border-color var(--transition);
-      outline: none;
-    }
-
-    input:focus, textarea:focus {
-      border-color: var(--blue);
-      box-shadow: 0 0 0 3px rgba(37,99,235,0.12);
-    }
-
-    textarea {
-      resize: vertical;
-      min-height: 120px;
-    }
-
-    .form-submit { width: 100%; justify-content: center; margin-top: 8px; }
-
-    .success-message {
-      display: none;
-      background: rgba(40,200,64,0.08);
-      border: 1.5px solid #28c840;
-      border-radius: var(--radius-sm);
-      padding: 16px 24px;
-      margin-top: 16px;
-      color: #1a7a2e;
-      font-size: 0.92rem;
-      font-weight: 500;
-      text-align: center;
-      opacity: 0;
-      transition: opacity 0.4s ease;
-    }
-
-    .success-message.visible { opacity: 1; }
-
-    .whatsapp-alt {
-      margin-top: 24px;
-      text-align: center;
-      font-size: 0.9rem;
-      color: var(--text-muted);
-    }
-
-    .whatsapp-alt a {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      color: var(--navy);
-      font-weight: 600;
-      margin-top: 10px;
-      transition: color var(--transition);
-    }
-
-    .whatsapp-alt a:hover { color: #25D366; }
-
-    /* ===== FOOTER ===== */
-    footer {
-      background: var(--navy);
-      padding: 40px 0;
-      position: relative;
-      z-index: 1;
-    }
-
-    .footer-inner {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 16px;
-      text-align: center;
-    }
-
-    .footer-logo {
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: var(--white);
-    }
-
-    .footer-logo span { color: var(--blue); }
-
-    .footer-copy {
-      font-size: 0.85rem;
-      color: rgba(255,255,255,0.45);
-    }
-
-    .footer-links { display: flex; gap: 24px; }
-
-    .footer-links a {
-      font-size: 0.82rem;
-      color: rgba(255,255,255,0.4);
-      transition: color var(--transition);
-    }
-
-    .footer-links a:hover { color: rgba(255,255,255,0.7); }
-
-    /* ===== LIGHTBOX ===== */
-    .lightbox {
-      position: fixed;
-      inset: 0;
-      z-index: 1000;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .lightbox-overlay {
-      position: absolute;
-      inset: 0;
-      background: rgba(0,0,0,0.85);
-      cursor: pointer;
-    }
-    .lightbox-content {
-      position: relative;
-      z-index: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .lightbox-close {
-      position: absolute;
-      top: -44px;
-      right: 0;
-      background: rgba(255,255,255,0.15);
-      border: none;
-      color: white;
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: background 0.2s;
-    }
-    .lightbox-close:hover { background: rgba(255,255,255,0.3); }
-
-    /* ===== TABLET (768px+) ===== */
-    @media (min-width: 768px) {
-      .includes-grid { grid-template-columns: repeat(2, 1fr); }
-      .demos-grid { grid-template-columns: repeat(3, 1fr); }
-      .pricing-grid { grid-template-columns: repeat(2, 1fr); }
-      .form-row { grid-template-columns: repeat(2, 1fr); }
-      .contact-inner { grid-template-columns: 1fr 2fr; gap: 64px; }
-      .footer-inner { flex-direction: row; justify-content: space-between; text-align: left; }
-    }
-
-    /* ===== DESKTOP (1024px+) ===== */
-    @media (min-width: 1024px) {
-      .includes-grid { grid-template-columns: repeat(3, 1fr); }
-      .steps-grid { grid-template-columns: repeat(3, 1fr); gap: 0; }
-      .step { padding: 0 40px; border-right: 1px solid var(--border); }
-      .step:first-child { padding-left: 0; }
-      .step:last-child { padding-right: 0; border-right: none; }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Woodia Spain — Tiendas Shopify en 48h para negocios locales en A Coruña</title>
+<meta name="description" content="Creamos tiendas Shopify profesionales para negocios locales en A Coruña. Precio fijo 300€, entrega en 48 horas, garantía de satisfacción.">
+<link rel="icon" type="image/png" href="icon.png">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Woodia Spain — Tiendas Shopify en 48h">
+<meta property="og:description" content="Creamos tiendas Shopify profesionales para negocios locales en A Coruña. Precio fijo 300€, entrega en 48 horas.">
+<meta property="og:image" content="logo.png">
+<meta property="og:url" content="https://woodiaspain.com">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+
+<!-- JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Woodia Spain",
+  "description": "Creamos tiendas Shopify profesionales para negocios locales en A Coruña en 48 horas.",
+  "url": "https://woodiaspain.com",
+  "telephone": "+34624594551",
+  "email": "info@woodiaspain.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "A Coruña",
+    "addressRegion": "Galicia",
+    "addressCountry": "ES"
+  },
+  "priceRange": "€€"
+}
+</script>
+
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --bg-dark: #0d0d0d;
+  --bg-light: #f5f3ef;
+  --accent: #c8a951;
+  --accent-dark: #a8893a;
+  --text: #0d0d0d;
+  --text-muted: #6b6660;
+  --white: #ffffff;
+  --border: #e8e4dc;
+  --font-heading: 'Syne', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  color: var(--text);
+  background: var(--white);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+img { max-width: 100%; display: block; }
+a { text-decoration: none; color: inherit; }
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ── Fade animation ── */
+.fade {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1), transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.fade.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── 1. NAV ── */
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  padding: 16px 0;
+  transition: background 0.35s, box-shadow 0.35s, padding 0.35s;
+}
+.nav.scrolled {
+  background: var(--bg-dark);
+  box-shadow: 0 2px 24px rgba(0,0,0,0.25);
+  padding: 10px 0;
+}
+.nav .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-logo img {
+  height: 32px;
+  filter: brightness(0) invert(1);
+}
+.nav-logo-text {
+  display: none;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--white);
+  font-size: 1.15rem;
+}
+.btn-nav {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 22px;
+  background: var(--accent);
+  color: var(--bg-dark);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.25s, transform 0.2s;
+  white-space: nowrap;
+}
+.btn-nav:hover { background: var(--accent-dark); transform: translateY(-1px); }
+
+/* ── 2. HERO ── */
+.hero {
+  background: var(--bg-dark);
+  padding: clamp(120px, 15vw, 160px) 0 clamp(60px, 10vw, 100px);
+  overflow: hidden;
+}
+.hero .container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+  align-items: center;
+}
+.hero-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  border: 1px solid var(--accent);
+  border-radius: 100px;
+  color: var(--accent);
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  margin-bottom: 24px;
+}
+.hero-pill::before {
+  content: '';
+  width: 6px; height: 6px;
+  background: var(--accent);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.hero h1 {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  line-height: 1.1;
+  color: var(--white);
+  margin-bottom: 18px;
+}
+.hero h1 em {
+  color: var(--accent);
+  font-style: normal;
+}
+.hero-subtitle {
+  color: #a8a4a0;
+  font-size: clamp(1rem, 1.6vw, 1.15rem);
+  line-height: 1.6;
+  margin-bottom: 32px;
+  max-width: 520px;
+}
+.hero-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 36px;
+}
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 28px;
+  background: var(--accent);
+  color: var(--bg-dark);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.25s, transform 0.2s;
+}
+.btn-primary:hover { background: var(--accent-dark); transform: translateY(-2px); }
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 28px;
+  background: transparent;
+  color: var(--white);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 1rem;
+  border: 1.5px solid rgba(255,255,255,0.25);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: border-color 0.25s, transform 0.2s;
+}
+.btn-outline:hover { border-color: var(--accent); transform: translateY(-2px); }
+.hero-trust {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.hero-trust span {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: #8a8580;
+  font-size: 0.88rem;
+  font-weight: 500;
+}
+.hero-trust .check {
+  color: var(--accent);
+  font-weight: 700;
+}
+.hero-image {
+  display: none;
+}
+.hero-image img {
+  width: 100%;
+  max-width: 480px;
+  border-radius: 16px;
+  transform: rotate(-2deg);
+  box-shadow: 0 32px 80px rgba(0,0,0,0.5), 0 0 0 1px rgba(200,169,81,0.1);
+}
+
+@media (min-width: 900px) {
+  .hero .container { grid-template-columns: 1fr 1fr; }
+  .hero-image { display: flex; justify-content: flex-end; }
+}
+
+/* ── 3. STATS BAR ── */
+.stats-bar {
+  background: var(--accent);
+  padding: 28px 0;
+}
+.stats-bar .container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  text-align: center;
+}
+.stat-item strong {
+  display: block;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  color: var(--bg-dark);
+}
+.stat-item span {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--bg-dark);
+  opacity: 0.75;
+}
+
+/* ── 4. QUÉ INCLUYE ── */
+.features {
+  background: var(--white);
+  padding: clamp(60px, 10vw, 100px) 0;
+}
+.section-title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+  text-align: center;
+  margin-bottom: 52px;
+}
+.features-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+@media (min-width: 600px) { .features-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 900px) { .features-grid { grid-template-columns: repeat(3, 1fr); } }
+
+.feature-card {
+  padding: 32px 28px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.feature-card:hover {
+  box-shadow: 0 8px 32px rgba(0,0,0,0.06);
+  transform: translateY(-3px);
+}
+.feature-icon {
+  width: 44px; height: 44px;
+  background: rgba(200,169,81,0.12);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+.feature-icon svg { width: 20px; height: 20px; stroke: var(--accent); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.feature-card h3 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.05rem;
+  margin-bottom: 8px;
+}
+.feature-card p {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+/* ── 5. DEMOS ── */
+.demos {
+  background: var(--bg-dark);
+  padding: clamp(60px, 10vw, 100px) 0;
+}
+.demos .section-title { color: var(--white); }
+.demos-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+}
+@media (min-width: 768px) { .demos-grid { grid-template-columns: repeat(2, 1fr); } }
+
+.demo-card {
+  background: #181818;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid #2a2a2a;
+  transition: border-color 0.3s, transform 0.3s;
+}
+.demo-card:hover { border-color: var(--accent); transform: translateY(-4px); }
+.demo-browser {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  background: #111;
+  border-bottom: 1px solid #2a2a2a;
+}
+.demo-dots { display: flex; gap: 6px; }
+.demo-dots span { width: 10px; height: 10px; border-radius: 50%; }
+.demo-dots span:nth-child(1) { background: #ff5f57; }
+.demo-dots span:nth-child(2) { background: #febc2e; }
+.demo-dots span:nth-child(3) { background: #28c840; }
+.demo-url {
+  flex: 1;
+  background: #222;
+  padding: 5px 12px;
+  border-radius: 6px;
+  font-size: 0.72rem;
+  color: #777;
+  font-family: monospace;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.demo-img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+}
+.demo-info { padding: 20px; }
+.demo-info h3 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--white);
+  font-size: 1.1rem;
+  margin-bottom: 6px;
+}
+.demo-tag {
+  color: #888;
+  font-size: 0.82rem;
+  margin-bottom: 16px;
+}
+.btn-demo {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 20px;
+  border: 1.5px solid var(--accent);
+  color: var(--accent);
+  background: transparent;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.88rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.25s, color 0.25s;
+}
+.btn-demo:hover { background: var(--accent); color: var(--bg-dark); }
+
+/* Lightbox */
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  background: rgba(0,0,0,0.92);
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px;
+  overflow-y: auto;
+}
+.lightbox.active { display: flex; }
+.lightbox-content {
+  position: relative;
+  max-width: 480px;
+  width: 100%;
+  margin: auto;
+}
+.lightbox-content img {
+  width: 100%;
+  border-radius: 10px;
+}
+.lightbox-title {
+  text-align: center;
+  color: var(--white);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-top: 16px;
+}
+.lightbox-close {
+  position: fixed;
+  top: 16px;
+  right: 20px;
+  width: 44px; height: 44px;
+  background: rgba(255,255,255,0.1);
+  border: none;
+  border-radius: 50%;
+  color: var(--white);
+  font-size: 1.3rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+  z-index: 2001;
+}
+.lightbox-close:hover { background: rgba(255,255,255,0.2); }
+
+/* ── 6. CÓMO FUNCIONA ── */
+.process {
+  background: var(--bg-light);
+  padding: clamp(60px, 10vw, 100px) 0;
+}
+.process-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  margin-bottom: 48px;
+}
+@media (min-width: 768px) { .process-grid { grid-template-columns: repeat(3, 1fr); } }
+.process-step { text-align: center; position: relative; }
+.process-number {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: clamp(3.5rem, 7vw, 5rem);
+  color: var(--accent);
+  opacity: 0.2;
+  line-height: 1;
+  margin-bottom: 12px;
+}
+.process-step h3 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.15rem;
+  margin-bottom: 8px;
+}
+.process-step p {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  line-height: 1.55;
+  max-width: 280px;
+  margin: 0 auto;
+}
+.process-cta { text-align: center; }
+
+/* ── 7. POR QUÉ NOSOTROS ── */
+.why {
+  background: var(--white);
+  padding: clamp(60px, 10vw, 100px) 0;
+}
+.why .container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+  align-items: center;
+}
+@media (min-width: 800px) { .why .container { grid-template-columns: 1fr 1fr; } }
+.why-label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 12px;
+}
+.why h2 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  margin-bottom: 28px;
+}
+.why-list { list-style: none; display: flex; flex-direction: column; gap: 16px; }
+.why-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+.why-check {
+  flex-shrink: 0;
+  width: 24px; height: 24px;
+  background: rgba(200,169,81,0.12);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 0.8rem;
+  margin-top: 1px;
+}
+.why-image img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 16px 48px rgba(0,0,0,0.08);
+}
+
+/* ── 8. PRECIOS ── */
+.pricing {
+  background: var(--bg-dark);
+  padding: clamp(60px, 10vw, 100px) 0;
+}
+.pricing .section-title { color: var(--white); }
+.pricing-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+@media (min-width: 700px) { .pricing-grid { grid-template-columns: repeat(2, 1fr); } }
+.pricing-card {
+  background: #181818;
+  border: 1px solid #2a2a2a;
+  border-radius: 16px;
+  padding: 36px 28px;
+  position: relative;
+}
+.pricing-card.popular {
+  border: 2px solid var(--accent);
+}
+.pricing-badge {
+  position: absolute;
+  top: -12px; left: 50%;
+  transform: translateX(-50%);
+  background: var(--accent);
+  color: var(--bg-dark);
+  font-weight: 700;
+  font-size: 0.76rem;
+  padding: 4px 16px;
+  border-radius: 100px;
+  white-space: nowrap;
+}
+.pricing-card h3 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--white);
+  font-size: 1.15rem;
+  margin-bottom: 8px;
+  margin-top: 8px;
+}
+.pricing-price {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: clamp(2rem, 4vw, 2.6rem);
+  color: var(--white);
+  margin-bottom: 4px;
+}
+.pricing-sub {
+  color: #777;
+  font-size: 0.84rem;
+  margin-bottom: 24px;
+}
+.pricing-features {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+.pricing-features li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #ccc;
+  font-size: 0.9rem;
+}
+.pricing-features li::before {
+  content: '✓';
+  color: var(--accent);
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.btn-pricing-primary {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  text-align: center;
+  background: var(--accent);
+  color: var(--bg-dark);
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.95rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.25s;
+}
+.btn-pricing-primary:hover { background: var(--accent-dark); }
+.btn-pricing-outline {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  text-align: center;
+  background: transparent;
+  color: var(--accent);
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.95rem;
+  border: 1.5px solid var(--accent);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.25s, color 0.25s;
+}
+.btn-pricing-outline:hover { background: var(--accent); color: var(--bg-dark); }
+.pricing-note {
+  text-align: center;
+  color: #777;
+  font-size: 0.84rem;
+  margin-top: 28px;
+}
+
+/* ── 9. FAQ ── */
+.faq {
+  background: var(--bg-light);
+  padding: clamp(60px, 10vw, 100px) 0;
+}
+.faq-list {
+  max-width: 720px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.faq-item {
+  background: var(--white);
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  overflow: hidden;
+}
+.faq-question {
+  width: 100%;
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--text);
+  text-align: left;
+}
+.faq-question:hover { color: var(--accent-dark); }
+.faq-chevron {
+  flex-shrink: 0;
+  width: 20px; height: 20px;
+  transition: transform 0.3s;
+}
+.faq-item[aria-expanded="true"] .faq-chevron { transform: rotate(180deg); }
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.faq-answer-inner {
+  padding: 0 24px 20px;
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+/* ── 10. CONTACTO ── */
+.contact {
+  background: var(--white);
+  padding: clamp(60px, 10vw, 100px) 0;
+}
+.contact .container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+}
+@media (min-width: 800px) { .contact .container { grid-template-columns: 1fr 1fr; } }
+.contact-info h2 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  margin-bottom: 24px;
+}
+.contact-detail {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+.contact-detail svg { width: 20px; height: 20px; stroke: var(--accent); fill: none; stroke-width: 2; flex-shrink: 0; }
+.btn-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 28px;
+  background: #25D366;
+  color: var(--white);
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.95rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.25s, transform 0.2s;
+  margin-top: 12px;
+}
+.btn-whatsapp:hover { background: #1fb855; transform: translateY(-2px); }
+.contact-form-wrap {
+  background: var(--bg-light);
+  padding: 36px 32px;
+  border-radius: 16px;
+}
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+@media (min-width: 500px) { .form-row { grid-template-columns: 1fr 1fr; } }
+.form-group label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.84rem;
+  margin-bottom: 6px;
+  color: var(--text);
+}
+.form-group input, .form-group textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  background: var(--white);
+  color: var(--text);
+  transition: border-color 0.25s;
+  outline: none;
+}
+.form-group input:focus, .form-group textarea:focus { border-color: var(--accent); }
+.form-group textarea { min-height: 100px; resize: vertical; }
+.form-group.full { margin-bottom: 16px; }
+.btn-submit {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  background: var(--accent);
+  color: var(--bg-dark);
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.95rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.25s;
+}
+.btn-submit:hover { background: var(--accent-dark); }
+.form-success {
+  display: none;
+  text-align: center;
+  padding: 20px;
+  background: rgba(200,169,81,0.1);
+  border-radius: 10px;
+  margin-top: 16px;
+  color: var(--accent-dark);
+  font-weight: 600;
+}
+.form-success.show { display: block; }
+
+/* ── 11. FOOTER ── */
+.footer {
+  background: var(--bg-dark);
+  padding: 40px 0;
+}
+.footer .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+}
+.footer-logo img {
+  height: 28px;
+  filter: brightness(0) invert(1);
+}
+.footer-logo-text {
+  display: none;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--white);
+  font-size: 1rem;
+}
+.footer-copy {
+  color: #666;
+  font-size: 0.84rem;
+}
+.footer-links {
+  display: flex;
+  gap: 16px;
+}
+.footer-links a {
+  color: #666;
+  font-size: 0.82rem;
+  transition: color 0.2s;
+}
+.footer-links a:hover { color: var(--accent); }
+</style>
 </head>
 <body>
 
-  <!-- ===== NAV ===== -->
-  <nav id="navbar" aria-label="Navegación principal">
-    <div class="container nav-inner">
-      <a href="#" class="nav-logo" aria-label="Woodia Spain - Inicio">
-        <span class="nav-logo-text"><span style="color:#2563eb">W</span>oodia Spain</span>
-      </a>
-      <a href="#contacto" class="btn btn-primary nav-cta">Solicitar presupuesto</a>
-    </div>
-  </nav>
+<!-- ── 1. NAV ── -->
+<nav class="nav" id="mainNav">
+  <div class="container">
+    <a href="#" class="nav-logo" aria-label="Woodia Spain inicio">
+      <img src="logo.png" alt="Woodia Spain logo" height="32" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+      <span class="nav-logo-text">Woodia Spain</span>
+    </a>
+    <a href="https://wa.me/34624594551" class="btn-nav">Solicitar presupuesto</a>
+  </div>
+</nav>
 
-  <!-- ===== HERO ===== -->
-  <section id="hero" aria-label="Sección principal">
-    <div class="hero-bg-image" aria-hidden="true"></div>
-    <div class="container">
-      <div class="hero-content">
-        <div class="hero-tag fade-in">Su tienda Shopify, lista en 48 horas</div>
-        <h1 class="hero-title fade-in fade-in-delay-1">
-          Su negocio local,<br>en internet en <em>48 horas</em>
-        </h1>
-        <p class="hero-subtitle fade-in fade-in-delay-2">
-          Creamos tiendas Shopify profesionales para negocios locales de A Coruña. Precio fijo, sin sorpresas, con garantía de devolución.
-        </p>
-        <div class="hero-actions fade-in fade-in-delay-3">
-          <a href="#demos" class="btn btn-primary">Ver ejemplos</a>
-          <a href="https://wa.me/34624594551" class="btn btn-outline" target="_blank" rel="noopener noreferrer">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-            </svg>
-            Hablar por WhatsApp
-          </a>
-        </div>
+<!-- ── 2. HERO ── -->
+<section class="hero" id="hero">
+  <div class="container">
+    <div class="hero-content fade">
+      <div class="hero-pill">Shopify Partner · A Coruña</div>
+      <h1>Su negocio local, en internet en <em>48 horas</em></h1>
+      <p class="hero-subtitle">Diseñamos y creamos tiendas online profesionales con Shopify para que su negocio empiece a vender desde el primer día. Sin complicaciones, sin sorpresas.</p>
+      <div class="hero-ctas">
+        <a href="#demos" class="btn-primary">Ver nuestros trabajos →</a>
+        <a href="https://wa.me/34624594551" class="btn-outline">Hablar por WhatsApp</a>
+      </div>
+      <div class="hero-trust">
+        <span><span class="check">✓</span> Precio fijo 300€</span>
+        <span><span class="check">✓</span> Entrega 48h</span>
+        <span><span class="check">✓</span> Garantía 7 días</span>
       </div>
     </div>
-  </section>
+    <div class="hero-image fade">
+      <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80" alt="Persona comprando online desde su móvil en una tienda local">
+    </div>
+  </div>
+</section>
 
-  <!-- ===== SOCIAL PROOF BAR ===== -->
-  <section id="proof" aria-label="Resultados clave">
-    <div class="container">
-      <div class="proof-inner">
-        <div class="proof-item">
-          <span class="proof-number">48h</span>
-          <span class="proof-label">Tiempo de entrega</span>
+<!-- ── 3. STATS BAR ── -->
+<section class="stats-bar">
+  <div class="container">
+    <div class="stat-item fade">
+      <strong>48h</strong>
+      <span>Tiempo de entrega</span>
+    </div>
+    <div class="stat-item fade">
+      <strong>100%</strong>
+      <span>Satisfacción garantizada</span>
+    </div>
+    <div class="stat-item fade">
+      <strong>300€</strong>
+      <span>Precio fijo</span>
+    </div>
+  </div>
+</section>
+
+<!-- ── 4. QUÉ INCLUYE ── -->
+<section class="features" id="features">
+  <div class="container">
+    <h2 class="section-title fade">Todo lo que incluye su tienda</h2>
+    <div class="features-grid">
+
+      <div class="feature-card fade">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
         </div>
-        <div class="proof-item">
-          <span class="proof-number">100%</span>
-          <span class="proof-label">Satisfacción garantizada</span>
+        <h3>Tienda completa</h3>
+        <p>Diseño profesional con su marca, productos cargados y lista para vender desde el primer momento.</p>
+      </div>
+
+      <div class="feature-card fade">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12" y2="18.01"/></svg>
         </div>
-        <div class="proof-item">
-          <span class="proof-number">Precio fijo</span>
-          <span class="proof-label">Sin sorpresas</span>
+        <h3>Adaptada a móvil</h3>
+        <p>Su tienda se verá perfecta en cualquier dispositivo: móvil, tablet y ordenador.</p>
+      </div>
+
+      <div class="feature-card fade">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
         </div>
+        <h3>Pago activado</h3>
+        <p>Configuramos las pasarelas de pago para que sus clientes puedan comprar de forma segura.</p>
+      </div>
+
+      <div class="feature-card fade">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
+        </div>
+        <h3>Formación incluida</h3>
+        <p>Le enseñamos a gestionar su tienda: añadir productos, procesar pedidos y más.</p>
+      </div>
+
+      <div class="feature-card fade">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <h3>Entrega en 48h</h3>
+        <p>Nos comprometemos a tener su tienda lista en un máximo de 48 horas laborables.</p>
+      </div>
+
+      <div class="feature-card fade">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3>Garantía 7 días</h3>
+        <p>Si no queda satisfecho, le devolvemos el dinero. Sin preguntas, sin complicaciones.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── 5. DEMOS ── -->
+<section class="demos" id="demos">
+  <div class="container">
+    <h2 class="section-title fade">Tiendas que hemos creado</h2>
+    <div class="demos-grid">
+
+      <div class="demo-card fade">
+        <div class="demo-browser">
+          <div class="demo-dots"><span></span><span></span><span></span></div>
+          <div class="demo-url">lumiere-skincare.myshopify.com</div>
+        </div>
+        <img class="demo-img" src="lumiere-mockup.png" alt="Vista previa de la tienda LUMIÈRE Skincare en Shopify" onerror="this.src='https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=600&q=80'">
+        <div class="demo-info">
+          <h3>LUMIÈRE Skincare</h3>
+          <p class="demo-tag">Cosmética · Shopify OS 2.0</p>
+          <button class="btn-demo" onclick="openLightbox('lumiere.png','LUMIÈRE Skincare')">Ver demo →</button>
+        </div>
+      </div>
+
+      <div class="demo-card fade">
+        <div class="demo-browser">
+          <div class="demo-dots"><span></span><span></span><span></span></div>
+          <div class="demo-url">apex-performance.myshopify.com</div>
+        </div>
+        <img class="demo-img" src="apex-mockup.png" alt="Vista previa de la tienda APEX Performance en Shopify" onerror="this.src='https://images.unsplash.com/photo-1593095948071-474c5cc2989d?w=600&q=80'">
+        <div class="demo-info">
+          <h3>APEX Performance</h3>
+          <p class="demo-tag">Suplementos · Shopify OS 2.0</p>
+          <button class="btn-demo" onclick="openLightbox('apex.png','APEX Performance')">Ver demo →</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Vista previa de la tienda">
+  <button class="lightbox-close" onclick="closeLightbox()" aria-label="Cerrar">✕</button>
+  <div class="lightbox-content">
+    <img id="lightboxImg" src="" alt="">
+    <p class="lightbox-title" id="lightboxTitle"></p>
+  </div>
+</div>
+
+<!-- ── 6. CÓMO FUNCIONA ── -->
+<section class="process" id="process">
+  <div class="container">
+    <h2 class="section-title fade">Cómo funciona</h2>
+    <div class="process-grid">
+      <div class="process-step fade">
+        <div class="process-number">01</div>
+        <h3>Nos contacta</h3>
+        <p>Escríbanos por WhatsApp o rellene el formulario. Le responderemos en menos de 2 horas.</p>
+      </div>
+      <div class="process-step fade">
+        <div class="process-number">02</div>
+        <h3>Creamos su tienda</h3>
+        <p>Diseñamos su tienda Shopify con su marca, productos y pasarela de pago configurada.</p>
+      </div>
+      <div class="process-step fade">
+        <div class="process-number">03</div>
+        <h3>Empieza a vender</h3>
+        <p>En 48 horas recibe su tienda lista. Le damos formación para que la gestione con total autonomía.</p>
       </div>
     </div>
-  </section>
-
-  <!-- ===== QUÉ INCLUYE ===== -->
-  <section id="includes" aria-labelledby="includes-title">
-    <div class="container">
-      <div class="section-header fade-in">
-        <span class="section-label">¿Qué incluye?</span>
-        <h2 class="section-title" id="includes-title">Todo lo que necesita para vender online</h2>
-        <p class="section-subtitle">Sin sorpresas al final. Esto es exactamente lo que recibe desde el primer día.</p>
-      </div>
-      <div class="includes-grid">
-
-        <div class="include-card fade-in fade-in-delay-1">
-          <div class="include-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>
-            </svg>
-          </div>
-          <h3>Tienda Shopify completa</h3>
-          <p>Hasta 20 productos configurados, diseño adaptado a su marca y sector.</p>
-        </div>
-
-        <div class="include-card fade-in fade-in-delay-2">
-          <div class="include-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/>
-            </svg>
-          </div>
-          <h3>Adaptada a móvil</h3>
-          <p>El 80% de sus clientes compra desde el teléfono. Su tienda se verá perfecta en cualquier pantalla.</p>
-        </div>
-
-        <div class="include-card fade-in fade-in-delay-3">
-          <div class="include-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/>
-            </svg>
-          </div>
-          <h3>Pago activado</h3>
-          <p>Stripe y Bizum configurados y listos para cobrar desde el primer día. Sin complicaciones técnicas.</p>
-        </div>
-
-        <div class="include-card fade-in fade-in-delay-1">
-          <div class="include-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M15 10l4.553-2.069A1 1 0 0121 8.882V15.118a1 1 0 01-1.447.916L15 14M3 8a2 2 0 012-2h8a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2V8z"/>
-            </svg>
-          </div>
-          <h3>Formación incluida</h3>
-          <p>30 minutos de videollamada para que gestione su tienda de forma totalmente autónoma desde el primer día.</p>
-        </div>
-
-        <div class="include-card fade-in fade-in-delay-2">
-          <div class="include-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
-            </svg>
-          </div>
-          <h3>Entrega en 48h</h3>
-          <p>Desde que nos envía los materiales (fotos, textos y productos) hasta que su tienda está online.</p>
-        </div>
-
-        <div class="include-card fade-in fade-in-delay-3">
-          <div class="include-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-            </svg>
-          </div>
-          <h3>Garantía 7 días</h3>
-          <p>Si no está satisfecho con el resultado, le devolvemos el dinero completo, sin preguntas.</p>
-        </div>
-
-      </div>
+    <div class="process-cta fade">
+      <a href="https://wa.me/34624594551" class="btn-primary">Solicitar presupuesto ahora</a>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ===== DEMOS ===== -->
-  <section id="demos" aria-labelledby="demos-title">
-    <div class="container">
-      <div class="section-header fade-in">
-        <span class="section-label">Ejemplos reales</span>
-        <h2 class="section-title" id="demos-title">Tiendas que hemos creado</h2>
-        <p class="section-subtitle">Cada tienda está diseñada y adaptada al sector y estilo del negocio.</p>
-      </div>
-      <div class="demos-grid">
-
-        <div class="demo-card fade-in fade-in-delay-1">
-          <div class="browser-chrome">
-            <div class="browser-dots">
-              <div class="browser-dot dot-red"></div>
-              <div class="browser-dot dot-yellow"></div>
-              <div class="browser-dot dot-green"></div>
-            </div>
-            <div class="browser-url">lumiere-skincare.myshopify.com</div>
-          </div>
-          <div class="browser-screen">
-            <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&q=80" alt="Tienda de moda" style="width:100%;height:100%;object-fit:cover;">
-          </div>
-          <div class="demo-info">
-            <h3>Tienda de Moda</h3>
-            <button class="demo-btn" onclick="openLightbox('lumiere.png', 'LUMIÈRE Skincare')" aria-label="Ver demo tienda de moda">
-              Ver demo
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </button>
-          </div>
-        </div>
-
-        <div class="demo-card fade-in fade-in-delay-2">
-          <div class="browser-chrome">
-            <div class="browser-dots">
-              <div class="browser-dot dot-red"></div>
-              <div class="browser-dot dot-yellow"></div>
-              <div class="browser-dot dot-green"></div>
-            </div>
-            <div class="browser-url">cosmetica-coruña.myshopify.com</div>
-          </div>
-          <div class="browser-screen">
-            <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=600&q=80" alt="Tienda de cosmética" style="width:100%;height:100%;object-fit:cover;">
-          </div>
-          <div class="demo-info">
-            <h3>Tienda de Cosmética</h3>
-            <button class="demo-btn" onclick="openLightbox('https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=1200&q=80', 'Tienda de Cosmética')" aria-label="Ver demo tienda de cosmética">
-              Ver demo
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </button>
-          </div>
-        </div>
-
-        <div class="demo-card fade-in fade-in-delay-3">
-          <div class="browser-chrome">
-            <div class="browser-dots">
-              <div class="browser-dot dot-red"></div>
-              <div class="browser-dot dot-yellow"></div>
-              <div class="browser-dot dot-green"></div>
-            </div>
-            <div class="browser-url">apex-performance.myshopify.com</div>
-          </div>
-          <div class="browser-screen">
-            <img src="https://images.unsplash.com/photo-1593095948071-474c5cc2989d?w=600&q=80" alt="Tienda de suplementos" style="width:100%;height:100%;object-fit:cover;">
-          </div>
-          <div class="demo-info">
-            <h3>Tienda de Suplementos</h3>
-            <button class="demo-btn" onclick="openLightbox('apex.png', 'APEX Performance')" aria-label="Ver demo tienda de suplementos">
-              Ver demo
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </button>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== CÓMO FUNCIONA ===== -->
-  <section id="como-funciona" aria-labelledby="como-title">
-    <div class="container">
-      <div class="section-header fade-in">
-        <span class="section-label">El proceso</span>
-        <h2 class="section-title" id="como-title">Cómo funciona</h2>
-        <p class="section-subtitle">Tres pasos. Sin complicaciones. Sin reuniones innecesarias.</p>
-      </div>
-      <div class="steps-grid">
-
-        <div class="step fade-in fade-in-delay-1">
-          <div class="step-number">01</div>
-          <h3>Nos contacta</h3>
-          <p>Cuéntenos su negocio en 5 minutos por WhatsApp o email. Sin reuniones previas ni formularios largos.</p>
-        </div>
-
-        <div class="step fade-in fade-in-delay-2">
-          <div class="step-number">02</div>
-          <h3>Creamos su tienda</h3>
-          <p>En 48 horas tiene su tienda Shopify profesional lista para vender. Usted nos envía los materiales, nosotros nos encargamos del resto.</p>
-        </div>
-
-        <div class="step fade-in fade-in-delay-3">
-          <div class="step-number">03</div>
-          <h3>Empieza a vender</h3>
-          <p>Le formamos, le entregamos el acceso completo y ya puede vender online desde el primer día sin depender de nadie.</p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== PRECIOS ===== -->
-  <section id="precios" aria-labelledby="precios-title">
-    <div class="container">
-      <div class="section-header fade-in" style="text-align:center;">
-        <span class="section-label">Tarifas</span>
-        <h2 class="section-title" id="precios-title">Precio fijo, sin letra pequeña</h2>
-        <p class="section-subtitle" style="margin:0 auto;">Lo que ve es lo que paga. Sin costes ocultos ni sorpresas al final.</p>
-      </div>
-      <div class="pricing-grid">
-
-        <div class="pricing-card popular fade-in fade-in-delay-1">
-          <div class="popular-badge">Más popular</div>
-          <div class="pricing-name">Lanzamiento</div>
-          <div class="pricing-price">300€ <span>pago único</span></div>
-          <p class="pricing-desc">Todo lo que necesita para empezar a vender online de inmediato.</p>
-          <ul class="pricing-features">
-            <li class="pricing-feature">Tienda Shopify completa</li>
-            <li class="pricing-feature">Hasta 20 productos configurados</li>
-            <li class="pricing-feature">Diseño personalizado a su marca</li>
-            <li class="pricing-feature">Pago activado (Stripe + Bizum)</li>
-            <li class="pricing-feature">Formación en videollamada (30 min)</li>
-            <li class="pricing-feature">Garantía de devolución 7 días</li>
-          </ul>
-          <a href="#contacto" class="btn btn-primary pricing-cta">Quiero mi tienda</a>
-        </div>
-
-        <div class="pricing-card fade-in fade-in-delay-2">
-          <div class="pricing-name">Lanzamiento + Mantenimiento</div>
-          <div class="pricing-price">300€ <span>+ 50€/mes</span></div>
-          <p class="pricing-desc">Para quienes quieren delegar completamente la gestión técnica de su tienda.</p>
-          <ul class="pricing-features">
-            <li class="pricing-feature">Todo lo del plan Lanzamiento</li>
-            <li class="pricing-feature">Gestión técnica mensual</li>
-            <li class="pricing-feature">Actualizaciones de diseño</li>
-            <li class="pricing-feature">Soporte prioritario por WhatsApp</li>
-            <li class="pricing-feature">Añadimos productos nuevos por usted</li>
-          </ul>
-          <a href="#contacto" class="btn btn-outline-dark pricing-cta">Quiero este plan</a>
-        </div>
-
-      </div>
-      <p class="pricing-note fade-in">
-        Shopify tiene un coste de 27€/mes que paga directamente a ellos. Nuestros honorarios son aparte.
-      </p>
-    </div>
-  </section>
-
-  <!-- ===== FAQ ===== -->
-  <section id="faq" aria-labelledby="faq-title">
-    <div class="container">
-      <div class="section-header fade-in" style="text-align:center;">
-        <span class="section-label">FAQ</span>
-        <h2 class="section-title" id="faq-title">Preguntas frecuentes</h2>
-      </div>
-      <ul class="faq-list" aria-label="Preguntas frecuentes">
-
-        <li class="faq-item">
-          <button class="faq-question" aria-expanded="false">
-            ¿Necesito saber de informática?
-            <span class="faq-icon" aria-hidden="true">
-              <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor"><path d="M6 1v10M1 6h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-            </span>
-          </button>
-          <div class="faq-answer" role="region">
-            <div class="faq-answer-inner">No. Le entregamos la tienda completamente lista y le enseñamos a usarla en 30 minutos. No necesita ningún conocimiento técnico previo. Si tiene dudas después, estamos disponibles.</div>
-          </div>
-        </li>
-
-        <li class="faq-item">
-          <button class="faq-question" aria-expanded="false">
-            ¿Hay costes adicionales?
-            <span class="faq-icon" aria-hidden="true">
-              <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor"><path d="M6 1v10M1 6h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-            </span>
-          </button>
-          <div class="faq-answer" role="region">
-            <div class="faq-answer-inner">El único coste adicional es el de Shopify: 27€/mes que paga directamente a ellos. No cobramos nada más aparte de nuestros honorarios, salvo que elija el plan con mantenimiento mensual (50€/mes).</div>
-          </div>
-        </li>
-
-        <li class="faq-item">
-          <button class="faq-question" aria-expanded="false">
-            ¿En cuánto tiempo estará lista mi tienda?
-            <span class="faq-icon" aria-hidden="true">
-              <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor"><path d="M6 1v10M1 6h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-            </span>
-          </button>
-          <div class="faq-answer" role="region">
-            <div class="faq-answer-inner">48 horas desde que recibimos sus materiales: fotos de productos, textos descriptivos y lista de productos con precios. El proceso está optimizado para que sea lo más rápido y sencillo posible para usted.</div>
-          </div>
-        </li>
-
-        <li class="faq-item">
-          <button class="faq-question" aria-expanded="false">
-            ¿Qué pasa si no me gusta el resultado?
-            <span class="faq-icon" aria-hidden="true">
-              <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor"><path d="M6 1v10M1 6h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-            </span>
-          </button>
-          <div class="faq-answer" role="region">
-            <div class="faq-answer-inner">Tiene 7 días de garantía total. Si no está satisfecho con el resultado por cualquier motivo, le devolvemos el dinero íntegro sin hacer preguntas. Su satisfacción es nuestra reputación.</div>
-          </div>
-        </li>
-
-        <li class="faq-item">
-          <button class="faq-question" aria-expanded="false">
-            ¿Puedo añadir más productos después?
-            <span class="faq-icon" aria-hidden="true">
-              <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor"><path d="M6 1v10M1 6h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-            </span>
-          </button>
-          <div class="faq-answer" role="region">
-            <div class="faq-answer-inner">Sí, Shopify es muy intuitivo para la gestión diaria. En la formación incluida le enseñamos exactamente cómo añadir productos, cambiar precios y gestionar pedidos de forma autónoma.</div>
-          </div>
-        </li>
-
+<!-- ── 7. POR QUÉ NOSOTROS ── -->
+<section class="why" id="why">
+  <div class="container">
+    <div class="why-text fade">
+      <p class="why-label">Por qué elegirnos</p>
+      <h2>Especialistas en comercio local gallego</h2>
+      <ul class="why-list">
+        <li><span class="why-check">✓</span>Conocemos el comercio local de Galicia</li>
+        <li><span class="why-check">✓</span>Entrega garantizada en 48 horas</li>
+        <li><span class="why-check">✓</span>Precio fijo sin letra pequeña</li>
+        <li><span class="why-check">✓</span>Soporte en español sin intermediarios</li>
       </ul>
     </div>
-  </section>
+    <div class="why-image fade">
+      <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=700&q=80" alt="Equipo de profesionales trabajando en un proyecto digital" loading="lazy">
+    </div>
+  </div>
+</section>
 
-  <!-- ===== CONTACTO ===== -->
-  <section id="contacto" aria-labelledby="contacto-title">
-    <div class="container">
-      <div class="contact-inner">
+<!-- ── 8. PRECIOS ── -->
+<section class="pricing" id="pricing">
+  <div class="container">
+    <h2 class="section-title fade">Planes y precios</h2>
+    <div class="pricing-grid">
 
-        <div class="contact-info">
-          <div class="fade-in">
-            <span class="section-label">Contacto</span>
-            <h2 class="section-title" id="contacto-title">Hablemos</h2>
-            <p class="section-subtitle">Cuéntenos su negocio y le diremos si podemos ayudarle. Sin compromiso.</p>
+      <div class="pricing-card popular fade">
+        <span class="pricing-badge">Más popular</span>
+        <h3>Lanzamiento</h3>
+        <div class="pricing-price">300€</div>
+        <p class="pricing-sub">Pago único</p>
+        <ul class="pricing-features">
+          <li>Tienda Shopify completa</li>
+          <li>Diseño profesional personalizado</li>
+          <li>Hasta 20 productos cargados</li>
+          <li>Pasarela de pago configurada</li>
+          <li>Adaptada a móvil y tablet</li>
+          <li>Formación de uso incluida</li>
+          <li>Entrega en 48 horas</li>
+          <li>Garantía de devolución 7 días</li>
+        </ul>
+        <a href="https://wa.me/34624594551" class="btn-pricing-primary">Quiero mi tienda</a>
+      </div>
+
+      <div class="pricing-card fade">
+        <h3>Lanzamiento + Mantenimiento</h3>
+        <div class="pricing-price">300€ <span style="font-size:0.5em;opacity:0.6">+ 50€/mes</span></div>
+        <p class="pricing-sub">Pago único + mensualidad</p>
+        <ul class="pricing-features">
+          <li>Todo lo del plan Lanzamiento</li>
+          <li>Actualizaciones de diseño mensuales</li>
+          <li>Carga de nuevos productos</li>
+          <li>Soporte técnico prioritario</li>
+          <li>Optimización SEO continua</li>
+          <li>Informes mensuales de rendimiento</li>
+        </ul>
+        <a href="https://wa.me/34624594551" class="btn-pricing-outline">Solicitar información</a>
+      </div>
+
+    </div>
+    <p class="pricing-note fade">Shopify tiene un coste de 27€/mes que se paga directamente a ellos.</p>
+  </div>
+</section>
+
+<!-- ── 9. FAQ ── -->
+<section class="faq" id="faq">
+  <div class="container">
+    <h2 class="section-title fade">Preguntas frecuentes</h2>
+    <div class="faq-list">
+
+      <div class="faq-item fade" aria-expanded="false">
+        <button class="faq-question" aria-expanded="false">
+          ¿Necesitan saber de informática?
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">No. Nos encargamos de todo el proceso técnico. Solo necesitamos la información de su negocio, sus productos y su logo. Además, incluimos una sesión de formación para que pueda gestionar su tienda de forma autónoma.</div>
+        </div>
+      </div>
+
+      <div class="faq-item fade" aria-expanded="false">
+        <button class="faq-question" aria-expanded="false">
+          ¿Hay costes adicionales?
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">El precio de creación de la tienda es fijo: 300€. El único coste adicional es la suscripción de Shopify (27€/mes), que se paga directamente a Shopify. No hay sorpresas ni costes ocultos.</div>
+        </div>
+      </div>
+
+      <div class="faq-item fade" aria-expanded="false">
+        <button class="faq-question" aria-expanded="false">
+          ¿En cuánto tiempo estará lista?
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">En un máximo de 48 horas laborables desde que recibimos toda la información necesaria (productos, imágenes, logotipo y datos del negocio).</div>
+        </div>
+      </div>
+
+      <div class="faq-item fade" aria-expanded="false">
+        <button class="faq-question" aria-expanded="false">
+          ¿Qué pasa si no les gusta?
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Ofrecemos garantía de devolución durante los primeros 7 días. Si el resultado no cumple con sus expectativas, le devolvemos el 100% del importe sin preguntas.</div>
+        </div>
+      </div>
+
+      <div class="faq-item fade" aria-expanded="false">
+        <button class="faq-question" aria-expanded="false">
+          ¿Pueden añadir productos después?
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Por supuesto. Con la formación que incluimos, podrá añadir, modificar o eliminar productos de forma autónoma. Si prefiere que lo hagamos nosotros, puede contratar el plan con mantenimiento mensual.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── 10. CONTACTO ── -->
+<section class="contact" id="contacto">
+  <div class="container">
+    <div class="contact-info fade">
+      <h2>Hablemos sobre su proyecto</h2>
+      <div class="contact-detail">
+        <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        A Coruña, Galicia, España
+      </div>
+      <div class="contact-detail">
+        <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        <a href="mailto:info@woodiaspain.com">info@woodiaspain.com</a>
+      </div>
+      <div class="contact-detail">
+        <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+        <a href="tel:+34624594551">+34 624 594 551</a>
+      </div>
+      <a href="https://wa.me/34624594551" class="btn-whatsapp">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Hablar por WhatsApp
+      </a>
+    </div>
+
+    <div class="contact-form-wrap fade">
+      <form id="contactForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Nombre</label>
+            <input type="text" id="name" name="name" placeholder="Su nombre" required>
           </div>
-
-          <div class="contact-item fade-in fade-in-delay-1">
-            <div class="contact-item-icon">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/>
-              </svg>
-            </div>
-            <div class="contact-item-text">
-              <p>Ubicación</p>
-              <p>A Coruña, Galicia, España</p>
-            </div>
-          </div>
-
-          <div class="contact-item fade-in fade-in-delay-2">
-            <div class="contact-item-icon">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
-              </svg>
-            </div>
-            <div class="contact-item-text">
-              <p>Email</p>
-              <p>info@woodiaspain.com</p>
-            </div>
-          </div>
-
-          <div class="contact-item fade-in fade-in-delay-3">
-            <div class="contact-item-icon">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="#2563eb" aria-hidden="true">
-                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-              </svg>
-            </div>
-            <div class="contact-item-text">
-              <p>WhatsApp</p>
-              <p>+34 624 594 551</p>
-            </div>
+          <div class="form-group">
+            <label for="business">Negocio</label>
+            <input type="text" id="business" name="business" placeholder="Nombre de su negocio">
           </div>
         </div>
-
-        <div class="contact-form fade-in fade-in-delay-1">
-          <form id="contact-form" novalidate>
-            <div class="form-row">
-              <div class="form-group">
-                <label for="nombre">Nombre</label>
-                <input type="text" id="nombre" name="nombre" placeholder="Su nombre" required>
-              </div>
-              <div class="form-group">
-                <label for="negocio">Nombre del negocio</label>
-                <input type="text" id="negocio" name="negocio" placeholder="Nombre de su negocio" required>
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="form-group">
-                <label for="telefono">Teléfono</label>
-                <input type="tel" id="telefono" name="telefono" placeholder="+34 600 000 000">
-              </div>
-              <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="su@email.com" required>
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="mensaje">Cuéntenos su negocio</label>
-              <textarea id="mensaje" name="mensaje" placeholder="¿A qué se dedica? ¿Qué productos vendería? ¿Tiene ya fotos y descripción de productos?"></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary form-submit">Enviar mensaje</button>
-            <div class="success-message" id="success-msg" role="alert" aria-live="polite">
-              Mensaje enviado correctamente. Le respondemos en menos de 24 horas.
-            </div>
-          </form>
-          <div class="whatsapp-alt">
-            <p>¿Prefiere algo más directo?</p>
-            <a href="https://wa.me/34624594551" target="_blank" rel="noopener noreferrer">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-              </svg>
-              O escríbanos directamente por WhatsApp →
-            </a>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="phone">Teléfono</label>
+            <input type="tel" id="phone" name="phone" placeholder="+34 600 000 000">
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="su@email.com" required>
           </div>
         </div>
-
-      </div>
+        <div class="form-group full">
+          <label for="message">Mensaje</label>
+          <textarea id="message" name="message" placeholder="Cuéntenos sobre su negocio y lo que necesita..."></textarea>
+        </div>
+        <button type="submit" class="btn-submit">Enviar mensaje</button>
+      </form>
+      <div class="form-success" id="formSuccess">¡Gracias! Hemos recibido su mensaje. Le responderemos en menos de 2 horas.</div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ===== FOOTER ===== -->
-  <footer>
-    <div class="container">
-      <div class="footer-inner">
-        <div class="footer-logo"><span>W</span>oodia Spain</div>
-        <p class="footer-copy">© 2026 Woodia Spain — A Coruña, Galicia</p>
-        <nav class="footer-links" aria-label="Enlaces legales">
-          <a href="#">Aviso legal</a>
-          <a href="#">Política de privacidad</a>
-        </nav>
-      </div>
+<!-- ── 11. FOOTER ── -->
+<footer class="footer">
+  <div class="container">
+    <a href="#" class="footer-logo" aria-label="Woodia Spain inicio">
+      <img src="logo.png" alt="Woodia Spain logo" height="28" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+      <span class="footer-logo-text">Woodia Spain</span>
+    </a>
+    <p class="footer-copy">© 2025 Woodia Spain — A Coruña, Galicia</p>
+    <div class="footer-links">
+      <a href="#">Aviso legal</a>
+      <span style="color:#444">·</span>
+      <a href="#">Política de privacidad</a>
     </div>
-  </footer>
+  </div>
+</footer>
 
-  <script>
-    // ===== NAV SCROLL =====
-    const navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', () => {
-      navbar.classList.toggle('scrolled', window.scrollY > 50);
-    }, { passive: true });
+<script>
+(function() {
+  /* ── Nav scroll ── */
+  var nav = document.getElementById('mainNav');
+  var scrollThreshold = 60;
 
-    // ===== INTERSECTION OBSERVER (fade-in) =====
-    const fadeEls = document.querySelectorAll('.fade-in');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
+  function checkNav() {
+    if (window.scrollY > scrollThreshold) {
+      nav.classList.add('scrolled');
+    } else {
+      nav.classList.remove('scrolled');
+    }
+  }
+  window.addEventListener('scroll', checkNav, { passive: true });
+  checkNav();
+
+  /* ── Fade on scroll (IntersectionObserver) ── */
+  var fades = document.querySelectorAll('.fade');
+  if ('IntersectionObserver' in window) {
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
         if (entry.isIntersecting) {
           entry.target.classList.add('visible');
           observer.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.12 });
-    fadeEls.forEach(el => observer.observe(el));
+    }, { threshold: 0.15 });
 
-    // ===== FAQ ACCORDION =====
-    document.querySelectorAll('.faq-question').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const item = btn.closest('.faq-item');
-        const answer = item.querySelector('.faq-answer');
-        const isOpen = item.classList.contains('open');
+    fades.forEach(function(el) { observer.observe(el); });
+  } else {
+    fades.forEach(function(el) { el.classList.add('visible'); });
+  }
 
-        document.querySelectorAll('.faq-item.open').forEach(openItem => {
-          openItem.classList.remove('open');
-          openItem.querySelector('.faq-answer').style.maxHeight = null;
-          openItem.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
-        });
+  /* ── FAQ Accordion ── */
+  var faqItems = document.querySelectorAll('.faq-item');
+  faqItems.forEach(function(item) {
+    var btn = item.querySelector('.faq-question');
+    var answer = item.querySelector('.faq-answer');
 
-        if (!isOpen) {
-          item.classList.add('open');
-          answer.style.maxHeight = answer.scrollHeight + 'px';
-          btn.setAttribute('aria-expanded', 'true');
-        }
+    btn.addEventListener('click', function() {
+      var isOpen = item.getAttribute('aria-expanded') === 'true';
+
+      faqItems.forEach(function(other) {
+        other.setAttribute('aria-expanded', 'false');
+        other.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+        other.querySelector('.faq-answer').style.maxHeight = null;
       });
+
+      if (!isOpen) {
+        item.setAttribute('aria-expanded', 'true');
+        btn.setAttribute('aria-expanded', 'true');
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+      }
     });
+  });
 
-    // ===== CONTACT FORM =====
-    document.getElementById('contact-form').addEventListener('submit', function(e) {
-      e.preventDefault();
-      const successMsg = document.getElementById('success-msg');
-      successMsg.style.display = 'block';
-      requestAnimationFrame(() => {
-        requestAnimationFrame(() => {
-          successMsg.classList.add('visible');
-        });
-      });
-      this.reset();
-    });
+  /* ── Form ── */
+  var form = document.getElementById('contactForm');
+  var success = document.getElementById('formSuccess');
 
-    // ===== LIGHTBOX =====
-    function openLightbox(src, alt) {
-      const lb = document.getElementById('lightbox');
-      const img = document.getElementById('lightbox-img');
-      img.src = src;
-      img.alt = alt;
-      lb.style.display = 'flex';
-      document.body.style.overflow = 'hidden';
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    form.style.display = 'none';
+    success.classList.add('show');
+  });
+
+  /* ── Lightbox ── */
+  var lightbox = document.getElementById('lightbox');
+  var lightboxImg = document.getElementById('lightboxImg');
+  var lightboxTitle = document.getElementById('lightboxTitle');
+
+  window.openLightbox = function(src, title) {
+    lightboxImg.src = src;
+    lightboxImg.alt = 'Captura completa de la tienda ' + title;
+    lightboxTitle.textContent = title;
+    lightbox.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  };
+
+  window.closeLightbox = function() {
+    lightbox.classList.remove('active');
+    document.body.style.overflow = '';
+  };
+
+  lightbox.addEventListener('click', function(e) {
+    if (e.target === lightbox) closeLightbox();
+  });
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+      closeLightbox();
     }
-    function closeLightbox() {
-      document.getElementById('lightbox').style.display = 'none';
-      document.body.style.overflow = '';
-    }
-    document.querySelector('.lightbox-close').addEventListener('click', closeLightbox);
-    document.querySelector('.lightbox-overlay').addEventListener('click', closeLightbox);
-    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
-  </script>
-
-  <!-- ===== LIGHTBOX ===== -->
-  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Vista previa de tienda" style="display:none;">
-    <div class="lightbox-overlay"></div>
-    <div class="lightbox-content">
-      <button class="lightbox-close" aria-label="Cerrar">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
-      </button>
-      <img id="lightbox-img" src="" alt="" style="max-width:90vw;max-height:85vh;border-radius:12px;box-shadow:0 25px 80px rgba(0,0,0,0.5);">
-    </div>
-  </div>
+  });
+})();
+</script>
 
 </body>
 </html>
