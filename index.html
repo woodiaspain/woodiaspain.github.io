@@ -1568,39 +1568,42 @@
     });
   });
 
-  // FORM — Formspree with fetch
-  document.getElementById('contact-form').addEventListener('submit', function(e) {
+  // FORM — n8n webhook
+  document.getElementById('contact-form').addEventListener('submit', async function(e) {
     e.preventDefault();
     const form = this;
     const submitBtn = form.querySelector('button[type="submit"]');
-    const successEl = document.getElementById('form-success');
+    const successMsg = document.getElementById('form-success');
     const errorEl = document.getElementById('form-error');
 
     submitBtn.disabled = true;
     submitBtn.textContent = 'Enviando...';
-    successEl.style.display = 'none';
+    successMsg.style.display = 'none';
     errorEl.style.display = 'none';
 
-    fetch(form.action, {
+    const data = {
+      nombre: form.nombre.value,
+      negocio: form.negocio.value,
+      telefono: form.telefono.value,
+      email: form.email.value,
+      mensaje: form.mensaje.value
+    };
+
+    const res = await fetch('https://woodia-spain-n8n.zify4h.easypanel.host/webhook/woodia-contact', {
       method: 'POST',
-      body: new FormData(form),
-      headers: { 'Accept': 'application/json' }
-    })
-    .then(res => {
-      if (res.ok) {
-        successEl.style.display = 'block';
-        form.reset();
-        submitBtn.textContent = 'Solicitar presupuesto gratuito';
-        submitBtn.disabled = false;
-      } else {
-        throw new Error('server');
-      }
-    })
-    .catch(() => {
-      errorEl.style.display = 'block';
-      submitBtn.textContent = 'Solicitar presupuesto gratuito';
-      submitBtn.disabled = false;
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      mode: 'no-cors',
+      body: JSON.stringify(data)
     });
+
+    successMsg.style.display = 'block';
+    requestAnimationFrame(() => successMsg.classList.add('visible'));
+    this.reset();
+    submitBtn.textContent = 'Solicitar presupuesto gratuito';
+    submitBtn.disabled = false;
   });
 
   // LEGAL PAGES
