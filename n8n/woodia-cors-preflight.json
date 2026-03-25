@@ -2,20 +2,30 @@
   "name": "Woodia Spain - CORS Preflight",
   "nodes": [
     {
+      "id": "cors-webhook",
+      "name": "OPTIONS preflight",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        0,
+        0
+      ],
       "parameters": {
         "httpMethod": "OPTIONS",
         "path": "woodia-contact",
         "responseMode": "responseNode",
         "options": {}
-      },
-      "id": "node-webhook-options",
-      "name": "OPTIONS preflight",
-      "type": "n8n-nodes-base.webhook",
-      "typeVersion": 2,
-      "position": [0, 0],
-      "webhookId": "woodia-contact-options"
+      }
     },
     {
+      "id": "cors-respond",
+      "name": "Responder CORS",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [
+        300,
+        0
+      ],
       "parameters": {
         "respondWith": "text",
         "responseBody": "OK",
@@ -38,12 +48,7 @@
             ]
           }
         }
-      },
-      "id": "node-respond-cors",
-      "name": "Responder CORS",
-      "type": "n8n-nodes-base.respondToWebhook",
-      "typeVersion": 1.1,
-      "position": [300, 0]
+      }
     }
   ],
   "connections": {
@@ -60,9 +65,9 @@
     }
   },
   "settings": {
-    "executionOrder": "v1"
+    "executionOrder": "v1",
+    "callerPolicy": "workflowsFromSameOwner",
+    "availableInMCP": false
   },
-  "staticData": null,
-  "tags": [],
-  "pinData": {}
+  "staticData": null
 }

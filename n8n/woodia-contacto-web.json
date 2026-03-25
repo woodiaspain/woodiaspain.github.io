@@ -1,56 +1,29 @@
 {
+  "updatedAt": "2026-03-25T04:11:17.626Z",
+  "createdAt": "2026-03-25T04:11:17.626Z",
+  "id": "sm4WvwkGpqqnWQJF",
   "name": "Woodia Spain - Contacto Web",
+  "description": null,
+  "active": true,
+  "isArchived": false,
   "nodes": [
     {
-      "parameters": {
-        "httpMethod": "POST",
-        "path": "woodia-contact",
-        "responseMode": "responseNode",
-        "options": {}
-      },
       "id": "node-webhook",
       "name": "Recibir contacto web",
       "type": "n8n-nodes-base.webhook",
       "typeVersion": 2,
-      "position": [0, 0],
-      "webhookId": "woodia-contact-post"
-    },
-    {
+      "position": [
+        0,
+        0
+      ],
+      "webhookId": "woodia-contact-post",
       "parameters": {
-        "jsCode": "// Extrae datos del body del webhook (compatible con n8n v1 y v2)\nconst raw = $input.first().json;\nconst data = (raw.body && typeof raw.body === 'object') ? raw.body : raw;\n\nreturn [{\n  json: {\n    nombre:   data.nombre   || '',\n    negocio:  data.negocio  || '',\n    telefono: data.telefono || '',\n    email:    data.email    || '',\n    mensaje:  data.mensaje  || '',\n    fecha:    data.fecha    || new Date().toLocaleString('es-ES')\n  }\n}];"
-      },
-      "id": "node-code",
-      "name": "Extraer datos",
-      "type": "n8n-nodes-base.code",
-      "typeVersion": 2,
-      "position": [280, 0]
-    },
-    {
-      "parameters": {
-        "sendTo": "info@woodiaspain.com",
-        "subject": "=🏪 Nuevo contacto - {{ $json.nombre }} ({{ $json.negocio }})",
-        "emailType": "html",
-        "message": "=<h2 style=\"color:#c8a951\">Nuevo contacto desde woodiaspain.com</h2>\n<table style=\"border-collapse:collapse;width:100%\">\n  <tr><td style=\"padding:8px;border:1px solid #ddd;font-weight:bold\">Nombre</td><td style=\"padding:8px;border:1px solid #ddd\">{{ $json.nombre }}</td></tr>\n  <tr><td style=\"padding:8px;border:1px solid #ddd;font-weight:bold\">Negocio</td><td style=\"padding:8px;border:1px solid #ddd\">{{ $json.negocio }}</td></tr>\n  <tr><td style=\"padding:8px;border:1px solid #ddd;font-weight:bold\">Teléfono</td><td style=\"padding:8px;border:1px solid #ddd\">{{ $json.telefono }}</td></tr>\n  <tr><td style=\"padding:8px;border:1px solid #ddd;font-weight:bold\">Email</td><td style=\"padding:8px;border:1px solid #ddd\">{{ $json.email }}</td></tr>\n  <tr><td style=\"padding:8px;border:1px solid #ddd;font-weight:bold\">Mensaje</td><td style=\"padding:8px;border:1px solid #ddd\">{{ $json.mensaje }}</td></tr>\n  <tr><td style=\"padding:8px;border:1px solid #ddd;font-weight:bold\">Fecha</td><td style=\"padding:8px;border:1px solid #ddd\">{{ $json.fecha }}</td></tr>\n</table>\n<br>\n<a href=\"https://wa.me/34{{ $json.telefono }}\" style=\"background:#25D366;color:white;padding:10px 20px;text-decoration:none;border-radius:6px\">Responder por WhatsApp</a>",
-        "options": {}
-      },
-      "id": "node-gmail",
-      "name": "Enviar email contacto",
-      "type": "n8n-nodes-base.gmail",
-      "typeVersion": 2.1,
-      "position": [560, 0],
-      "credentials": {
-        "gmailOAuth2": {
-          "id": "",
-          "name": "Gmail Pablo"
-        }
-      }
-    },
-    {
-      "parameters": {
-        "respondWith": "json",
-        "responseBody": "={\"success\": true}",
+        "httpMethod": "POST",
+        "path": "woodia-contact",
+        "responseMode": "onReceived",
         "options": {
           "responseCode": 200,
+          "responseData": "{\"success\":true}",
           "responseHeaders": {
             "entries": [
               {
@@ -68,12 +41,66 @@
             ]
           }
         }
+      }
+    },
+    {
+      "id": "node-code",
+      "name": "Clasificar plan y preparar email",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        280,
+        0
+      ],
+      "parameters": {
+        "jsCode": "const raw = $input.first().json;\nconst data = (raw.body && typeof raw.body === 'object') ? raw.body : raw;\n\nconst nombre   = data.nombre   || '';\nconst negocio  = data.negocio  || '';\nconst telefono = data.telefono || '';\nconst email    = data.email    || '';\nconst mensaje  = data.mensaje  || '';\nconst fecha    = data.fecha    || new Date().toLocaleString('es-ES');\n\n// Clasificar plan\nconst msg = mensaje.toLowerCase();\nconst keywords = ['mantenimiento','soporte','mensual','actualizaciones','gestionar','cambios mensuales'];\nconst esMantenimiento = keywords.some(k => msg.includes(k));\n\nconst planNombre  = esMantenimiento ? 'Lanzamiento + Mantenimiento' : 'Lanzamiento';\nconst planPrecio  = esMantenimiento ? '300\\u20ac + 50\\u20ac/mes' : '300\\u20ac (pago \\u00fanico)';\nconst planFeatures = esMantenimiento\n  ? '\\u2713 Todo lo del plan Lanzamiento \\u00b7 \\u2713 Actualizaciones y cambios mensuales \\u00b7 \\u2713 Soporte prioritario ilimitado \\u00b7 \\u2713 Copia de seguridad mensual \\u00b7 \\u2713 Monitorizaci\\u00f3n de disponibilidad \\u00b7 \\u2713 Optimizaci\\u00f3n continua de conversi\\u00f3n'\n  : '\\u2713 Tienda Shopify profesional completa \\u00b7 \\u2713 Dise\\u00f1o personalizado a su marca \\u00b7 \\u2713 Hasta 30 productos cargados \\u00b7 \\u2713 Pagos, env\\u00edos y dominio configurados \\u00b7 \\u2713 SEO local activado \\u00b7 \\u2713 15 d\\u00edas de soporte post-lanzamiento';\n\n// URL WhatsApp con mensaje preescrito\nconst waMsg = 'Hola Woodia! Soy ' + nombre + ' de ' + negocio + '. Acabo de recibir la info del plan ' + planNombre + ' y me gustar\\u00eda empezar.';\nconst whatsappUrl = 'https://wa.me/34624594551?text=' + encodeURIComponent(waMsg);\n\n// HTML del email (inline CSS — compatible con Gmail)\nconst emailHtml = '<!DOCTYPE html><html><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width\"></head>'\n  + '<body style=\"margin:0;padding:0;background-color:#f5f3ef;font-family:\\'Helvetica Neue\\',Arial,sans-serif;\">'\n  + '<table width=\"100%\" cellpadding=\"0\" cellspacing=\"0\" style=\"background-color:#f5f3ef;padding:32px 16px;\"><tr><td align=\"center\">'\n  + '<table width=\"600\" cellpadding=\"0\" cellspacing=\"0\" style=\"background-color:#ffffff;border-radius:12px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,0.08);\">'\n\n  // HEADER\n  + '<tr><td style=\"background-color:#0d0d0d;padding:32px 40px;text-align:center;\">'\n  + '<p style=\"margin:0;font-size:22px;font-weight:800;color:#ffffff;letter-spacing:-0.5px;\">Woodia Spain</p>'\n  + '<p style=\"margin:6px 0 0;font-size:12px;color:#c8a951;text-transform:uppercase;letter-spacing:2px;\">Tiendas Shopify profesionales</p>'\n  + '</td></tr>'\n\n  // BODY\n  + '<tr><td style=\"padding:40px;\">'\n  + '<p style=\"margin:0 0 8px;font-size:13px;color:#c8a951;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;\">Gracias por contactarnos</p>'\n  + '<h1 style=\"margin:0 0 20px;font-size:26px;font-weight:800;color:#0d0d0d;line-height:1.2;\">Hola ' + nombre + ', \\u00a1bienvenido/a!</h1>'\n  + '<p style=\"margin:0 0 24px;font-size:15px;color:#555;line-height:1.7;\">Hemos recibido su solicitud para <strong style=\"color:#0d0d0d;\">' + negocio + '</strong>. Hemos analizado lo que necesita y creemos que el plan ideal para su proyecto es:</p>'\n\n  // PLAN CARD\n  + '<table width=\"100%\" cellpadding=\"0\" cellspacing=\"0\" style=\"background-color:#0d0d0d;border-radius:10px;overflow:hidden;margin-bottom:24px;\">'\n  + '<tr><td style=\"padding:28px 32px;\">'\n  + '<p style=\"margin:0 0 4px;font-size:12px;color:#c8a951;text-transform:uppercase;letter-spacing:2px;font-weight:700;\">Plan recomendado</p>'\n  + '<p style=\"margin:0 0 8px;font-size:22px;font-weight:800;color:#ffffff;\">' + planNombre + '</p>'\n  + '<p style=\"margin:0 0 16px;font-size:28px;font-weight:800;color:#c8a951;\">' + planPrecio + '</p>'\n  + '<p style=\"margin:0;font-size:14px;color:rgba(255,255,255,0.7);line-height:1.8;\">' + planFeatures + '</p>'\n  + '</td></tr></table>'\n\n  + '<p style=\"margin:0 0 24px;font-size:15px;color:#555;line-height:1.7;\">En <strong style=\"color:#0d0d0d;\">48 horas</strong> tendr\\u00e1 su tienda Shopify lista para vender. Sin sorpresas, sin letra peque\\u00f1a.</p>'\n  + '<p style=\"margin:0 0 28px;font-size:15px;color:#555;line-height:1.7;\">\\u00bfQuiere arrancar o tiene alguna duda? H\\u00e1blenos directamente por WhatsApp y le respondemos al momento:</p>'\n\n  // WHATSAPP BUTTON\n  + '<table width=\"100%\" cellpadding=\"0\" cellspacing=\"0\"><tr><td align=\"center\">'\n  + '<a href=\"' + whatsappUrl + '\" target=\"_blank\" style=\"display:inline-block;background-color:#25D366;color:#ffffff;font-size:16px;font-weight:700;padding:16px 40px;border-radius:8px;text-decoration:none;letter-spacing:0.3px;\">Hablar por WhatsApp \\ud83d\\udcac</a>'\n  + '</td></tr></table>'\n  + '<p style=\"margin:24px 0 0;font-size:13px;color:#999;text-align:center;\">O ll\\u00e1menos al +34 624 594 551</p>'\n  + '</td></tr>'\n\n  // FOOTER\n  + '<tr><td style=\"background-color:#f5f3ef;padding:24px 40px;text-align:center;border-top:1px solid #e8e4dc;\">'\n  + '<p style=\"margin:0 0 4px;font-size:13px;color:#6b6660;\">\\u00a9 2026 Woodia Spain \\u00b7 A Coru\\u00f1a, Galicia</p>'\n  + '<p style=\"margin:0;font-size:12px;color:#999;\">Este email se ha enviado porque solicit\\u00f3 informaci\\u00f3n en woodiaspain.com</p>'\n  + '</td></tr>'\n\n  + '</table></td></tr></table></body></html>';\n\n// Asunto personalizado\nconst subject = nombre + ', su tienda online est\\u00e1 m\\u00e1s cerca de lo que cree \\ud83d\\ude80';\n\n// HTML para notificacion interna\nconst internalHtml = '<h2 style=\"color:#c8a951;font-family:Arial,sans-serif;\">Nuevo lead — Plan ' + planNombre + '</h2>'\n  + '<table style=\"border-collapse:collapse;width:100%;font-family:Arial,sans-serif;\">'\n  + '<tr><td style=\"padding:8px;border:1px solid #ddd;font-weight:bold;\">Nombre</td><td style=\"padding:8px;border:1px solid #ddd;\">' + nombre + '</td></tr>'\n  + '<tr><td style=\"padding:8px;border:1px solid #ddd;font-weight:bold;\">Negocio</td><td style=\"padding:8px;border:1px solid #ddd;\">' + negocio + '</td></tr>'\n  + '<tr><td style=\"padding:8px;border:1px solid #ddd;font-weight:bold;\">Tel\\u00e9fono</td><td style=\"padding:8px;border:1px solid #ddd;\">' + telefono + '</td></tr>'\n  + '<tr><td style=\"padding:8px;border:1px solid #ddd;font-weight:bold;\">Email</td><td style=\"padding:8px;border:1px solid #ddd;\">' + email + '</td></tr>'\n  + '<tr><td style=\"padding:8px;border:1px solid #ddd;font-weight:bold;\">Mensaje</td><td style=\"padding:8px;border:1px solid #ddd;\">' + mensaje + '</td></tr>'\n  + '<tr><td style=\"padding:8px;border:1px solid #ddd;font-weight:bold;\">Plan recomendado</td><td style=\"padding:8px;border:1px solid #c8a951;color:#c8a951;font-weight:bold;\">' + planNombre + ' — ' + planPrecio + '</td></tr>'\n  + '<tr><td style=\"padding:8px;border:1px solid #ddd;font-weight:bold;\">Fecha</td><td style=\"padding:8px;border:1px solid #ddd;\">' + fecha + '</td></tr>'\n  + '</table>'\n  + '<br><a href=\"' + whatsappUrl + '\" style=\"background:#25D366;color:white;padding:10px 20px;text-decoration:none;border-radius:6px;font-family:Arial,sans-serif;\">Responder por WhatsApp</a>';\n\nreturn [{\n  json: {\n    nombre, negocio, telefono, email, mensaje, fecha,\n    plan_nombre: planNombre,\n    plan_precio: planPrecio,\n    plan_features: planFeatures,\n    whatsapp_url: whatsappUrl,\n    subject,\n    email_html: emailHtml,\n    internal_html: internalHtml\n  }\n}];"
+      }
+    },
+    {
+      "id": "node-gmail-cliente",
+      "name": "Email bienvenida al cliente",
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        560,
+        0
+      ],
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "hNLliHodeLtj44NB",
+          "name": "Gmail Pablo"
+        }
       },
-      "id": "node-respond",
-      "name": "Responder con CORS",
-      "type": "n8n-nodes-base.respondToWebhook",
-      "typeVersion": 1.1,
-      "position": [840, 0]
+      "parameters": {
+        "sendTo": "={{ $json.email }}",
+        "subject": "={{ $json.subject }}",
+        "emailType": "html",
+        "message": "={{ $json.email_html }}",
+        "options": {}
+      }
+    },
+    {
+      "id": "node-gmail-interno",
+      "name": "Notificacion interna",
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        840,
+        0
+      ],
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "hNLliHodeLtj44NB",
+          "name": "Gmail Pablo"
+        }
+      },
+      "parameters": {
+        "sendTo": "info@woodiaspain.com",
+        "subject": "={{ '🏥 Nuevo lead — ' + $json.plan_nombre + ' — ' + $json.nombre + ' (' + $json.negocio + ')' }}",
+        "emailType": "html",
+        "message": "={{ $json.internal_html }}",
+        "options": {}
+      }
     }
   ],
   "connections": {
@@ -81,29 +108,29 @@
       "main": [
         [
           {
-            "node": "Extraer datos",
+            "node": "Clasificar plan y preparar email",
             "type": "main",
             "index": 0
           }
         ]
       ]
     },
-    "Extraer datos": {
+    "Clasificar plan y preparar email": {
       "main": [
         [
           {
-            "node": "Enviar email contacto",
+            "node": "Email bienvenida al cliente",
             "type": "main",
             "index": 0
           }
         ]
       ]
     },
-    "Enviar email contacto": {
+    "Email bienvenida al cliente": {
       "main": [
         [
           {
-            "node": "Responder con CORS",
+            "node": "Notificacion interna",
             "type": "main",
             "index": 0
           }
@@ -112,9 +139,187 @@
     }
   },
   "settings": {
-    "executionOrder": "v1"
+    "executionOrder": "v1",
+    "callerPolicy": "workflowsFromSameOwner",
+    "availableInMCP": false
   },
   "staticData": null,
+  "meta": null,
+  "pinData": null,
+  "versionId": "6f49b0f9-34b8-48eb-8897-4f0f0ae6703b",
+  "activeVersionId": "6f49b0f9-34b8-48eb-8897-4f0f0ae6703b",
+  "versionCounter": 3,
+  "triggerCount": 1,
+  "shared": [
+    {
+      "updatedAt": "2026-03-25T04:11:17.627Z",
+      "createdAt": "2026-03-25T04:11:17.627Z",
+      "role": "workflow:owner",
+      "workflowId": "sm4WvwkGpqqnWQJF",
+      "projectId": "64T9BKlPBzRH22cF",
+      "project": {
+        "updatedAt": "2026-02-25T17:01:46.275Z",
+        "createdAt": "2026-02-25T17:01:26.894Z",
+        "id": "64T9BKlPBzRH22cF",
+        "name": "Pablo Rodriguez <info@woodiaspain.com>",
+        "type": "personal",
+        "icon": null,
+        "description": null,
+        "creatorId": "e78ba8bb-170b-4722-bdc2-f064785b244a"
+      }
+    }
+  ],
   "tags": [],
-  "pinData": {}
+  "activeVersion": {
+    "updatedAt": "2026-03-25T04:11:17.631Z",
+    "createdAt": "2026-03-25T04:11:17.631Z",
+    "versionId": "6f49b0f9-34b8-48eb-8897-4f0f0ae6703b",
+    "workflowId": "sm4WvwkGpqqnWQJF",
+    "nodes": [
+      {
+        "id": "node-webhook",
+        "name": "Recibir contacto web",
+        "type": "n8n-nodes-base.webhook",
+        "typeVersion": 2,
+        "position": [
+          0,
+          0
+        ],
+        "webhookId": "woodia-contact-post",
+        "parameters": {
+          "httpMethod": "POST",
+          "path": "woodia-contact",
+          "responseMode": "onReceived",
+          "options": {
+            "responseCode": 200,
+            "responseData": "{\"success\":true}",
+            "responseHeaders": {
+              "entries": [
+                {
+                  "name": "Access-Control-Allow-Origin",
+                  "value": "*"
+                },
+                {
+                  "name": "Access-Control-Allow-Methods",
+                  "value": "POST, OPTIONS"
+                },
+                {
+                  "name": "Access-Control-Allow-Headers",
+                  "value": "Content-Type, Accept"
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "id": "node-code",
+        "name": "Clasificar plan y preparar email",
+        "type": "n8n-nodes-base.code",
+        "typeVersion": 2,
+        "position": [
+          280,
+          0
+        ],
+        "parameters": {
+          "jsCode": "const raw = $input.first().json;\nconst data = (raw.body && typeof raw.body === 'object') ? raw.body : raw;\n\nconst nombre   = data.nombre   || '';\nconst negocio  = data.negocio  || '';\nconst telefono = data.telefono || '';\nconst email    = data.email    || '';\nconst mensaje  = data.mensaje  || '';\nconst fecha    = data.fecha    || new Date().toLocaleString('es-ES');\n\n// Clasificar plan\nconst msg = mensaje.toLowerCase();\nconst keywords = ['mantenimiento','soporte','mensual','actualizaciones','gestionar','cambios mensuales'];\nconst esMantenimiento = keywords.some(k => msg.includes(k));\n\nconst planNombre  = esMantenimiento ? 'Lanzamiento + Mantenimiento' : 'Lanzamiento';\nconst planPrecio  = esMantenimiento ? '300\\u20ac + 50\\u20ac/mes' : '300\\u20ac (pago \\u00fanico)';\nconst planFeatures = esMantenimiento\n  ? '\\u2713 Todo lo del plan Lanzamiento \\u00b7 \\u2713 Actualizaciones y cambios mensuales \\u00b7 \\u2713 Soporte prioritario ilimitado \\u00b7 \\u2713 Copia de seguridad mensual \\u00b7 \\u2713 Monitorizaci\\u00f3n de disponibilidad \\u00b7 \\u2713 Optimizaci\\u00f3n continua de conversi\\u00f3n'\n  : '\\u2713 Tienda Shopify profesional completa \\u00b7 \\u2713 Dise\\u00f1o personalizado a su marca \\u00b7 \\u2713 Hasta 30 productos cargados \\u00b7 \\u2713 Pagos, env\\u00edos y dominio configurados \\u00b7 \\u2713 SEO local activado \\u00b7 \\u2713 15 d\\u00edas de soporte post-lanzamiento';\n\n// URL WhatsApp con mensaje preescrito\nconst waMsg = 'Hola Woodia! Soy ' + nombre + ' de ' + negocio + '. Acabo de recibir la info del plan ' + planNombre + ' y me gustar\\u00eda empezar.';\nconst whatsappUrl = 'https://wa.me/34624594551?text=' + encodeURIComponent(waMsg);\n\n// HTML del email (inline CSS — compatible con Gmail)\nconst emailHtml = '<!DOCTYPE html><html><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width\"></head>'\n  + '<body style=\"margin:0;padding:0;background-color:#f5f3ef;font-family:\\'Helvetica Neue\\',Arial,sans-serif;\">'\n  + '<table width=\"100%\" cellpadding=\"0\" cellspacing=\"0\" style=\"background-color:#f5f3ef;padding:32px 16px;\"><tr><td align=\"center\">'\n  + '<table width=\"600\" cellpadding=\"0\" cellspacing=\"0\" style=\"background-color:#ffffff;border-radius:12px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,0.08);\">'\n\n  // HEADER\n  + '<tr><td style=\"background-color:#0d0d0d;padding:32px 40px;text-align:center;\">'\n  + '<p style=\"margin:0;font-size:22px;font-weight:800;color:#ffffff;letter-spacing:-0.5px;\">Woodia Spain</p>'\n  + '<p style=\"margin:6px 0 0;font-size:12px;color:#c8a951;text-transform:uppercase;letter-spacing:2px;\">Tiendas Shopify profesionales</p>'\n  + '</td></tr>'\n\n  // BODY\n  + '<tr><td style=\"padding:40px;\">'\n  + '<p style=\"margin:0 0 8px;font-size:13px;color:#c8a951;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;\">Gracias por contactarnos</p>'\n  + '<h1 style=\"margin:0 0 20px;font-size:26px;font-weight:800;color:#0d0d0d;line-height:1.2;\">Hola ' + nombre + ', \\u00a1bienvenido/a!</h1>'\n  + '<p style=\"margin:0 0 24px;font-size:15px;color:#555;line-height:1.7;\">Hemos recibido su solicitud para <strong style=\"color:#0d0d0d;\">' + negocio + '</strong>. Hemos analizado lo que necesita y creemos que el plan ideal para su proyecto es:</p>'\n\n  // PLAN CARD\n  + '<table width=\"100%\" cellpadding=\"0\" cellspacing=\"0\" style=\"background-color:#0d0d0d;border-radius:10px;overflow:hidden;margin-bottom:24px;\">'\n  + '<tr><td style=\"padding:28px 32px;\">'\n  + '<p style=\"margin:0 0 4px;font-size:12px;color:#c8a951;text-transform:uppercase;letter-spacing:2px;font-weight:700;\">Plan recomendado</p>'\n  + '<p style=\"margin:0 0 8px;font-size:22px;font-weight:800;color:#ffffff;\">' + planNombre + '</p>'\n  + '<p style=\"margin:0 0 16px;font-size:28px;font-weight:800;color:#c8a951;\">' + planPrecio + '</p>'\n  + '<p style=\"margin:0;font-size:14px;color:rgba(255,255,255,0.7);line-height:1.8;\">' + planFeatures + '</p>'\n  + '</td></tr></table>'\n\n  + '<p style=\"margin:0 0 24px;font-size:15px;color:#555;line-height:1.7;\">En <strong style=\"color:#0d0d0d;\">48 horas</strong> tendr\\u00e1 su tienda Shopify lista para vender. Sin sorpresas, sin letra peque\\u00f1a.</p>'\n  + '<p style=\"margin:0 0 28px;font-size:15px;color:#555;line-height:1.7;\">\\u00bfQuiere arrancar o tiene alguna duda? H\\u00e1blenos directamente por WhatsApp y le respondemos al momento:</p>'\n\n  // WHATSAPP BUTTON\n  + '<table width=\"100%\" cellpadding=\"0\" cellspacing=\"0\"><tr><td align=\"center\">'\n  + '<a href=\"' + whatsappUrl + '\" target=\"_blank\" style=\"display:inline-block;background-color:#25D366;color:#ffffff;font-size:16px;font-weight:700;padding:16px 40px;border-radius:8px;text-decoration:none;letter-spacing:0.3px;\">Hablar por WhatsApp \\ud83d\\udcac</a>'\n  + '</td></tr></table>'\n  + '<p style=\"margin:24px 0 0;font-size:13px;color:#999;text-align:center;\">O ll\\u00e1menos al +34 624 594 551</p>'\n  + '</td></tr>'\n\n  // FOOTER\n  + '<tr><td style=\"background-color:#f5f3ef;padding:24px 40px;text-align:center;border-top:1px solid #e8e4dc;\">'\n  + '<p style=\"margin:0 0 4px;font-size:13px;color:#6b6660;\">\\u00a9 2026 Woodia Spain \\u00b7 A Coru\\u00f1a, Galicia</p>'\n  + '<p style=\"margin:0;font-size:12px;color:#999;\">Este email se ha enviado porque solicit\\u00f3 informaci\\u00f3n en woodiaspain.com</p>'\n  + '</td></tr>'\n\n  + '</table></td></tr></table></body></html>';\n\n// Asunto personalizado\nconst subject = nombre + ', su tienda online est\\u00e1 m\\u00e1s cerca de lo que cree \\ud83d\\ude80';\n\n// HTML para notificacion interna\nconst internalHtml = '<h2 style=\"color:#c8a951;font-family:Arial,sans-serif;\">Nuevo lead — Plan ' + planNombre + '</h2>'\n  + '<table style=\"border-collapse:collapse;width:100%;font-family:Arial,sans-serif;\">'\n  + '<tr><td style=\"padding:8px;border:1px solid #ddd;font-weight:bold;\">Nombre</td><td style=\"padding:8px;border:1px solid #ddd;\">' + nombre + '</td></tr>'\n  + '<tr><td style=\"padding:8px;border:1px solid #ddd;font-weight:bold;\">Negocio</td><td style=\"padding:8px;border:1px solid #ddd;\">' + negocio + '</td></tr>'\n  + '<tr><td style=\"padding:8px;border:1px solid #ddd;font-weight:bold;\">Tel\\u00e9fono</td><td style=\"padding:8px;border:1px solid #ddd;\">' + telefono + '</td></tr>'\n  + '<tr><td style=\"padding:8px;border:1px solid #ddd;font-weight:bold;\">Email</td><td style=\"padding:8px;border:1px solid #ddd;\">' + email + '</td></tr>'\n  + '<tr><td style=\"padding:8px;border:1px solid #ddd;font-weight:bold;\">Mensaje</td><td style=\"padding:8px;border:1px solid #ddd;\">' + mensaje + '</td></tr>'\n  + '<tr><td style=\"padding:8px;border:1px solid #ddd;font-weight:bold;\">Plan recomendado</td><td style=\"padding:8px;border:1px solid #c8a951;color:#c8a951;font-weight:bold;\">' + planNombre + ' — ' + planPrecio + '</td></tr>'\n  + '<tr><td style=\"padding:8px;border:1px solid #ddd;font-weight:bold;\">Fecha</td><td style=\"padding:8px;border:1px solid #ddd;\">' + fecha + '</td></tr>'\n  + '</table>'\n  + '<br><a href=\"' + whatsappUrl + '\" style=\"background:#25D366;color:white;padding:10px 20px;text-decoration:none;border-radius:6px;font-family:Arial,sans-serif;\">Responder por WhatsApp</a>';\n\nreturn [{\n  json: {\n    nombre, negocio, telefono, email, mensaje, fecha,\n    plan_nombre: planNombre,\n    plan_precio: planPrecio,\n    plan_features: planFeatures,\n    whatsapp_url: whatsappUrl,\n    subject,\n    email_html: emailHtml,\n    internal_html: internalHtml\n  }\n}];"
+        }
+      },
+      {
+        "id": "node-gmail-cliente",
+        "name": "Email bienvenida al cliente",
+        "type": "n8n-nodes-base.gmail",
+        "typeVersion": 2.1,
+        "position": [
+          560,
+          0
+        ],
+        "credentials": {
+          "gmailOAuth2": {
+            "id": "hNLliHodeLtj44NB",
+            "name": "Gmail Pablo"
+          }
+        },
+        "parameters": {
+          "sendTo": "={{ $json.email }}",
+          "subject": "={{ $json.subject }}",
+          "emailType": "html",
+          "message": "={{ $json.email_html }}",
+          "options": {}
+        }
+      },
+      {
+        "id": "node-gmail-interno",
+        "name": "Notificacion interna",
+        "type": "n8n-nodes-base.gmail",
+        "typeVersion": 2.1,
+        "position": [
+          840,
+          0
+        ],
+        "credentials": {
+          "gmailOAuth2": {
+            "id": "hNLliHodeLtj44NB",
+            "name": "Gmail Pablo"
+          }
+        },
+        "parameters": {
+          "sendTo": "info@woodiaspain.com",
+          "subject": "={{ '🏥 Nuevo lead — ' + $json.plan_nombre + ' — ' + $json.nombre + ' (' + $json.negocio + ')' }}",
+          "emailType": "html",
+          "message": "={{ $json.internal_html }}",
+          "options": {}
+        }
+      }
+    ],
+    "connections": {
+      "Recibir contacto web": {
+        "main": [
+          [
+            {
+              "node": "Clasificar plan y preparar email",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Clasificar plan y preparar email": {
+        "main": [
+          [
+            {
+              "node": "Email bienvenida al cliente",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Email bienvenida al cliente": {
+        "main": [
+          [
+            {
+              "node": "Notificacion interna",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      }
+    },
+    "authors": "Pablo Rodriguez",
+    "name": null,
+    "description": null,
+    "autosaved": false,
+    "workflowPublishHistory": [
+      {
+        "createdAt": "2026-03-25T04:11:17.843Z",
+        "id": 146,
+        "workflowId": "sm4WvwkGpqqnWQJF",
+        "versionId": "6f49b0f9-34b8-48eb-8897-4f0f0ae6703b",
+        "event": "activated",
+        "userId": "e78ba8bb-170b-4722-bdc2-f064785b244a"
+      }
+    ]
+  }
 }

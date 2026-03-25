@@ -635,9 +635,15 @@
       display: grid;
       gap: 24px;
       margin-bottom: 28px;
+      max-width: 1100px;
+      margin-left: auto;
+      margin-right: auto;
     }
-    @media (min-width: 720px) {
-      .pricing-grid { grid-template-columns: repeat(2, 1fr); }
+    @media (min-width: 769px) {
+      .pricing-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (max-width: 768px) {
+      .pricing-grid { grid-template-columns: 1fr; }
     }
     .price-card {
       border-radius: 16px;
@@ -1240,44 +1246,77 @@
 <section class="pricing" aria-labelledby="pricing-title">
   <div class="container">
     <span class="section-tag fade">Precios</span>
-    <h2 class="section-title fade fade-delay-1" id="pricing-title">Sin sorpresas.<br>Sin letra pequeña.</h2>
-    <p class="section-sub fade fade-delay-2">Dos opciones claras para arrancar su negocio online con el pie derecho.</p>
+    <h2 class="section-title fade fade-delay-1" id="pricing-title">Elige el plan que mejor encaja</h2>
+    <p class="section-sub fade fade-delay-2">Tres opciones claras para arrancar su negocio online con el pie derecho.</p>
     <div class="pricing-grid">
-      <div class="price-card popular fade fade-delay-1">
-        <div class="price-badge">Más popular</div>
-        <div class="price-name">Lanzamiento</div>
+
+      <!-- CARD 1: Shopify Básica -->
+      <div class="price-card fade fade-delay-1">
+        <div class="price-name">Shopify Básica</div>
         <div class="price-amount"><span class="currency">€</span>300</div>
-        <div class="price-period">pago único · sin cuota mensual nuestra</div>
+        <div class="price-period">mantenimiento 50€/mes</div>
         <div class="price-divider"></div>
+        <p style="font-size:0.84rem;color:rgba(255,255,255,0.5);margin-bottom:20px;line-height:1.5;">Para negocios que quieren empezar a vender online de forma rápida y sencilla.</p>
         <ul class="price-features">
-          <li class="price-feature">Tienda Shopify profesional completa</li>
-          <li class="price-feature">Diseño personalizado a su marca</li>
-          <li class="price-feature">Hasta 30 productos cargados</li>
-          <li class="price-feature">Pagos, envíos y dominio configurados</li>
-          <li class="price-feature">SEO local activado</li>
-          <li class="price-feature">15 días de soporte post-lanzamiento</li>
+          <li class="price-feature">Configuración base de Shopify</li>
+          <li class="price-feature">Tema profesional bien montado</li>
+          <li class="price-feature">Homepage simple y limpia</li>
+          <li class="price-feature">Hasta 10 productos</li>
+          <li class="price-feature">Hasta 3 colecciones</li>
+          <li class="price-feature">Páginas legales y contacto</li>
+          <li class="price-feature">Pagos y envíos básicos</li>
+          <li class="price-feature">Adaptación móvil</li>
+          <li class="price-feature">1 ronda de cambios</li>
         </ul>
-        <a href="#contacto" class="btn btn-gold" style="width:100%;justify-content:center;">Empezar ahora</a>
+        <a href="#contacto" class="btn btn-outline" style="width:100%;justify-content:center;">Empezar →</a>
       </div>
-      <div class="price-card fade fade-delay-2">
-        <div class="price-name">Lanzamiento + Mantenimiento</div>
-        <div class="price-amount"><span class="currency">€</span>300<span class="per-month"> +50/mes</span></div>
-        <div class="price-period">setup único · más 50€/mes de mantenimiento</div>
+
+      <!-- CARD 2: Shopify Growth (destacada) -->
+      <div class="price-card popular fade fade-delay-2">
+        <div class="price-badge">Más popular</div>
+        <div class="price-name">Shopify Growth</div>
+        <div class="price-amount"><span class="currency">€</span>700</div>
+        <div class="price-period">mantenimiento 100€/mes</div>
         <div class="price-divider"></div>
+        <p style="font-size:0.84rem;color:rgba(255,255,255,0.5);margin-bottom:20px;line-height:1.5;">Para negocios que quieren destacar y vender más desde el primer día.</p>
         <ul class="price-features">
-          <li class="price-feature">Todo lo del plan Lanzamiento</li>
-          <li class="price-feature">Actualizaciones y cambios mensuales</li>
-          <li class="price-feature">Soporte prioritario ilimitado</li>
-          <li class="price-feature">Copia de seguridad mensual</li>
-          <li class="price-feature">Monitorización de disponibilidad</li>
-          <li class="price-feature">Optimización continua de conversión</li>
+          <li class="price-feature">Todo lo del plan Básica</li>
+          <li class="price-feature">Diseño más cuidado y trabajado</li>
+          <li class="price-feature">Home con estructura avanzada</li>
+          <li class="price-feature">Hasta 25 productos</li>
+          <li class="price-feature">Banners e imágenes premium</li>
+          <li class="price-feature">Organización optimizada</li>
+          <li class="price-feature">Orientado a conversión</li>
+          <li class="price-feature">2 rondas de cambios</li>
+          <li class="price-feature">Soporte prioritario</li>
         </ul>
-        <a href="#contacto" class="btn btn-outline" style="width:100%;justify-content:center;">Consultar disponibilidad</a>
+        <a href="#contacto" class="btn btn-gold" style="width:100%;justify-content:center;">Contratar →</a>
       </div>
+
+      <!-- CARD 3: Shopify Premium -->
+      <div class="price-card fade fade-delay-3">
+        <div class="price-name">Shopify Premium</div>
+        <div class="price-amount"><span class="currency">€</span>1200</div>
+        <div class="price-period">mantenimiento 150€/mes</div>
+        <div class="price-divider"></div>
+        <p style="font-size:0.84rem;color:rgba(255,255,255,0.5);margin-bottom:20px;line-height:1.5;">Para negocios que quieren una tienda completamente personalizada y optimizada.</p>
+        <ul class="price-features">
+          <li class="price-feature">Todo lo del plan Growth</li>
+          <li class="price-feature">Diseño completamente personalizado</li>
+          <li class="price-feature">Hasta 60 productos</li>
+          <li class="price-feature">UX móvil optimizada</li>
+          <li class="price-feature">Apps e integraciones básicas</li>
+          <li class="price-feature">Secciones avanzadas</li>
+          <li class="price-feature">Configuración completa</li>
+          <li class="price-feature">2-3 rondas de cambios</li>
+          <li class="price-feature">Soporte y optimización continua</li>
+        </ul>
+        <a href="#contacto" class="btn btn-outline" style="width:100%;justify-content:center;">Contratar →</a>
+      </div>
+
     </div>
     <div class="price-note fade">
-      <strong>Nota sobre Shopify:</strong> La plataforma Shopify tiene un coste de <strong>27€/mes</strong> que se abona directamente a Shopify.
-      No es un coste de Woodia Spain — es la tarifa oficial de la plataforma.
+      <strong>Nota sobre Shopify:</strong> Shopify tiene un coste de <strong>27€/mes</strong> que se paga directamente a ellos. Nuestros honorarios son los indicados.
     </div>
   </div>
 </section>
