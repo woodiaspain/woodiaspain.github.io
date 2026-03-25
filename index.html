@@ -1573,29 +1573,35 @@
     e.preventDefault();
 
     const btn = this.querySelector('button[type="submit"]');
-    const successMsg = document.getElementById('success-msg');
+    const successBox = document.getElementById('form-success');
+    const errorBox  = document.getElementById('form-error');
+
+    const nombre   = document.getElementById('f-nombre').value.trim();
+    const negocio  = document.getElementById('f-negocio').value.trim();
+    const telefono = document.getElementById('f-tel').value.trim();
+    const email    = document.getElementById('f-email').value.trim();
+    const mensaje  = document.getElementById('f-msg').value.trim();
+
+    if (!nombre || !negocio || !email) return;
 
     btn.textContent = 'Enviando...';
     btn.disabled = true;
+    if (errorBox) errorBox.style.display = 'none';
 
-    const formData = new FormData(this);
-    const data = Object.fromEntries(formData.entries());
-    data.fecha = new Date().toLocaleString('es-ES');
+    const data = { nombre, negocio, telefono, email, mensaje, fecha: new Date().toLocaleString('es-ES') };
 
     fetch('https://woodia-spain-n8n.zify4h.easypanel.host/webhook/woodia-contact', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data)
     })
-    .then(() => {
-      successMsg.style.display = 'block';
-      requestAnimationFrame(() => successMsg.classList.add('visible'));
+    .then(r => {
+      if (!r.ok) throw new Error('error');
+      if (successBox) { successBox.style.display = 'block'; requestAnimationFrame(() => successBox.classList.add('visible')); }
       this.reset();
     })
     .catch(() => {
-      successMsg.style.display = 'block';
-      requestAnimationFrame(() => successMsg.classList.add('visible'));
-      this.reset();
+      if (errorBox) errorBox.style.display = 'block';
     })
     .finally(() => {
       btn.textContent = 'Solicitar presupuesto gratuito';

@@ -17,17 +17,27 @@
     },
     {
       "parameters": {
+        "jsCode": "// Extrae datos del body del webhook (compatible con n8n v1 y v2)\nconst raw = $input.first().json;\nconst data = (raw.body && typeof raw.body === 'object') ? raw.body : raw;\n\nreturn [{\n  json: {\n    nombre:   data.nombre   || '',\n    negocio:  data.negocio  || '',\n    telefono: data.telefono || '',\n    email:    data.email    || '',\n    mensaje:  data.mensaje  || '',\n    fecha:    data.fecha    || new Date().toLocaleString('es-ES')\n  }\n}];"
+      },
+      "id": "node-code",
+      "name": "Extraer datos",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [280, 0]
+    },
+    {
+      "parameters": {
         "sendTo": "info@woodiaspain.com",
-        "subject": "=🏪 Nuevo contacto - {{ $json.body.nombre }} ({{ $json.body.negocio }})",
+        "subject": "=🏪 Nuevo contacto - {{ $json.nombre }} ({{ $json.negocio }})",
         "emailType": "html",
-        "message": "=<h2 style=\"color:#c8a951\">Nuevo contacto desde woodiaspain.com</h2>\n<table style=\"border-collapse:collapse;width:100%\">\n  <tr><td style=\"padding:8px;border:1px solid #ddd;font-weight:bold\">Nombre</td><td style=\"padding:8px;border:1px solid #ddd\">{{ $json.body.nombre }}</td></tr>\n  <tr><td style=\"padding:8px;border:1px solid #ddd;font-weight:bold\">Negocio</td><td style=\"padding:8px;border:1px solid #ddd\">{{ $json.body.negocio }}</td></tr>\n  <tr><td style=\"padding:8px;border:1px solid #ddd;font-weight:bold\">Teléfono</td><td style=\"padding:8px;border:1px solid #ddd\">{{ $json.body.telefono }}</td></tr>\n  <tr><td style=\"padding:8px;border:1px solid #ddd;font-weight:bold\">Email</td><td style=\"padding:8px;border:1px solid #ddd\">{{ $json.body.email }}</td></tr>\n  <tr><td style=\"padding:8px;border:1px solid #ddd;font-weight:bold\">Mensaje</td><td style=\"padding:8px;border:1px solid #ddd\">{{ $json.body.mensaje }}</td></tr>\n  <tr><td style=\"padding:8px;border:1px solid #ddd;font-weight:bold\">Fecha</td><td style=\"padding:8px;border:1px solid #ddd\">{{ $json.body.fecha }}</td></tr>\n</table>\n<br>\n<a href=\"https://wa.me/34{{ $json.body.telefono }}\" style=\"background:#25D366;color:white;padding:10px 20px;text-decoration:none;border-radius:6px\">Responder por WhatsApp</a>",
+        "message": "=<h2 style=\"color:#c8a951\">Nuevo contacto desde woodiaspain.com</h2>\n<table style=\"border-collapse:collapse;width:100%\">\n  <tr><td style=\"padding:8px;border:1px solid #ddd;font-weight:bold\">Nombre</td><td style=\"padding:8px;border:1px solid #ddd\">{{ $json.nombre }}</td></tr>\n  <tr><td style=\"padding:8px;border:1px solid #ddd;font-weight:bold\">Negocio</td><td style=\"padding:8px;border:1px solid #ddd\">{{ $json.negocio }}</td></tr>\n  <tr><td style=\"padding:8px;border:1px solid #ddd;font-weight:bold\">Teléfono</td><td style=\"padding:8px;border:1px solid #ddd\">{{ $json.telefono }}</td></tr>\n  <tr><td style=\"padding:8px;border:1px solid #ddd;font-weight:bold\">Email</td><td style=\"padding:8px;border:1px solid #ddd\">{{ $json.email }}</td></tr>\n  <tr><td style=\"padding:8px;border:1px solid #ddd;font-weight:bold\">Mensaje</td><td style=\"padding:8px;border:1px solid #ddd\">{{ $json.mensaje }}</td></tr>\n  <tr><td style=\"padding:8px;border:1px solid #ddd;font-weight:bold\">Fecha</td><td style=\"padding:8px;border:1px solid #ddd\">{{ $json.fecha }}</td></tr>\n</table>\n<br>\n<a href=\"https://wa.me/34{{ $json.telefono }}\" style=\"background:#25D366;color:white;padding:10px 20px;text-decoration:none;border-radius:6px\">Responder por WhatsApp</a>",
         "options": {}
       },
       "id": "node-gmail",
       "name": "Enviar email contacto",
       "type": "n8n-nodes-base.gmail",
       "typeVersion": 2.1,
-      "position": [300, 0],
+      "position": [560, 0],
       "credentials": {
         "gmailOAuth2": {
           "id": "",
@@ -63,11 +73,22 @@
       "name": "Responder con CORS",
       "type": "n8n-nodes-base.respondToWebhook",
       "typeVersion": 1.1,
-      "position": [600, 0]
+      "position": [840, 0]
     }
   ],
   "connections": {
     "Recibir contacto web": {
+      "main": [
+        [
+          {
+            "node": "Extraer datos",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extraer datos": {
       "main": [
         [
           {
