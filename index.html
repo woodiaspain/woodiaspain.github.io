@@ -20,6 +20,7 @@
   <meta name="geo.placename" content="A Coruña">
   <link rel="canonical" href="https://www.woodiaspain.com">
   <link rel="icon" type="image/png" href="icon.png">
+  <meta name="theme-color" content="#0d0d0d">
 
   <script type="application/ld+json">
   {
@@ -45,6 +46,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:wght@400;500;600&display=swap" as="style">
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 
   <style>
@@ -80,6 +82,30 @@
     img { display: block; max-width: 100%; }
 
     a { text-decoration: none; color: inherit; }
+
+    /* SCROLL PROGRESS BAR */
+    #scroll-progress {
+      position: fixed;
+      top: 0; left: 0;
+      height: 3px;
+      width: 0%;
+      background: #c8a951;
+      z-index: 999;
+      transition: width 0.1s linear;
+    }
+
+    /* HERO ENTRANCE KEYFRAMES */
+    @keyframes fadeInUp { from { opacity:0; transform:translateY(30px); } to { opacity:1; transform:translateY(0); } }
+    @keyframes fadeInDown { from { opacity:0; transform:translateY(-20px); } to { opacity:1; transform:translateY(0); } }
+    @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+    @keyframes heroImgIn { from { opacity:0; transform:scale(1.03); } to { opacity:1; transform:scale(1); } }
+
+    .hero-anim-down { animation: fadeInDown 0.5s ease both; }
+    .hero-anim-up-1 { animation: fadeInUp 0.7s ease 0.1s both; }
+    .hero-anim-up-2 { animation: fadeInUp 0.7s ease 0.25s both; }
+    .hero-anim-up-3 { animation: fadeInUp 0.7s ease 0.4s both; }
+    .hero-anim-up-4 { animation: fadeInUp 0.7s ease 0.55s both; }
+    .hero-anim-img { animation: heroImgIn 1s ease 0.2s both; }
 
     /* FADE ANIMATION */
     .fade {
@@ -229,17 +255,26 @@
     .trust-badge svg { flex-shrink: 0; }
     .hero-image-wrap {
       position: relative;
-      display: flex;
-      justify-content: center;
+      overflow: hidden;
+      border-radius: 16px;
+    }
+    @media (max-width: 767px) {
+      .hero-image-wrap { display: none; }
+    }
+    .hero-image-wrap::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right, #0d0d0d 0%, transparent 30%);
+      z-index: 1;
+      pointer-events: none;
     }
     .hero-image {
       width: 100%;
-      max-width: 520px;
-      aspect-ratio: 4/3;
+      height: 420px;
       object-fit: cover;
-      border-radius: 16px;
-      transform: rotate(-2deg);
-      box-shadow: 0 40px 80px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.06);
+      object-position: center top;
+      display: block;
     }
     .hero-badge-float {
       position: absolute;
@@ -831,9 +866,60 @@
     .footer-links { display: flex; gap: 20px; }
     .footer-links a { font-size: 0.8rem; color: rgba(255,255,255,0.35); transition: color 0.2s; }
     .footer-links a:hover { color: var(--accent); }
+
+    /* LEGAL SECTIONS */
+    .legal-section {
+      display: none;
+      background: var(--white);
+      padding: 80px 24px;
+    }
+    .legal-section .legal-inner {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .legal-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--accent-dark);
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      margin-bottom: 40px;
+      font-family: var(--font-body);
+      transition: color 0.2s;
+    }
+    .legal-back:hover { color: var(--accent); }
+    .legal-section h2 {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 800;
+      color: var(--text);
+      letter-spacing: -0.02em;
+      margin-bottom: 32px;
+    }
+    .legal-section h3 {
+      font-family: 'Syne', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text);
+      margin: 28px 0 8px;
+    }
+    .legal-section p {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.8;
+      margin-bottom: 12px;
+    }
   </style>
 </head>
 <body>
+
+<div id="scroll-progress" aria-hidden="true"></div>
 
 <!-- NAV -->
 <nav class="nav" aria-label="Navegación principal">
@@ -850,15 +936,14 @@
   <div class="container">
     <div class="hero-inner">
       <div class="hero-content">
-        <div class="hero-pill fade">Shopify Partner Oficial</div>
-        <h1 class="hero-title fade fade-delay-1" id="hero-title">
+        <div class="hero-pill hero-anim-down">Shopify Partner Oficial</div>
+        <h1 class="hero-title hero-anim-up-1" id="hero-title">
           Su negocio local<br>en internet en<br><span class="gold">48 horas</span>
         </h1>
-        <p class="hero-sub fade fade-delay-2">
-          Creamos su tienda Shopify profesional desde cero. Precio fijo, sin sorpresas,
-          con garantía de devolución de 7 días si no queda satisfecho.
+        <p class="hero-sub hero-anim-up-2">
+          Creamos tiendas Shopify profesionales para negocios locales de A Coruña. Precio fijo 300€, entrega en 48 horas, garantía de devolución.
         </p>
-        <div class="hero-ctas fade fade-delay-3">
+        <div class="hero-ctas hero-anim-up-3">
           <a href="#contacto" class="btn btn-gold">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
             Quiero mi tienda en 48h
@@ -868,7 +953,7 @@
             Hablar por WhatsApp
           </a>
         </div>
-        <div class="trust-badges fade fade-delay-4">
+        <div class="trust-badges hero-anim-up-4">
           <div class="trust-badge">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#c8a951" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
             Garantía 7 días
@@ -883,7 +968,7 @@
           </div>
         </div>
       </div>
-      <div class="hero-image-wrap fade fade-delay-2">
+      <div class="hero-image-wrap hero-anim-img">
         <img
           class="hero-image"
           src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80"
@@ -909,17 +994,17 @@
   <div class="container">
     <div class="stats-bar-inner">
       <div class="stat-item fade">
-        <span class="stat-num">48h</span>
+        <span class="stat-num" id="stat-1">48h</span>
         <span class="stat-label">Tiempo de entrega</span>
       </div>
       <div class="stat-divider" aria-hidden="true"></div>
       <div class="stat-item fade fade-delay-1">
-        <span class="stat-num">100%</span>
+        <span class="stat-num" id="stat-2">100%</span>
         <span class="stat-label">Satisfacción garantizada</span>
       </div>
       <div class="stat-divider" aria-hidden="true"></div>
       <div class="stat-item fade fade-delay-2">
-        <span class="stat-num">300€</span>
+        <span class="stat-num" id="stat-3">300€</span>
         <span class="stat-label">Precio fijo único</span>
       </div>
     </div>
@@ -991,8 +1076,7 @@
           <img src="lumiere-mockup.png" alt="Demo tienda LUMIÈRE Skincare en Shopify" loading="lazy" width="600" height="375">
           <div class="demo-overlay" aria-hidden="true">
             <button class="demo-overlay-btn" tabindex="-1">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"></path></svg>
-              Ver en detalle
+              Ver demo →
             </button>
           </div>
         </div>
@@ -1007,8 +1091,7 @@
           <img src="apex-mockup.png" alt="Demo tienda APEX Performance en Shopify" loading="lazy" width="600" height="375">
           <div class="demo-overlay" aria-hidden="true">
             <button class="demo-overlay-btn" tabindex="-1">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"></path></svg>
-              Ver en detalle
+              Ver demo →
             </button>
           </div>
         </div>
@@ -1260,7 +1343,7 @@
       </div>
       <div class="fade fade-delay-2">
         <div class="contact-form-wrap">
-          <form id="contact-form" novalidate>
+          <form id="contact-form" action="https://formspree.io/f/XXXXXXXX" method="POST" novalidate>
             <div class="form-row">
               <div class="form-group">
                 <label for="f-nombre">Nombre</label>
@@ -1293,10 +1376,47 @@
               <strong>¡Mensaje recibido!</strong>
               <p>Le respondemos en menos de 2 horas con un presupuesto detallado. Revise también su carpeta de spam.</p>
             </div>
+            <div id="form-error" role="alert" style="display:none;margin-top:12px;padding:14px 18px;background:rgba(220,50,50,0.06);border:1px solid rgba(220,50,50,0.25);border-radius:8px;font-size:0.88rem;color:#c0392b;">
+              Error al enviar. Llámenos al +34 624 594 551
+            </div>
           </form>
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- AVISO LEGAL -->
+<section class="legal-section" id="aviso-legal" aria-labelledby="aviso-title">
+  <div class="legal-inner">
+    <button class="legal-back" onclick="hideLegal('aviso-legal')">← Volver</button>
+    <h2 id="aviso-title">Aviso Legal</h2>
+    <h3>Titular</h3>
+    <p>Woodia Spain<br>Actividad: Desarrollo y diseño de tiendas online<br>Contacto: info@woodiaspain.com | +34 624 594 551<br>Domicilio: A Coruña, Galicia, España</p>
+    <h3>Condiciones de uso</h3>
+    <p>El acceso y uso de este sitio web implica la aceptación de las presentes condiciones. Woodia Spain se reserva el derecho de modificar los contenidos del sitio web sin previo aviso.</p>
+    <h3>Propiedad intelectual</h3>
+    <p>Los contenidos de esta web están protegidos por derechos de propiedad intelectual. Queda prohibida su reproducción total o parcial sin autorización expresa de Woodia Spain.</p>
+  </div>
+</section>
+
+<!-- POLÍTICA DE PRIVACIDAD -->
+<section class="legal-section" id="politica-privacidad" aria-labelledby="privacidad-title">
+  <div class="legal-inner">
+    <button class="legal-back" onclick="hideLegal('politica-privacidad')">← Volver</button>
+    <h2 id="privacidad-title">Política de Privacidad</h2>
+    <h3>Responsable</h3>
+    <p>Woodia Spain — info@woodiaspain.com</p>
+    <h3>Datos que recogemos</h3>
+    <p>Nombre, email, teléfono y mensaje enviado a través del formulario de contacto.</p>
+    <h3>Finalidad</h3>
+    <p>Responder a su consulta y gestionar la relación comercial.</p>
+    <h3>Legitimación</h3>
+    <p>Consentimiento del interesado.</p>
+    <h3>Conservación</h3>
+    <p>Los datos se conservan durante el tiempo necesario para gestionar su solicitud.</p>
+    <h3>Derechos</h3>
+    <p>Puede ejercer sus derechos de acceso, rectificación, supresión y portabilidad escribiendo a info@woodiaspain.com. No cedemos sus datos a terceros salvo obligación legal.</p>
   </div>
 </section>
 
@@ -1311,14 +1431,28 @@
       </div>
       <p class="footer-copy">© 2025 Woodia Spain · A Coruña, Galicia</p>
       <nav class="footer-links" aria-label="Enlaces legales">
-        <a href="/privacidad">Política de privacidad</a>
-        <a href="/legal">Aviso legal</a>
+        <a href="#" onclick="showLegal('aviso-legal');return false;">Aviso legal</a>
+        <a href="#" onclick="showLegal('politica-privacidad');return false;">Política de privacidad</a>
       </nav>
     </div>
   </div>
 </footer>
 
 <script>
+  // SCROLL PROGRESS BAR
+  const progressBar = document.getElementById('scroll-progress');
+  window.addEventListener('scroll', () => {
+    const scrolled = window.scrollY;
+    const total = document.documentElement.scrollHeight - window.innerHeight;
+    progressBar.style.width = (total > 0 ? (scrolled / total) * 100 : 0) + '%';
+  }, { passive: true });
+
+  // NAV scroll effect
+  window.addEventListener('scroll', () => {
+    document.querySelector('.nav').style.borderBottomColor =
+      window.scrollY > 60 ? 'rgba(255,255,255,0.1)' : 'rgba(255,255,255,0.06)';
+  }, { passive: true });
+
   // INTERSECTION OBSERVER — fade animations
   const io = new IntersectionObserver(
     entries => entries.forEach(e => {
@@ -1327,6 +1461,34 @@
     { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
   );
   document.querySelectorAll('.fade').forEach(el => io.observe(el));
+
+  // STATS COUNTER ANIMATION
+  function animateCount(el, target, suffix, duration) {
+    const start = performance.now();
+    function step(now) {
+      const elapsed = now - start;
+      const progress = Math.min(elapsed / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      el.textContent = Math.round(eased * target) + suffix;
+      if (progress < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+
+  let statsCounted = false;
+  const statsBar = document.querySelector('.stats-bar');
+  if (statsBar) {
+    const statsIO = new IntersectionObserver(entries => {
+      if (entries[0].isIntersecting && !statsCounted) {
+        statsCounted = true;
+        animateCount(document.getElementById('stat-1'), 48, 'h', 1500);
+        animateCount(document.getElementById('stat-2'), 100, '%', 1500);
+        animateCount(document.getElementById('stat-3'), 300, '€', 1500);
+        statsIO.disconnect();
+      }
+    }, { threshold: 0.5 });
+    statsIO.observe(statsBar);
+  }
 
   // LIGHTBOX
   const lightbox = document.getElementById('lightbox');
@@ -1376,18 +1538,52 @@
     });
   });
 
-  // FORM
+  // FORM — Formspree with fetch
   document.getElementById('contact-form').addEventListener('submit', function(e) {
     e.preventDefault();
-    this.querySelectorAll('input, textarea, button[type="submit"]').forEach(el => { el.disabled = true; });
-    document.getElementById('form-success').style.display = 'block';
+    const form = this;
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const successEl = document.getElementById('form-success');
+    const errorEl = document.getElementById('form-error');
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Enviando...';
+    successEl.style.display = 'none';
+    errorEl.style.display = 'none';
+
+    fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    })
+    .then(res => {
+      if (res.ok) {
+        successEl.style.display = 'block';
+        form.reset();
+        submitBtn.textContent = 'Solicitar presupuesto gratuito';
+        submitBtn.disabled = false;
+      } else {
+        throw new Error('server');
+      }
+    })
+    .catch(() => {
+      errorEl.style.display = 'block';
+      submitBtn.textContent = 'Solicitar presupuesto gratuito';
+      submitBtn.disabled = false;
+    });
   });
 
-  // NAV scroll effect
-  window.addEventListener('scroll', () => {
-    document.querySelector('.nav').style.borderBottomColor =
-      window.scrollY > 60 ? 'rgba(255,255,255,0.1)' : 'rgba(255,255,255,0.06)';
-  }, { passive: true });
+  // LEGAL PAGES
+  function showLegal(id) {
+    document.querySelectorAll('.legal-section').forEach(s => s.style.display = 'none');
+    document.getElementById(id).style.display = 'block';
+    window.scrollTo({ top: document.getElementById(id).offsetTop - 80, behavior: 'smooth' });
+  }
+
+  function hideLegal(id) {
+    document.getElementById(id).style.display = 'none';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 </script>
 
 </body>
