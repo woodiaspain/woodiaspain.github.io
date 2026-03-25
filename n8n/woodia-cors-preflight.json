@@ -1,0 +1,68 @@
+{
+  "name": "Woodia Spain - CORS Preflight",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "OPTIONS",
+        "path": "woodia-contact",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "id": "node-webhook-options",
+      "name": "OPTIONS preflight",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [0, 0],
+      "webhookId": "woodia-contact-options"
+    },
+    {
+      "parameters": {
+        "respondWith": "text",
+        "responseBody": "OK",
+        "options": {
+          "responseCode": 200,
+          "responseHeaders": {
+            "entries": [
+              {
+                "name": "Access-Control-Allow-Origin",
+                "value": "*"
+              },
+              {
+                "name": "Access-Control-Allow-Methods",
+                "value": "POST, OPTIONS"
+              },
+              {
+                "name": "Access-Control-Allow-Headers",
+                "value": "Content-Type, Accept"
+              }
+            ]
+          }
+        }
+      },
+      "id": "node-respond-cors",
+      "name": "Responder CORS",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [300, 0]
+    }
+  ],
+  "connections": {
+    "OPTIONS preflight": {
+      "main": [
+        [
+          {
+            "node": "Responder CORS",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [],
+  "pinData": {}
+}

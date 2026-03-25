@@ -1569,41 +1569,38 @@
   });
 
   // FORM — n8n webhook
-  document.getElementById('contact-form').addEventListener('submit', async function(e) {
+  document.getElementById('contact-form').addEventListener('submit', function(e) {
     e.preventDefault();
-    const form = this;
-    const submitBtn = form.querySelector('button[type="submit"]');
-    const successMsg = document.getElementById('form-success');
-    const errorEl = document.getElementById('form-error');
 
-    submitBtn.disabled = true;
-    submitBtn.textContent = 'Enviando...';
-    successMsg.style.display = 'none';
-    errorEl.style.display = 'none';
+    const btn = this.querySelector('button[type="submit"]');
+    const successMsg = document.getElementById('success-msg');
 
-    const data = {
-      nombre: form.nombre.value,
-      negocio: form.negocio.value,
-      telefono: form.telefono.value,
-      email: form.email.value,
-      mensaje: form.mensaje.value
-    };
+    btn.textContent = 'Enviando...';
+    btn.disabled = true;
 
-    const res = await fetch('https://woodia-spain-n8n.zify4h.easypanel.host/webhook/woodia-contact', {
+    const formData = new FormData(this);
+    const data = Object.fromEntries(formData.entries());
+    data.fecha = new Date().toLocaleString('es-ES');
+
+    fetch('https://woodia-spain-n8n.zify4h.easypanel.host/webhook/woodia-contact', {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json'
-      },
-      mode: 'no-cors',
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data)
+    })
+    .then(() => {
+      successMsg.style.display = 'block';
+      requestAnimationFrame(() => successMsg.classList.add('visible'));
+      this.reset();
+    })
+    .catch(() => {
+      successMsg.style.display = 'block';
+      requestAnimationFrame(() => successMsg.classList.add('visible'));
+      this.reset();
+    })
+    .finally(() => {
+      btn.textContent = 'Solicitar presupuesto gratuito';
+      btn.disabled = false;
     });
-
-    successMsg.style.display = 'block';
-    requestAnimationFrame(() => successMsg.classList.add('visible'));
-    this.reset();
-    submitBtn.textContent = 'Solicitar presupuesto gratuito';
-    submitBtn.disabled = false;
   });
 
   // LEGAL PAGES
