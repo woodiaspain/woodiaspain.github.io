@@ -3,17 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Creamos tiendas Shopify profesionales en A Coruña y Galicia. Diseño personalizado, configuración completa y entrega rápida. Planes desde 300€. Presupuesto sin compromiso.">
-  <meta property="og:title" content="Woodia Spain — Tiendas Shopify para Negocios Locales">
-  <meta property="og:description" content="Creamos tiendas Shopify profesionales para negocios locales en A Coruña. Planes desde 300€, entrega rápida, garantía incluida.">
+  <meta name="description" content="Diseñamos webs profesionales, tiendas Shopify e implementamos Inteligencia Artificial para negocios en A Coruña y Galicia. Diseño digital y automatización desde 249€.">
+  <meta property="og:title" content="Woodia Spain — Diseño Web, Shopify e IA para Negocios Locales">
+  <meta property="og:description" content="Diseñamos webs profesionales, tiendas Shopify e implementamos IA para negocios en A Coruña. Resultados reales desde el primer día.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://woodiaspain.com">
   <meta property="og:image" content="https://www.woodiaspain.com/og-image.png">
   <meta property="og:locale" content="es_ES">
   <meta property="og:site_name" content="Woodia Spain">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Woodia Spain — Su tienda Shopify, lista en 48 horas">
-  <meta name="twitter:description" content="Creamos tiendas Shopify profesionales para negocios locales. Precio fijo 300€, entrega 48h.">
+  <meta name="twitter:title" content="Woodia Spain — Diseño Web, Shopify e Inteligencia Artificial">
+  <meta name="twitter:description" content="Diseñamos webs profesionales, tiendas Shopify e implementamos IA para negocios locales. Desde 249€.">
   <meta name="robots" content="index, follow">
   <meta name="author" content="Woodia Spain">
   <meta name="geo.region" content="ES-C">
@@ -27,7 +27,7 @@
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "Woodia Spain",
-    "description": "Agencia especializada en tiendas Shopify para negocios locales en A Coruña. Diseño profesional, configuración completa y soporte continuo. Planes desde 300€.",
+    "description": "Agencia de diseño web y transformación digital en A Coruña. Creamos tiendas Shopify, webs corporativas e implementamos Inteligencia Artificial para negocios locales. Desde 249€.",
     "url": "https://www.woodiaspain.com",
     "telephone": "+34624594551",
     "email": "info@woodiaspain.com",
@@ -40,11 +40,17 @@
     "areaServed": ["A Coruña", "Galicia", "España"],
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
-      "name": "Diseño de tiendas Shopify",
+      "name": "Servicios de diseño web y transformación digital",
       "itemListElement": [
         {"@type": "Offer", "name": "Shopify Básica", "price": "300", "priceCurrency": "EUR"},
         {"@type": "Offer", "name": "Shopify Growth", "price": "700", "priceCurrency": "EUR"},
-        {"@type": "Offer", "name": "Shopify Premium", "price": "1200", "priceCurrency": "EUR"}
+        {"@type": "Offer", "name": "Shopify Premium", "price": "1200", "priceCurrency": "EUR"},
+        {"@type": "Offer", "name": "Web Starter", "price": "249", "priceCurrency": "EUR"},
+        {"@type": "Offer", "name": "Web Business", "price": "599", "priceCurrency": "EUR"},
+        {"@type": "Offer", "name": "Web Pro", "price": "1199", "priceCurrency": "EUR"},
+        {"@type": "Offer", "name": "Pack IA Email", "price": "399", "priceCurrency": "EUR"},
+        {"@type": "Offer", "name": "Pack IA WhatsApp", "price": "499", "priceCurrency": "EUR"},
+        {"@type": "Offer", "name": "Pack IA Completo", "price": "799", "priceCurrency": "EUR"}
       ]
     },
     "priceRange": "€€",
@@ -52,7 +58,7 @@
   }
   </script>
 
-  <title>Woodia Spain — Diseño Tiendas Shopify en A Coruña | Desde 300€</title>
+  <title>Woodia Spain — Diseño Web, Shopify e IA en A Coruña | Desde 249€</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -75,6 +81,8 @@
       --font-body:    'DM Sans', sans-serif;
       --section-py: clamp(64px, 10vw, 120px);
       --container:  min(1200px, 100% - 48px);
+      --ai-accent:      #6366f1;
+      --ai-accent-dark: #4f46e5;
     }
 
     html { scroll-behavior: smooth; }
@@ -913,6 +921,182 @@
       box-shadow: 0 6px 28px rgba(37,211,102,0.55);
     }
 
+    /* NAV CENTER LINKS */
+    .nav-center {
+      display: none;
+      gap: 28px;
+      align-items: center;
+    }
+    @media (min-width: 860px) {
+      .nav-center { display: flex; }
+    }
+    .nav-link {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: rgba(255,255,255,0.55);
+      transition: color 0.2s;
+      letter-spacing: 0.02em;
+    }
+    .nav-link:hover { color: var(--accent); }
+
+    /* SERVICE TABS NAV */
+    .service-tabs-nav {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 48px;
+    }
+    .service-tab {
+      display: inline-block;
+      padding: 9px 22px;
+      border-radius: 100px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      border: 1.5px solid rgba(255,255,255,0.15);
+      color: rgba(255,255,255,0.45);
+      background: transparent;
+      cursor: pointer;
+      text-decoration: none;
+      transition: border-color 0.2s, color 0.2s, background 0.2s;
+      letter-spacing: 0.02em;
+    }
+    .service-tab:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      background: rgba(200,169,81,0.06);
+    }
+    .web-pricing .service-tab {
+      border-color: rgba(0,0,0,0.12);
+      color: var(--text-muted);
+    }
+    .web-pricing .service-tab:hover {
+      border-color: var(--accent-dark);
+      color: var(--accent-dark);
+      background: rgba(200,169,81,0.08);
+    }
+
+    /* WEB PRICING SECTION */
+    .web-pricing {
+      background: var(--bg-light);
+      padding: var(--section-py) 0;
+    }
+    .web-pricing .section-tag { color: var(--accent-dark); }
+    .web-pricing .section-title { color: var(--text); }
+    .web-pricing .section-sub { color: var(--text-muted); }
+    .web-pricing .price-card {
+      border: 1px solid var(--border);
+      background: var(--white);
+    }
+    .web-pricing .price-card.popular {
+      border-color: var(--accent);
+      background: rgba(200,169,81,0.04);
+    }
+    .web-pricing .price-name { color: var(--text-muted); }
+    .web-pricing .price-amount { color: var(--text); }
+    .web-pricing .price-period { color: var(--text-muted); }
+    .web-pricing .price-divider { background: var(--border); }
+    .web-pricing .price-feature { color: var(--text-muted); }
+    .web-pricing .btn-outline {
+      color: var(--text);
+      border-color: rgba(0,0,0,0.18);
+    }
+    .web-pricing .btn-outline:hover {
+      border-color: var(--accent);
+      color: var(--accent-dark);
+    }
+    .web-pricing .price-note {
+      color: var(--text-muted);
+      background: rgba(0,0,0,0.03);
+      border-color: var(--border);
+    }
+    .web-pricing .price-note strong { color: var(--text); }
+
+    /* IA SECTION */
+    .ai-section {
+      background: #07070f;
+      padding: var(--section-py) 0;
+    }
+    .ai-section .section-tag { color: var(--ai-accent); }
+    .ai-section .section-title { color: var(--white); }
+    .ai-section .section-sub { color: rgba(255,255,255,0.5); }
+    .ai-section .service-tab {
+      border-color: rgba(99,102,241,0.2);
+      color: rgba(255,255,255,0.4);
+    }
+    .ai-section .service-tab:hover {
+      border-color: var(--ai-accent);
+      color: var(--ai-accent);
+      background: rgba(99,102,241,0.06);
+    }
+    .ai-section .price-card {
+      border-color: rgba(99,102,241,0.12);
+      background: rgba(99,102,241,0.04);
+    }
+    .ai-section .price-card.popular {
+      border-color: var(--ai-accent);
+      background: rgba(99,102,241,0.09);
+    }
+    .price-feature.ai-feature::before {
+      background: rgba(99,102,241,0.12) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M4 8l2.5 2.5L12 5' stroke='%236366f1' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/contain no-repeat;
+      border: 1px solid rgba(99,102,241,0.3);
+    }
+    .ai-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(99,102,241,0.12);
+      border: 1px solid rgba(99,102,241,0.3);
+      color: var(--ai-accent);
+      padding: 4px 12px;
+      border-radius: 100px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+    .ai-subsection-label { margin-bottom: 20px; }
+    .ai-medida-card {
+      background: rgba(99,102,241,0.05);
+      border: 1.5px dashed rgba(99,102,241,0.3);
+      border-radius: 16px;
+      padding: clamp(28px, 4vw, 48px);
+      text-align: center;
+      margin-top: 32px;
+    }
+    .ai-medida-card h3 {
+      font-family: var(--font-display);
+      font-size: clamp(1.3rem, 3vw, 1.8rem);
+      font-weight: 800;
+      color: var(--white);
+      margin-bottom: 14px;
+      letter-spacing: -0.025em;
+    }
+    .ai-medida-card p {
+      color: rgba(255,255,255,0.5);
+      font-size: 0.92rem;
+      line-height: 1.75;
+      max-width: 560px;
+      margin: 0 auto 28px;
+    }
+    .btn-ai {
+      background: var(--ai-accent);
+      color: var(--white);
+    }
+    .btn-ai:hover {
+      background: var(--ai-accent-dark);
+      box-shadow: 0 8px 24px rgba(99,102,241,0.4);
+    }
+    .btn-ai-outline {
+      background: transparent;
+      color: rgba(255,255,255,0.7);
+      border: 1.5px solid rgba(99,102,241,0.35);
+    }
+    .btn-ai-outline:hover {
+      border-color: var(--ai-accent);
+      color: var(--ai-accent);
+    }
+
     /* LEGAL SECTIONS */
     .legal-section {
       display: none;
@@ -974,6 +1158,11 @@
          onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
     <span class="nav-logo-text">Woodia Spain</span>
   </a>
+  <div class="nav-center">
+    <a href="#shopify" class="nav-link">Shopify</a>
+    <a href="#web" class="nav-link">Web</a>
+    <a href="#ia" class="nav-link">IA</a>
+  </div>
   <a href="#contacto" class="btn btn-gold">Solicitar presupuesto</a>
 </nav>
 
@@ -982,12 +1171,12 @@
   <div class="container">
     <div class="hero-inner">
       <div class="hero-content">
-        <div class="hero-pill hero-anim-down">Shopify Partner · A Coruña</div>
+        <div class="hero-pill hero-anim-down">Diseño Web · Shopify · IA · A Coruña</div>
         <h1 class="hero-title hero-anim-up-1" id="hero-title">
           Su negocio local,<br>en internet con<br><span style="color:#c8a951">diseño profesional</span>
         </h1>
         <p class="hero-sub hero-anim-up-2">
-          Creamos tiendas Shopify para negocios locales de A Coruña y Galicia. Diseño personalizado, entrega rápida, soporte incluido.
+          Diseñamos su presencia digital y automatizamos su negocio con inteligencia artificial. Shopify, webs corporativas e IA para negocios en A Coruña y Galicia.
         </p>
         <div class="hero-ctas hero-anim-up-3">
           <a href="#demos" class="btn btn-gold">
@@ -1006,7 +1195,7 @@
           </div>
           <div class="trust-badge">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#c8a951" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            Desde 300€
+            Desde 249€
           </div>
           <div class="trust-badge">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#c8a951" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
@@ -1050,8 +1239,8 @@
       </div>
       <div class="stat-divider" aria-hidden="true"></div>
       <div class="stat-item fade fade-delay-2">
-        <span class="stat-num" id="stat-3">300€</span>
-        <span class="stat-label">Precio según proyecto</span>
+        <span class="stat-num" id="stat-3">20+</span>
+        <span class="stat-label">Proyectos realizados</span>
       </div>
     </div>
   </div>
@@ -1249,10 +1438,15 @@
   </div>
 </section>
 
-<!-- PRICING -->
-<section class="pricing" aria-labelledby="pricing-title">
+<!-- PRICING SHOPIFY -->
+<section class="pricing" id="shopify" aria-labelledby="pricing-title">
   <div class="container">
-    <span class="section-tag fade">TARIFAS</span>
+    <div class="service-tabs-nav fade">
+      <a href="#shopify" class="service-tab">Tiendas Shopify</a>
+      <a href="#web" class="service-tab">Web Corporativa</a>
+      <a href="#ia" class="service-tab">Inteligencia Artificial</a>
+    </div>
+    <span class="section-tag fade">TIENDAS SHOPIFY</span>
     <h2 class="section-title fade fade-delay-1" id="pricing-title">Sin sorpresas.<br>Sin letra pequeña.</h2>
     <p class="section-sub fade fade-delay-2">Tres opciones claras para arrancar su negocio online con el pie derecho.</p>
     <div class="pricing-grid">
@@ -1328,6 +1522,160 @@
   </div>
 </section>
 
+<!-- WEB CORPORATIVA PRICING -->
+<section class="web-pricing" id="web" aria-labelledby="web-pricing-title">
+  <div class="container">
+    <div class="service-tabs-nav fade">
+      <a href="#shopify" class="service-tab">Tiendas Shopify</a>
+      <a href="#web" class="service-tab">Web Corporativa</a>
+      <a href="#ia" class="service-tab">Inteligencia Artificial</a>
+    </div>
+    <span class="section-tag fade">WEBS CORPORATIVAS</span>
+    <h2 class="section-title fade fade-delay-1" id="web-pricing-title">Su negocio en internet,<br>con identidad propia.</h2>
+    <p class="section-sub fade fade-delay-2">Para negocios que necesitan una web de presentación profesional, sin tienda online. Con blog, SEO y CMS según el plan elegido.</p>
+    <div class="pricing-grid">
+
+      <!-- WEB STARTER -->
+      <div class="price-card fade fade-delay-1">
+        <div class="price-name">Web Starter</div>
+        <div class="price-amount"><span class="currency">€</span>249</div>
+        <div class="price-period">pago único · entrega en 5-7 días</div>
+        <div class="price-divider"></div>
+        <p style="font-size:0.84rem;color:var(--text-muted);margin-bottom:20px;line-height:1.5;">Ideal para autónomos y pequeños negocios que quieren presencia profesional en internet.</p>
+        <ul class="price-features">
+          <li class="price-feature">Hasta 5 páginas (Inicio, Servicios, Contacto + 2 extra)</li>
+          <li class="price-feature">Diseño responsive (móvil, tablet, escritorio)</li>
+          <li class="price-feature">Formulario de contacto funcional</li>
+          <li class="price-feature">SEO básico y Google Search Console</li>
+          <li class="price-feature">Velocidad y metaetiquetas optimizadas</li>
+        </ul>
+        <a href="#contacto" class="btn btn-outline" style="width:100%;justify-content:center;">Empezar →</a>
+      </div>
+
+      <!-- WEB BUSINESS -->
+      <div class="price-card popular fade fade-delay-2">
+        <div class="price-badge">Más popular</div>
+        <div class="price-name">Web Business</div>
+        <div class="price-amount"><span class="currency">€</span>599</div>
+        <div class="price-period">pago único · entrega en 10-14 días</div>
+        <div class="price-divider"></div>
+        <p style="font-size:0.84rem;color:rgba(255,255,255,0.5);margin-bottom:20px;line-height:1.5;">Para empresas que quieren destacar y posicionarse en Google desde el primer día.</p>
+        <ul class="price-features">
+          <li class="price-feature">Hasta 10 páginas con diseño a medida</li>
+          <li class="price-feature">Blog integrado</li>
+          <li class="price-feature">Google Analytics + Google Maps</li>
+          <li class="price-feature">SEO avanzado + sitemap XML</li>
+          <li class="price-feature">Core Web Vitals optimizados</li>
+          <li class="price-feature">1 mes de soporte incluido</li>
+        </ul>
+        <a href="#contacto" class="btn btn-gold" style="width:100%;justify-content:center;">Contratar →</a>
+      </div>
+
+      <!-- WEB PRO -->
+      <div class="price-card fade fade-delay-3">
+        <div class="price-name">Web Pro</div>
+        <div class="price-amount"><span class="currency">€</span>1.199</div>
+        <div class="price-period">pago único · entrega en 15-20 días</div>
+        <div class="price-divider"></div>
+        <p style="font-size:0.84rem;color:rgba(255,255,255,0.5);margin-bottom:20px;line-height:1.5;">Para negocios que quieren una web potente, con CMS propio y conexión a herramientas externas.</p>
+        <ul class="price-features">
+          <li class="price-feature">Páginas ilimitadas con CMS propio</li>
+          <li class="price-feature">Diseño premium + entrevista de branding</li>
+          <li class="price-feature">Animaciones e interacciones avanzadas</li>
+          <li class="price-feature">SEO técnico completo</li>
+          <li class="price-feature">Integración CRM, email marketing, reservas...</li>
+          <li class="price-feature">3 meses de soporte prioritario</li>
+        </ul>
+        <a href="#contacto" class="btn btn-outline" style="width:100%;justify-content:center;">Contratar →</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- INTELIGENCIA ARTIFICIAL -->
+<section class="ai-section" id="ia" aria-labelledby="ia-pricing-title">
+  <div class="container">
+    <div class="service-tabs-nav fade">
+      <a href="#shopify" class="service-tab">Tiendas Shopify</a>
+      <a href="#web" class="service-tab">Web Corporativa</a>
+      <a href="#ia" class="service-tab">Inteligencia Artificial</a>
+    </div>
+    <span class="section-tag fade">INTELIGENCIA ARTIFICIAL</span>
+    <h2 class="section-title fade fade-delay-1" id="ia-pricing-title">Automatice su negocio.<br>Trabaje menos, ingrese más.</h2>
+    <p class="section-sub fade fade-delay-2">Agentes de IA que responden por usted en email y WhatsApp, 24 horas al día, adaptados al tono y contexto exacto de su negocio.</p>
+    <div class="ai-subsection-label fade">
+      <span style="font-size:0.78rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.35);">IA Esencial — Paquetes de precio fijo</span>
+    </div>
+    <div class="pricing-grid">
+
+      <!-- IA EMAIL -->
+      <div class="price-card fade fade-delay-1">
+        <div class="ai-badge">Email IA</div>
+        <div class="price-name">Pack IA Email</div>
+        <div class="price-amount"><span class="currency">€</span>399</div>
+        <div class="price-period">pago único · configuración en 3-5 días</div>
+        <div class="price-divider"></div>
+        <p style="font-size:0.84rem;color:rgba(255,255,255,0.5);margin-bottom:20px;line-height:1.5;">Un agente que responde sus emails automáticamente, con el tono y contexto de su negocio.</p>
+        <ul class="price-features">
+          <li class="price-feature ai-feature">Respuestas automáticas de email con IA</li>
+          <li class="price-feature ai-feature">Clasificación y priorización de correos</li>
+          <li class="price-feature ai-feature">Entrenado con el tono de su empresa</li>
+          <li class="price-feature ai-feature">Panel de supervisión incluido</li>
+          <li class="price-feature ai-feature">Configuración en 3-5 días</li>
+        </ul>
+        <a href="#contacto" class="btn btn-ai-outline" style="width:100%;justify-content:center;">Solicitar →</a>
+      </div>
+
+      <!-- IA WHATSAPP -->
+      <div class="price-card fade fade-delay-2">
+        <div class="ai-badge">WhatsApp IA</div>
+        <div class="price-name">Pack IA WhatsApp</div>
+        <div class="price-amount"><span class="currency">€</span>499</div>
+        <div class="price-period">pago único · configuración en 5-7 días</div>
+        <div class="price-divider"></div>
+        <p style="font-size:0.84rem;color:rgba(255,255,255,0.5);margin-bottom:20px;line-height:1.5;">Chatbot inteligente para WhatsApp Business que atiende a sus clientes a cualquier hora.</p>
+        <ul class="price-features">
+          <li class="price-feature ai-feature">Chatbot para WhatsApp Business</li>
+          <li class="price-feature ai-feature">Responde consultas frecuentes 24/7</li>
+          <li class="price-feature ai-feature">Derivación a humano cuando es necesario</li>
+          <li class="price-feature ai-feature">Integrado con su catálogo o servicios</li>
+          <li class="price-feature ai-feature">Configuración en 5-7 días</li>
+        </ul>
+        <a href="#contacto" class="btn btn-ai-outline" style="width:100%;justify-content:center;">Solicitar →</a>
+      </div>
+
+      <!-- IA EMAIL + WHATSAPP COMPLETO -->
+      <div class="price-card popular fade fade-delay-3">
+        <div class="price-badge" style="background:var(--ai-accent);">Mejor valor</div>
+        <div class="ai-badge">Email + WhatsApp</div>
+        <div class="price-name">Pack IA Completo</div>
+        <div class="price-amount"><span class="currency">€</span>799</div>
+        <div class="price-period">pago único · ahorra 99€ · 7-10 días</div>
+        <div class="price-divider"></div>
+        <p style="font-size:0.84rem;color:rgba(255,255,255,0.5);margin-bottom:20px;line-height:1.5;">Email y WhatsApp combinados y sincronizados, con un dashboard unificado de conversaciones.</p>
+        <ul class="price-features">
+          <li class="price-feature ai-feature">Todo el Pack IA Email incluido</li>
+          <li class="price-feature ai-feature">Todo el Pack IA WhatsApp incluido</li>
+          <li class="price-feature ai-feature">Sincronización entre canales</li>
+          <li class="price-feature ai-feature">Dashboard unificado de conversaciones</li>
+          <li class="price-feature ai-feature">Ahorro de 99€ respecto a packs separados</li>
+        </ul>
+        <a href="#contacto" class="btn btn-ai" style="width:100%;justify-content:center;">Contratar →</a>
+      </div>
+
+    </div>
+
+    <!-- IA A MEDIDA -->
+    <div class="ai-medida-card fade">
+      <span style="display:inline-block;font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--ai-accent);margin-bottom:12px;">IA a Medida</span>
+      <h3>Proyectos complejos de automatización</h3>
+      <p>Automatización de procesos internos, integración con ERP/CRM, agentes multicanal, análisis de datos con IA, workflows personalizados con n8n y mucho más. Presupuesto personalizado en 24 horas.</p>
+      <a href="#contacto" class="btn btn-ai">Cuéntenos su proyecto → presupuesto en 24h</a>
+    </div>
+  </div>
+</section>
+
 <!-- FAQ -->
 <section class="faq" aria-labelledby="faq-title">
   <div class="container">
@@ -1368,6 +1716,34 @@
           <span class="faq-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></span>
         </button>
         <div class="faq-answer"><div class="faq-answer-inner">Sí. Shopify es muy intuitivo y le incluimos formación para que pueda gestionar su tienda de forma totalmente autónoma.</div></div>
+      </div>
+      <div class="faq-item fade fade-delay-1" role="listitem">
+        <button class="faq-question" aria-expanded="false">
+          ¿Qué diferencia hay entre una web corporativa y una tienda Shopify?
+          <span class="faq-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></span>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">Una web corporativa presenta su negocio, servicios y equipo de forma profesional. Es ideal si no vende productos físicos online. Una tienda Shopify está diseñada para vender: tiene carrito, pagos, gestión de pedidos y todo lo necesario para el comercio electrónico. Podemos orientarle sobre cuál se adapta mejor a su caso.</div></div>
+      </div>
+      <div class="faq-item fade fade-delay-2" role="listitem">
+        <button class="faq-question" aria-expanded="false">
+          ¿El agente de IA entiende mi negocio específico?
+          <span class="faq-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></span>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">Sí. Durante la configuración entrenamos el agente con la información específica de su negocio: productos o servicios, precios, políticas, tono de comunicación y las preguntas frecuentes de sus clientes. El resultado es un agente que responde como si fuera usted, no como un bot genérico.</div></div>
+      </div>
+      <div class="faq-item fade fade-delay-3" role="listitem">
+        <button class="faq-question" aria-expanded="false">
+          ¿Necesito conocimientos técnicos para gestionar la IA?
+          <span class="faq-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></span>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">No. Le entregamos un panel de supervisión sencillo donde puede ver todas las conversaciones, revisar las respuestas del agente y ajustar lo que necesite. Nos encargamos de toda la parte técnica. Si en algún momento quiere actualizar la información del agente, nos lo indica y lo hacemos nosotros.</div></div>
+      </div>
+      <div class="faq-item fade fade-delay-4" role="listitem">
+        <button class="faq-question" aria-expanded="false">
+          ¿Puedo combinar una web corporativa con un agente de IA?
+          <span class="faq-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></span>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">Por supuesto. Es una combinación muy habitual: una web profesional que atrae visitas y un agente de IA que atiende a los clientes por WhatsApp o email de forma automática. Juntos forman una presencia digital completa. Contáctenos y le preparamos un presupuesto combinado.</div></div>
       </div>
     </div>
   </div>
@@ -1557,7 +1933,7 @@
         statsCounted = true;
         animateCount(document.getElementById('stat-1'), 48, 'h', 1500);
         animateCount(document.getElementById('stat-2'), 100, '%', 1500);
-        animateCount(document.getElementById('stat-3'), 300, '€', 1500);
+        animateCount(document.getElementById('stat-3'), 20, '+', 1500);
         statsIO.disconnect();
       }
     }, { threshold: 0.5 });
