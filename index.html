@@ -615,6 +615,7 @@
       padding: var(--section-py) 0;
     }
     .why-inner { display: grid; gap: 48px; align-items: center; }
+    .why-inner > * { min-width: 0; }
     @media (min-width: 900px) {
       .why-inner { grid-template-columns: 1fr 1fr; }
     }
@@ -867,6 +868,7 @@
       padding: var(--section-py) 0;
     }
     .contact-inner { display: grid; gap: 56px; align-items: start; }
+    .contact-inner > * { min-width: 0; }
     @media (min-width: 900px) {
       .contact-inner { grid-template-columns: 1fr 1.2fr; }
     }
