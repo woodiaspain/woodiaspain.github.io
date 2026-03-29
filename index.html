@@ -643,6 +643,75 @@
       box-shadow: 0 24px 60px rgba(0,0,0,0.12);
     }
 
+    /* PAYMENT OPTIONS */
+    .payment-options {
+      background: var(--bg-light);
+      padding: var(--section-py) 0;
+    }
+    .payment-options .section-tag { color: var(--accent-dark); }
+    .payment-options .section-title { color: var(--text); }
+    .payment-options .section-sub { color: var(--text-muted); }
+    .payment-options-grid {
+      display: grid;
+      gap: 24px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    @media (min-width: 700px) {
+      .payment-options-grid { grid-template-columns: 1fr 1fr; }
+    }
+    .payment-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 36px 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .payment-card:hover {
+      border-color: var(--accent);
+      box-shadow: 0 8px 32px rgba(200,169,81,0.12);
+    }
+    .payment-card-icon {
+      width: 52px; height: 52px;
+      border-radius: 14px;
+      background: var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .payment-card-icon svg { width: 24px; height: 24px; color: var(--bg-dark); }
+    .payment-card-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent-dark);
+      background: rgba(200,169,81,0.1);
+      border: 1px solid rgba(200,169,81,0.3);
+      border-radius: 100px;
+      padding: 5px 13px;
+      width: fit-content;
+    }
+    .payment-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.18rem;
+      font-weight: 700;
+      color: var(--text);
+      line-height: 1.25;
+    }
+    .payment-card p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+
     /* PRICING */
     .pricing {
       background: var(--bg-dark);
@@ -1439,6 +1508,51 @@
           loading="lazy"
         >
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONDICIONES DE PAGO -->
+<section class="payment-options" id="condiciones-pago" aria-labelledby="payment-title">
+  <div class="container">
+    <span class="section-tag fade">CONDICIONES FLEXIBLES</span>
+    <h2 class="section-title fade fade-delay-1" id="payment-title">Pague como<br>mejor le convenga.</h2>
+    <p class="section-sub fade fade-delay-2">Sin permanencia ni sorpresas. Diseñamos las condiciones de pago para que arrancar su proyecto no suponga ningún obstáculo.</p>
+    <div class="payment-options-grid">
+
+      <div class="payment-card fade fade-delay-1">
+        <div class="payment-card-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+            <line x1="1" y1="10" x2="23" y2="10"></line>
+          </svg>
+        </div>
+        <span class="payment-card-badge">
+          <svg viewBox="0 0 16 16" fill="none" width="11" height="11" aria-hidden="true"><path d="M3 8l3 3 7-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Sin compromiso
+        </span>
+        <h3>Pago en 3 meses</h3>
+        <p>Fraccione el coste del desarrollo en 3 mensualidades iguales. Sin permanencia ni penalización por cancelación anticipada. Ideal si quiere empezar sin una gran inversión inicial.</p>
+      </div>
+
+      <div class="payment-card fade fade-delay-2">
+        <div class="payment-card-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 12 20 22 4 22 4 12"></polyline>
+            <rect x="2" y="7" width="20" height="5"></rect>
+            <line x1="12" y1="22" x2="12" y2="7"></line>
+            <path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"></path>
+            <path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"></path>
+          </svg>
+        </div>
+        <span class="payment-card-badge">
+          <svg viewBox="0 0 16 16" fill="none" width="11" height="11" aria-hidden="true"><path d="M3 8l3 3 7-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Pago al contado
+        </span>
+        <h3>1er mes de mantenimiento GRATIS</h3>
+        <p>Si paga el desarrollo al contado, el primer mes de mantenimiento mensual es completamente gratuito. Sin condiciones adicionales ni letra pequeña.</p>
+      </div>
+
     </div>
   </div>
 </section>
