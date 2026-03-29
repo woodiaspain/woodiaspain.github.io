@@ -371,22 +371,6 @@
       background: var(--white);
       padding: var(--section-py) 0;
     }
-    .includes--dark {
-      background: #07070f;
-    }
-    .includes--dark .section-tag { color: rgba(255,255,255,0.55); }
-    .includes--dark .section-title { color: var(--white); }
-    .includes--dark .section-sub { color: rgba(255,255,255,0.5); }
-    .includes--dark .include-card {
-      background: rgba(255,255,255,0.04);
-      border-color: rgba(255,255,255,0.1);
-    }
-    .includes--dark .include-card:hover {
-      border-color: #6366f1;
-      box-shadow: 0 8px 32px rgba(99,102,241,0.15);
-    }
-    .includes--dark .include-card h3 { color: var(--white); }
-    .includes--dark .include-card p { color: rgba(255,255,255,0.5); }
     .section-tag {
       display: inline-block;
       font-size: 0.72rem;
@@ -1048,15 +1032,11 @@
     }
     .ai-section .price-card {
       border-color: rgba(255,255,255,0.1);
-      background: rgba(255,255,255,0.03);
+      background: rgba(255,255,255,0.04);
     }
     .ai-section .price-card.popular {
-      border-color: rgba(255,255,255,0.35);
-      background: rgba(255,255,255,0.06);
-    }
-    .price-feature.ai-feature::before {
-      background: rgba(255,255,255,0.06) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M4 8l2.5 2.5L12 5' stroke='%23ffffff' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/contain no-repeat;
-      border: 1px solid rgba(255,255,255,0.2);
+      border-color: var(--accent);
+      background: rgba(200,169,81,0.06);
     }
     .ai-badge {
       display: inline-flex;
@@ -1314,112 +1294,6 @@
         </div>
         <h3>Sin letra pequeña</h3>
         <p>El precio acordado es el precio final. Sin extras de última hora ni costes ocultos.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- QUÉ INCLUYE — WEB CORPORATIVA -->
-<section class="includes" aria-labelledby="web-includes-title">
-  <div class="container">
-    <span class="section-tag fade">WEB CORPORATIVA</span>
-    <h2 class="section-title fade fade-delay-1" id="web-includes-title">Todo lo que incluye<br>su web corporativa</h2>
-    <p class="section-sub fade fade-delay-2">Una web profesional entregada completa y lista para recibir clientes desde el primer día.</p>
-    <div class="includes-grid">
-      <div class="include-card fade fade-delay-1">
-        <div class="include-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
-        </div>
-        <h3>Diseño a medida</h3>
-        <p>Cada web diseñada desde cero según la identidad de su negocio. Sin plantillas genéricas.</p>
-      </div>
-      <div class="include-card fade fade-delay-2">
-        <div class="include-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="5" width="22" height="14" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
-        </div>
-        <h3>100% responsive</h3>
-        <p>Perfecta en móvil, tablet y escritorio. El 80% de sus clientes navega desde el teléfono.</p>
-      </div>
-      <div class="include-card fade fade-delay-3">
-        <div class="include-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-        </div>
-        <h3>SEO desde el primer día</h3>
-        <p>Metaetiquetas, velocidad, sitemap y Google Search Console configurados en la entrega.</p>
-      </div>
-      <div class="include-card fade fade-delay-1">
-        <div class="include-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-        </div>
-        <h3>Formulario de contacto</h3>
-        <p>Integrado y funcional desde el primer día para que sus clientes puedan escribirle directamente.</p>
-      </div>
-      <div class="include-card fade fade-delay-2">
-        <div class="include-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-        </div>
-        <h3>Entrega rápida</h3>
-        <p>Según el pack elegido, en 5–20 días hábiles. Con plazos claros desde el inicio del proyecto.</p>
-      </div>
-      <div class="include-card fade fade-delay-3">
-        <div class="include-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-        </div>
-        <h3>Soporte incluido</h3>
-        <p>Correcciones y ajustes post-entrega incluidos en todos los planes sin coste adicional.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- QUÉ INCLUYE — IA PARA SU NEGOCIO -->
-<section class="includes includes--dark" aria-labelledby="ia-includes-title">
-  <div class="container">
-    <span class="section-tag fade">INTELIGENCIA ARTIFICIAL</span>
-    <h2 class="section-title fade fade-delay-1" id="ia-includes-title">Todo lo que activa<br>su agente de IA</h2>
-    <p class="section-sub fade fade-delay-2">Un agente configurado a medida de su negocio que trabaja por usted las 24 horas, los 365 días del año.</p>
-    <div class="includes-grid">
-      <div class="include-card fade fade-delay-1">
-        <div class="include-icon" style="background:rgba(99,102,241,0.15)" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#6366f1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10H12V2z"></path><path d="M12 2a10 10 0 0 1 10 10"></path><circle cx="12" cy="12" r="3"></circle></svg>
-        </div>
-        <h3>IA entrenada en su negocio</h3>
-        <p>Aprende su tono, productos y servicios para responder exactamente como lo haría usted.</p>
-      </div>
-      <div class="include-card fade fade-delay-2">
-        <div class="include-icon" style="background:rgba(99,102,241,0.15)" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#6366f1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
-        </div>
-        <h3>Respuestas automáticas 24/7</h3>
-        <p>Sin perder ningún mensaje, ni de noche ni en festivos. Su negocio siempre disponible.</p>
-      </div>
-      <div class="include-card fade fade-delay-3">
-        <div class="include-icon" style="background:rgba(99,102,241,0.15)" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#6366f1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-        </div>
-        <h3>Gestión de reseñas</h3>
-        <p>Responde automáticamente a valoraciones de Google, Trustpilot y otras plataformas.</p>
-      </div>
-      <div class="include-card fade fade-delay-1">
-        <div class="include-icon" style="background:rgba(99,102,241,0.15)" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#6366f1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
-        </div>
-        <h3>Multi-canal</h3>
-        <p>Email, WhatsApp, Instagram y más, según el plan elegido. Todo desde un mismo sistema.</p>
-      </div>
-      <div class="include-card fade fade-delay-2">
-        <div class="include-icon" style="background:rgba(99,102,241,0.15)" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#6366f1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-        </div>
-        <h3>Supervisión humana</h3>
-        <p>Panel de control para revisar y corregir respuestas cuando quiera. Usted siempre manda.</p>
-      </div>
-      <div class="include-card fade fade-delay-3">
-        <div class="include-icon" style="background:rgba(99,102,241,0.15)" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#6366f1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
-        </div>
-        <h3>Configuración guiada</h3>
-        <p>Nos encargamos de toda la integración técnica. Sin conocimientos previos necesarios.</p>
       </div>
     </div>
   </div>
@@ -1755,12 +1629,12 @@
           <li class="price-feature ai-feature">Panel de supervisión incluido</li>
           <li class="price-feature ai-feature">Configuración en 3-5 días</li>
         </ul>
-        <a href="#contacto" class="btn btn-ai-outline" style="width:100%;justify-content:center;">Solicitar →</a>
+        <a href="#contacto" class="btn btn-outline" style="width:100%;justify-content:center;">Solicitar →</a>
       </div>
 
       <!-- IA SOCIAL -->
       <div class="price-card popular fade fade-delay-2">
-        <div class="price-badge" style="background:#0d0d0d;border:1px solid rgba(255,255,255,0.3);color:#ffffff;">Más popular</div>
+        <div class="price-badge">Más popular</div>
         <div class="ai-badge">Social IA</div>
         <div class="price-name">Pack IA Social</div>
         <div class="price-amount"><span class="currency">€</span>549</div>
@@ -1774,7 +1648,7 @@
           <li class="price-feature ai-feature">Derivación a humano cuando es necesario</li>
           <li class="price-feature ai-feature">Configuración en 5-7 días</li>
         </ul>
-        <a href="#contacto" class="btn btn-ai" style="width:100%;justify-content:center;">Contratar →</a>
+        <a href="#contacto" class="btn btn-gold" style="width:100%;justify-content:center;">Contratar →</a>
       </div>
 
       <!-- IA COMPLETO -->
@@ -1792,7 +1666,7 @@
           <li class="price-feature ai-feature">Prioridad en soporte y actualizaciones</li>
           <li class="price-feature ai-feature">Configuración en 7-10 días</li>
         </ul>
-        <a href="#contacto" class="btn btn-ai-outline" style="width:100%;justify-content:center;">Contratar →</a>
+        <a href="#contacto" class="btn btn-outline" style="width:100%;justify-content:center;">Contratar →</a>
       </div>
 
     </div>
