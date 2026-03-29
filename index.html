@@ -928,6 +928,9 @@
       display: none;
       gap: 28px;
       align-items: center;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
     }
     @media (min-width: 860px) {
       .nav-center { display: flex; }
@@ -1158,6 +1161,8 @@
     <a href="#shopify" class="nav-link">Shopify</a>
     <a href="#web" class="nav-link">Web</a>
     <a href="#ia" class="nav-link">IA</a>
+    <a href="#nosotros" class="nav-link">Nosotros</a>
+    <a href="#faq" class="nav-link">FAQ</a>
   </div>
   <a href="#contacto" class="btn btn-gold">Solicitar presupuesto</a>
 </nav>
@@ -1378,7 +1383,7 @@
 </section>
 
 <!-- WHY US -->
-<section class="why" aria-labelledby="why-title">
+<section class="why" id="nosotros" aria-labelledby="why-title">
   <div class="container">
     <div class="why-inner">
       <div>
@@ -1678,80 +1683,45 @@
 </section>
 
 <!-- FAQ -->
-<section class="faq" aria-labelledby="faq-title">
+<section class="faq" id="faq" aria-labelledby="faq-title">
   <div class="container">
     <span class="section-tag fade" style="display:block;text-align:center">FAQ</span>
     <h2 class="section-title fade fade-delay-1" id="faq-title" style="text-align:center;margin-bottom:48px;">Resolvemos sus dudas<br>antes de empezar</h2>
     <div class="faq-list" role="list">
       <div class="faq-item fade" role="listitem">
         <button class="faq-question" aria-expanded="false">
-          ¿Cuánto tiempo tardan en entregar la tienda?
+          ¿Cuánto tiempo tardan en entregar el proyecto?
           <span class="faq-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></span>
         </button>
-        <div class="faq-answer"><div class="faq-answer-inner">Depende del plan elegido. El plan Básica se entrega en 48-72 horas, Growth en 5-7 días y Premium en 10-14 días desde que recibimos todos los materiales.</div></div>
+        <div class="faq-answer"><div class="faq-answer-inner">Depende del servicio y el plan elegido. Las tiendas Shopify se entregan en 48 horas–14 días. Las webs corporativas en 5–20 días. Los proyectos de IA se configuran en 3–10 días. En todos los casos le comunicamos el plazo exacto antes de empezar.</div></div>
       </div>
       <div class="faq-item fade fade-delay-1" role="listitem">
         <button class="faq-question" aria-expanded="false">
           ¿Qué necesito enviarles para empezar?
           <span class="faq-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></span>
         </button>
-        <div class="faq-answer"><div class="faq-answer-inner">Fotos de productos, textos descriptivos, precios, logo y cualquier referencia visual que tenga. Si necesita ayuda para organizar esto, también le orientamos.</div></div>
+        <div class="faq-answer"><div class="faq-answer-inner">Lo básico: logo, textos sobre su negocio y servicios, fotos si las tiene y cualquier referencia visual. Para proyectos de IA, además necesitamos información sobre su tono de comunicación y las preguntas más habituales de sus clientes. Si no tiene todo preparado, le orientamos paso a paso.</div></div>
       </div>
       <div class="faq-item fade fade-delay-2" role="listitem">
         <button class="faq-question" aria-expanded="false">
           ¿Hay costes adicionales aparte del presupuesto?
           <span class="faq-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></span>
         </button>
-        <div class="faq-answer"><div class="faq-answer-inner">Solo el coste de Shopify: 27€/mes que se paga directamente a ellos. Nuestros honorarios son los indicados en cada plan.</div></div>
+        <div class="faq-answer"><div class="faq-answer-inner">Nuestros honorarios son los indicados en cada plan, sin sorpresas. Si elige una tienda Shopify, hay que añadir la suscripción de Shopify (27€/mes, pago directo a ellos). Para webs corporativas y proyectos de IA no hay suscripciones obligatorias salvo que el plan incluya herramientas externas específicas, que siempre se indican antes de empezar.</div></div>
       </div>
       <div class="faq-item fade fade-delay-3" role="listitem">
-        <button class="faq-question" aria-expanded="false">
-          ¿Qué pasa si no estoy satisfecho con el resultado?
-          <span class="faq-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></span>
-        </button>
-        <div class="faq-answer"><div class="faq-answer-inner">Incluimos rondas de cambios en todos los planes. Trabajamos hasta que esté satisfecho con el resultado.</div></div>
-      </div>
-      <div class="faq-item fade fade-delay-4" role="listitem">
-        <button class="faq-question" aria-expanded="false">
-          ¿Puedo gestionar la tienda yo mismo después?
-          <span class="faq-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></span>
-        </button>
-        <div class="faq-answer"><div class="faq-answer-inner">Sí. Shopify es muy intuitivo y le incluimos formación para que pueda gestionar su tienda de forma totalmente autónoma.</div></div>
-      </div>
-      <div class="faq-item fade fade-delay-2" role="listitem">
-        <button class="faq-question" aria-expanded="false">
-          ¿Qué incluye exactamente una web corporativa?
-          <span class="faq-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></span>
-        </button>
-        <div class="faq-answer"><div class="faq-answer-inner">Una web corporativa incluye diseño a medida, páginas de inicio, servicios, contacto y las secciones que necesite su negocio. Según el plan elegido, añadimos blog, integración con Google Analytics, SEO técnico, animaciones avanzadas y conexión con sus herramientas actuales. Todo entregado con el código o CMS para que pueda gestionar el contenido usted mismo.</div></div>
-      </div>
-      <div class="faq-item fade fade-delay-1" role="listitem">
         <button class="faq-question" aria-expanded="false">
           ¿Qué diferencia hay entre una web corporativa y una tienda Shopify?
           <span class="faq-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></span>
         </button>
-        <div class="faq-answer"><div class="faq-answer-inner">Una web corporativa presenta su negocio, servicios y equipo de forma profesional. Es ideal si no vende productos físicos online. Una tienda Shopify está diseñada para vender: tiene carrito, pagos, gestión de pedidos y todo lo necesario para el comercio electrónico. Podemos orientarle sobre cuál se adapta mejor a su caso.</div></div>
-      </div>
-      <div class="faq-item fade fade-delay-2" role="listitem">
-        <button class="faq-question" aria-expanded="false">
-          ¿El agente de IA entiende mi negocio específico?
-          <span class="faq-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></span>
-        </button>
-        <div class="faq-answer"><div class="faq-answer-inner">Sí. Durante la configuración entrenamos el agente con la información específica de su negocio: productos o servicios, precios, políticas, tono de comunicación y las preguntas frecuentes de sus clientes. El resultado es un agente que responde como si fuera usted, no como un bot genérico.</div></div>
-      </div>
-      <div class="faq-item fade fade-delay-3" role="listitem">
-        <button class="faq-question" aria-expanded="false">
-          ¿Necesito conocimientos técnicos para gestionar la IA?
-          <span class="faq-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></span>
-        </button>
-        <div class="faq-answer"><div class="faq-answer-inner">No. Le entregamos un panel de supervisión sencillo donde puede ver todas las conversaciones, revisar las respuestas del agente y ajustar lo que necesite. Nos encargamos de toda la parte técnica. Si en algún momento quiere actualizar la información del agente, nos lo indica y lo hacemos nosotros.</div></div>
+        <div class="faq-answer"><div class="faq-answer-inner">Una web corporativa es perfecta si quiere mostrar sus servicios, captar clientes o tener presencia profesional online sin necesidad de vender productos directamente. Shopify es la opción ideal si su objetivo principal es vender productos online con carrito, pagos y gestión de stock. Podemos orientarle sobre cuál se adapta mejor a su caso.</div></div>
       </div>
       <div class="faq-item fade fade-delay-4" role="listitem">
         <button class="faq-question" aria-expanded="false">
-          ¿Puedo combinar una web corporativa con un agente de IA?
+          ¿Puedo combinar una web con un agente de IA?
           <span class="faq-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></span>
         </button>
-        <div class="faq-answer"><div class="faq-answer-inner">Por supuesto. Es una combinación muy habitual: una web profesional que atrae visitas y un agente de IA que atiende a los clientes por WhatsApp o email de forma automática. Juntos forman una presencia digital completa. Contáctenos y le preparamos un presupuesto combinado.</div></div>
+        <div class="faq-answer"><div class="faq-answer-inner">Por supuesto. Es una combinación muy habitual: una web profesional que atrae visitas y un agente de IA que atiende a los clientes por WhatsApp, email o Instagram de forma automática. Juntos forman una presencia digital completa. Contáctenos y le preparamos un presupuesto combinado.</div></div>
       </div>
     </div>
   </div>
