@@ -87,7 +87,7 @@
       --ai-accent-dark: #000000;
     }
 
-    html { scroll-behavior: smooth; }
+    html { scroll-behavior: smooth; overflow-x: hidden; }
 
     /* Custom scrollbar */
     ::-webkit-scrollbar { width: 6px; }
@@ -96,7 +96,7 @@
     ::-webkit-scrollbar-thumb:hover { background: #a8893a; }
 
     /* Firefox */
-    * { scrollbar-width: thin; scrollbar-color: #c8a951 #0d0d0d; }
+    html { scrollbar-width: thin; scrollbar-color: #c8a951 #0d0d0d; }
 
     body {
       font-family: var(--font-body);
@@ -104,6 +104,7 @@
       color: var(--white);
       line-height: 1.6;
       overflow-x: hidden;
+      max-width: 100%;
     }
 
     .container { width: var(--container); margin-inline: auto; }
