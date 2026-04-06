@@ -3,35 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://images.unsplash.com https://www.woodiaspain.com https://woodiaspain.com; connect-src https://woodia-spain-n8n.zify4h.easypanel.host; form-action 'self'; base-uri 'self'; object-src 'none';">
-  <meta name="referrer" content="strict-origin-when-cross-origin">
   <title>Woodia Spain — Diseño Web e IA para Negocios en A Coruña</title>
-  <meta name="description" content="Digitalizamos tu bar, tienda o negocio en A Coruña con diseño web profesional e inteligencia artificial. Web + bot WhatsApp + automatización. Todo conectado.">
+  <meta name="description" content="Digitalizamos tu bar, tienda o negocio en A Coruña con diseño web profesional e inteligencia artificial. Web + bot WhatsApp + automatización. Todo conectado. Desde 800€.">
+  <meta name="keywords" content="diseño web A Coruña, agencia web Galicia, Shopify A Coruña, chatbot WhatsApp negocio, automatización IA restaurantes, tienda online A Coruña, bot WhatsApp reservas">
   <meta property="og:title" content="Woodia Spain — Tu negocio digital en A Coruña">
-  <meta property="og:description" content="Web profesional + IA integrada para negocios locales en Galicia. Reservas, atención y reseñas en automático.">
-  <meta property="og:type" content="website">
+  <meta property="og:description" content="Web profesional + IA integrada para negocios locales. Reservas, atención y reseñas en automático.">
+  <meta property="og:image" content="https://woodiaspain.com/og-image.png">
   <meta property="og:url" content="https://woodiaspain.com">
-  <meta property="og:image" content="https://www.woodiaspain.com/og-image.png">
+  <meta property="og:type" content="website">
   <meta property="og:locale" content="es_ES">
   <meta property="og:site_name" content="Woodia Spain">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Woodia Spain — Tu negocio digital en A Coruña">
-  <meta name="twitter:description" content="Web profesional + IA integrada para negocios locales en Galicia.">
   <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://woodiaspain.com">
+  <link rel="icon" href="icon.png" type="image/png">
   <meta name="author" content="Woodia Spain">
   <meta name="geo.region" content="ES-C">
   <meta name="geo.placename" content="A Coruña">
-  <meta name="theme-color" content="#0A0A0A">
-  <link rel="canonical" href="https://www.woodiaspain.com">
-  <link rel="icon" type="image/png" href="icon.png">
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "Woodia Spain",
-    "description": "Diseño web e inteligencia artificial para negocios locales en A Coruña y Galicia. Web profesional + bot WhatsApp + automatización de reseñas.",
-    "url": "https://www.woodiaspain.com",
+    "description": "Diseño web e inteligencia artificial para negocios locales en A Coruña y Galicia.",
+    "url": "https://woodiaspain.com",
     "telephone": "+34624594551",
     "email": "info@woodiaspain.com",
     "address": { "@type": "PostalAddress", "addressLocality": "A Coruña", "addressRegion": "Galicia", "addressCountry": "ES" },
@@ -43,2616 +39,2296 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
 /* ============================================================
    RESET & ROOT
-   ============================================================ */
+============================================================ */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --bg:           #0A0A0A;
-  --bg-2:         #111111;
-  --bg-3:         #0D0D0D;
-  --gold:         #C8A84E;
-  --gold-hover:   #D4B85A;
-  --gold-subtle:  rgba(200, 168, 78, 0.12);
-  --gold-line:    rgba(200, 168, 78, 0.18);
-  --text:         #F5F5F0;
-  --text-muted:   #8A8A80;
-  --text-dim:     #555550;
-  --success:      #4A7C59;
-  --white:        #ffffff;
-  --font-display: 'Syne', sans-serif;
-  --font-body:    'DM Sans', sans-serif;
-  --section-py:   clamp(72px, 10vw, 128px);
-  --container:    min(1200px, 100% - 40px);
-  --radius-sm:    6px;
-  --radius-md:    12px;
-  --radius-lg:    20px;
-  --transition:   0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  --bg-white:   #FFFFFF;
+  --bg-light:   #F5F5F7;
+  --bg-subtle:  #FAFAFA;
+  --text-primary:   #1D1D1F;
+  --text-secondary: #424245;
+  --text-tertiary:  #6E6E73;
+  --text-light:     #86868B;
+  --accent:         #000000;
+  --accent-hover:   #1D1D1F;
+  --border:         #D2D2D7;
+  --border-light:   #E8E8ED;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.04);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.06);
+  --shadow-lg: 0 8px 30px rgba(0,0,0,0.08);
+  --shadow-xl: 0 20px 60px rgba(0,0,0,0.1);
+  --font-display: 'Inter Tight', sans-serif;
+  --font-body:    'Inter', sans-serif;
+  --max-w: 980px;
+  --max-w-text: 720px;
 }
 
 html { scroll-behavior: smooth; }
+
 body {
-  background: var(--bg);
-  color: var(--text);
   font-family: var(--font-body);
-  font-size: 1rem;
-  line-height: 1.65;
-  overflow-x: hidden;
+  font-weight: 400;
+  color: var(--text-primary);
+  background: var(--bg-white);
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
-/* Grain overlay */
-body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
-  opacity: 0.035;
-  pointer-events: none;
-  z-index: 9999;
-}
+img { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+button { font-family: inherit; cursor: pointer; border: none; background: none; }
+ul { list-style: none; }
 
-/* Scrollbar */
-::-webkit-scrollbar { width: 5px; }
-::-webkit-scrollbar-track { background: var(--bg); }
-::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 3px; }
-* { scrollbar-width: thin; scrollbar-color: var(--gold) var(--bg); }
-
-/* Utils */
-.container { width: var(--container); margin: 0 auto; }
-.section-label {
-  display: inline-block;
+/* ============================================================
+   TYPOGRAPHY SCALE
+============================================================ */
+.label {
   font-family: var(--font-body);
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.18em;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  color: var(--text-tertiary);
   text-transform: uppercase;
-  color: var(--gold);
-  margin-bottom: 1.25rem;
-}
-.section-title {
-  font-family: var(--font-display);
-  font-size: clamp(1.9rem, 4vw, 3rem);
-  font-weight: 800;
-  line-height: 1.1;
-  letter-spacing: -0.025em;
-  color: var(--text);
-  margin-bottom: 1rem;
-}
-.section-sub {
-  font-size: 1.05rem;
-  color: var(--text-muted);
-  line-height: 1.7;
-  max-width: 52ch;
-}
-.gold { color: var(--gold); }
-.divider {
-  border: none;
-  border-top: 1px solid var(--gold-line);
-  margin: 0;
+  margin-bottom: 20px;
+  display: block;
 }
 
-/* Buttons */
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  color: var(--text-primary);
+  line-height: 1.08;
+  letter-spacing: -0.022em;
+}
+
+h1 { font-size: clamp(2.4rem, 5.5vw, 4.2rem); font-weight: 700; }
+h2 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; }
+h3 { font-size: clamp(1.4rem, 2.5vw, 2rem); font-weight: 600; letter-spacing: -0.015em; }
+h4 { font-size: clamp(1.1rem, 1.8vw, 1.25rem); font-weight: 600; letter-spacing: -0.01em; }
+
+p {
+  font-family: var(--font-body);
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* ============================================================
+   LAYOUT UTILITIES
+============================================================ */
+.container {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.container--wide {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+
+section { width: 100%; }
+
+/* ============================================================
+   BUTTONS
+============================================================ */
 .btn {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 6px;
+  padding: 14px 28px;
+  border-radius: 980px;
   font-family: var(--font-body);
-  font-size: 0.95rem;
-  font-weight: 600;
-  border-radius: var(--radius-sm);
-  padding: 0.8rem 1.6rem;
-  cursor: pointer;
-  border: none;
-  text-decoration: none;
-  transition: var(--transition);
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1;
+  transition: opacity 0.2s ease, background 0.2s ease, color 0.2s ease;
   white-space: nowrap;
 }
-.btn-gold {
-  background: var(--gold);
-  color: #0A0A0A;
-}
-.btn-gold:hover { background: var(--gold-hover); transform: translateY(-1px); box-shadow: 0 8px 24px rgba(200,168,78,0.3); }
-.btn-outline {
-  background: transparent;
-  color: var(--text);
-  border: 1px solid rgba(245,245,240,0.2);
-}
-.btn-outline:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-1px); }
-.btn-sm { font-size: 0.85rem; padding: 0.6rem 1.2rem; }
-.btn-lg { font-size: 1rem; padding: 0.95rem 1.9rem; }
 
-/* Fade-in animation */
-.reveal {
-  opacity: 0;
-  transform: translateY(28px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+.btn--primary {
+  background: #000;
+  color: #fff;
 }
-.reveal.visible { opacity: 1; transform: none; }
+.btn--primary:hover { opacity: 0.82; }
+
+.btn--outline {
+  background: transparent;
+  color: #000;
+  border: 1px solid #000;
+}
+.btn--outline:hover { background: var(--bg-light); }
+
+.btn--white {
+  background: #fff;
+  color: #000;
+}
+.btn--white:hover { opacity: 0.88; }
+
+.btn--outline-white {
+  background: transparent;
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.5);
+}
+.btn--outline-white:hover { border-color: #fff; background: rgba(255,255,255,0.08); }
+
+.btn--full { width: 100%; justify-content: center; }
+
+.btn-group {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+.btn-group--center { justify-content: center; }
 
 /* ============================================================
    NAVBAR
-   ============================================================ */
-.navbar {
+============================================================ */
+.nav {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  z-index: 900;
-  padding: 1.1rem 0;
-  transition: background 0.3s ease, backdrop-filter 0.3s ease, border-bottom 0.3s ease;
+  z-index: 1000;
+  background: rgba(255,255,255,0.78);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid transparent;
+  transition: border-color 0.3s ease, background 0.3s ease;
 }
-.navbar.scrolled {
-  background: rgba(10, 10, 10, 0.9);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid var(--gold-line);
+
+.nav.scrolled {
+  background: rgba(255,255,255,0.92);
+  border-bottom-color: var(--border-light);
 }
-.navbar-inner {
+
+.nav__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 60px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
 }
-.nav-logo {
+
+.nav__logo img {
+  height: 26px;
+  width: auto;
+  display: block;
+}
+.nav__logo-fallback {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+
+.nav__links {
+  display: none;
+  gap: 32px;
+  align-items: center;
+}
+
+.nav__links a {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text-secondary);
+  transition: color 0.2s;
+}
+.nav__links a:hover { color: var(--text-primary); }
+
+.nav__cta {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-primary);
   display: flex;
   align-items: center;
-  text-decoration: none;
-  flex-shrink: 0;
+  gap: 4px;
+  transition: opacity 0.2s;
 }
-.nav-logo img { height: 32px; width: auto; }
-.nav-logo-text {
-  font-family: var(--font-display);
-  font-size: 1.2rem;
-  font-weight: 800;
-  color: var(--text);
-  display: none;
-}
-.nav-links {
-  display: none;
-  align-items: center;
-  gap: 0.25rem;
-  list-style: none;
-}
-.nav-links a {
-  font-size: 0.875rem;
-  font-weight: 500;
-  color: var(--text-muted);
-  text-decoration: none;
-  padding: 0.4rem 0.8rem;
-  border-radius: var(--radius-sm);
-  transition: color var(--transition);
-}
-.nav-links a:hover { color: var(--text); }
-.nav-cta { display: none; }
-.hamburger {
-  background: none;
-  border: 1px solid var(--gold-line);
-  color: var(--text);
-  cursor: pointer;
-  padding: 0.5rem;
-  border-radius: var(--radius-sm);
+.nav__cta:hover { opacity: 0.7; }
+
+.nav__hamburger {
+  width: 24px;
+  height: 24px;
   display: flex;
   flex-direction: column;
-  gap: 4px;
-  width: 38px;
-  height: 38px;
-  align-items: center;
   justify-content: center;
-  transition: border-color var(--transition);
+  gap: 5px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
 }
-.hamburger:hover { border-color: var(--gold); }
-.hamburger span {
+.nav__hamburger span {
   display: block;
-  width: 18px;
   height: 1.5px;
-  background: var(--text);
-  transition: var(--transition);
-  transform-origin: center;
+  background: var(--text-primary);
+  border-radius: 2px;
+  transition: transform 0.3s, opacity 0.3s;
 }
-.hamburger.active span:nth-child(1) { transform: translateY(5.5px) rotate(45deg); }
-.hamburger.active span:nth-child(2) { opacity: 0; }
-.hamburger.active span:nth-child(3) { transform: translateY(-5.5px) rotate(-45deg); }
+.nav__hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.nav__hamburger.open span:nth-child(2) { opacity: 0; }
+.nav__hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
 
 /* Mobile menu */
-.mobile-menu {
+.nav__mobile {
   position: fixed;
   inset: 0;
-  background: rgba(10, 10, 10, 0.98);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  z-index: 800;
+  background: #fff;
+  z-index: 999;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
+  gap: 32px;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s ease;
 }
-.mobile-menu.active { opacity: 1; pointer-events: all; }
-.mobile-menu a {
-  font-family: var(--font-display);
-  font-size: clamp(1.5rem, 5vw, 2rem);
-  font-weight: 700;
-  color: var(--text);
-  text-decoration: none;
-  padding: 0.6rem 1.5rem;
-  transition: color var(--transition);
+.nav__mobile.open {
+  opacity: 1;
+  pointer-events: all;
 }
-.mobile-menu a:hover { color: var(--gold); }
-.mobile-menu .menu-cta { margin-top: 1.5rem; }
-body.menu-open { overflow: hidden; }
+.nav__mobile a {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+.nav__mobile a:hover { opacity: 0.6; }
 
 @media (min-width: 768px) {
-  .nav-links { display: flex; }
-  .nav-cta { display: block; }
-  .hamburger { display: none; }
-  .navbar { padding: 1.25rem 0; }
+  .nav__links { display: flex; }
+  .nav__hamburger { display: none; }
 }
 
 /* ============================================================
    HERO
-   ============================================================ */
+============================================================ */
 .hero {
-  position: relative;
-  min-height: 100svh;
-  display: flex;
-  align-items: center;
-  padding-top: 100px;
-  padding-bottom: 80px;
-  overflow: hidden;
-}
-.hero::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(ellipse 70% 60% at 70% 40%, rgba(200, 168, 78, 0.07) 0%, transparent 65%),
-    radial-gradient(ellipse 50% 70% at 10% 90%, rgba(200, 168, 78, 0.04) 0%, transparent 70%);
-  pointer-events: none;
-}
-.hero-inner {
-  display: grid;
-  gap: 3rem;
-  align-items: center;
-}
-.hero-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  background: var(--gold-subtle);
-  border: 1px solid var(--gold-line);
-  border-radius: 100px;
-  padding: 0.35rem 0.85rem;
-  font-size: 0.78rem;
-  font-weight: 600;
-  color: var(--gold);
-  letter-spacing: 0.05em;
-  margin-bottom: 1.5rem;
-}
-.hero-badge .pulse-dot {
-  width: 6px; height: 6px;
-  background: var(--gold);
-  border-radius: 50%;
-  animation: pulse-dot 2s ease infinite;
-}
-@keyframes pulse-dot {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.4; transform: scale(1.4); }
-}
-.hero-title {
-  font-family: var(--font-display);
-  font-size: clamp(2.4rem, 6vw, 4.2rem);
-  font-weight: 800;
-  line-height: 1.06;
-  letter-spacing: -0.03em;
-  color: var(--text);
-  margin-bottom: 1.25rem;
-}
-.hero-title .highlight {
-  color: var(--gold);
-  position: relative;
-}
-.hero-sub {
-  font-size: clamp(1rem, 2vw, 1.15rem);
-  color: var(--text-muted);
-  line-height: 1.7;
-  max-width: 50ch;
-  margin-bottom: 2rem;
-}
-.hero-ctas {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  margin-bottom: 1.75rem;
-}
-.hero-trust {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.25rem;
-  font-size: 0.82rem;
-  color: var(--text-muted);
-}
-.hero-trust span {
-  display: flex;
-  align-items: center;
-  gap: 0.35rem;
-}
-.hero-trust .check { color: var(--gold); font-size: 0.9rem; }
-
-/* Hero visual */
-.hero-visual {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 440px;
-}
-
-/* Phone mockup */
-.phone-mockup {
-  position: relative;
-  width: 220px;
-  flex-shrink: 0;
-  z-index: 2;
-}
-.phone-body {
-  background: #161616;
-  border: 1.5px solid rgba(255,255,255,0.12);
-  border-radius: 32px;
-  padding: 10px 6px;
-  box-shadow: 0 32px 80px rgba(0,0,0,0.7), 0 0 0 1px rgba(200,168,78,0.08), inset 0 1px 0 rgba(255,255,255,0.06);
-  animation: phone-float 4s ease-in-out infinite;
-}
-@keyframes phone-float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-8px); }
-}
-.phone-notch {
-  width: 70px; height: 10px;
-  background: #0A0A0A;
-  border-radius: 10px;
-  margin: 0 auto 8px;
-}
-.phone-screen {
-  background: #1a1a1a;
-  border-radius: 22px;
-  overflow: hidden;
-  height: 360px;
-}
-.phone-nav {
-  background: #0f0f0f;
-  padding: 8px 12px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid rgba(200,168,78,0.1);
-}
-.phone-nav-dot { width: 28px; height: 5px; background: var(--gold); border-radius: 3px; opacity: 0.7; }
-.phone-nav-links { display: flex; gap: 5px; }
-.phone-nav-link { width: 20px; height: 5px; background: rgba(255,255,255,0.15); border-radius: 3px; }
-.phone-hero-img {
-  height: 110px;
-  background: linear-gradient(135deg, #1f1a0f 0%, #2a2010 60%, #1a1a1a 100%);
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.phone-hero-img::before {
-  content: '🍷';
-  font-size: 2.5rem;
-  opacity: 0.6;
-}
-.phone-hero-img::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to bottom, transparent 50%, #1a1a1a 100%);
-}
-.phone-content { padding: 12px; }
-.phone-rest-name {
-  font-family: var(--font-display);
-  font-size: 0.8rem;
-  font-weight: 700;
-  color: var(--text);
-  margin-bottom: 3px;
-}
-.phone-rest-sub { font-size: 0.6rem; color: var(--text-muted); margin-bottom: 10px; }
-.phone-cta-btn {
-  background: var(--gold);
-  color: #0A0A0A;
-  font-size: 0.62rem;
-  font-weight: 700;
-  border-radius: 5px;
-  padding: 5px 10px;
-  display: inline-block;
-  margin-bottom: 12px;
-}
-.phone-divider { height: 1px; background: rgba(255,255,255,0.07); margin-bottom: 10px; }
-.phone-row { display: flex; gap: 6px; margin-bottom: 6px; }
-.phone-chip {
-  background: rgba(200,168,78,0.12);
-  border: 1px solid var(--gold-line);
-  border-radius: 100px;
-  font-size: 0.56rem;
-  color: var(--gold);
-  padding: 2px 7px;
-}
-
-/* Floating cards */
-.float-wa {
-  position: absolute;
-  right: -10px;
-  bottom: 70px;
-  background: #1e1e1e;
-  border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 14px;
-  padding: 10px 12px;
-  width: 185px;
-  z-index: 3;
-  box-shadow: 0 16px 48px rgba(0,0,0,0.6);
-  animation: float-wa 3.5s ease-in-out infinite;
-}
-@keyframes float-wa {
-  0%, 100% { transform: translateY(0) rotate(-1deg); }
-  50% { transform: translateY(-6px) rotate(-1deg); }
-}
-.float-wa-header {
-  display: flex;
-  align-items: center;
-  gap: 7px;
-  margin-bottom: 7px;
-}
-.wa-avatar {
-  width: 22px; height: 22px;
-  background: #25D366;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.65rem;
-}
-.wa-name { font-size: 0.65rem; font-weight: 600; color: var(--text); }
-.wa-status { font-size: 0.55rem; color: #25D366; }
-.wa-bubble-in, .wa-bubble-out {
-  border-radius: 10px;
-  font-size: 0.6rem;
-  padding: 4px 8px;
-  margin-bottom: 4px;
-  max-width: 85%;
-  line-height: 1.4;
-}
-.wa-bubble-in { background: rgba(255,255,255,0.08); color: var(--text); }
-.wa-bubble-out { background: var(--gold); color: #0A0A0A; font-weight: 600; margin-left: auto; }
-.wa-tick { font-size: 0.5rem; color: var(--gold); text-align: right; margin-top: 2px; }
-
-.float-notif {
-  position: absolute;
-  left: -20px;
-  top: 60px;
-  background: #1e1e1e;
-  border: 1px solid var(--gold-line);
-  border-radius: 12px;
-  padding: 9px 12px;
-  width: 175px;
-  z-index: 3;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  box-shadow: 0 12px 36px rgba(0,0,0,0.5);
-  animation: float-notif 4.5s ease-in-out infinite;
-}
-@keyframes float-notif {
-  0%, 100% { transform: translateY(0) rotate(1deg); }
-  50% { transform: translateY(-5px) rotate(1deg); }
-}
-.notif-icon {
-  width: 28px; height: 28px;
-  background: var(--gold-subtle);
-  border-radius: 7px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.85rem;
-  flex-shrink: 0;
-}
-.notif-text { font-size: 0.6rem; color: var(--text); }
-.notif-text strong { display: block; font-size: 0.62rem; color: var(--gold); margin-bottom: 1px; }
-
-.float-review {
-  position: absolute;
-  left: -15px;
-  bottom: 30px;
-  background: #1e1e1e;
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 12px;
-  padding: 9px 12px;
-  width: 165px;
-  z-index: 3;
-  box-shadow: 0 12px 36px rgba(0,0,0,0.5);
-  animation: float-review 5s ease-in-out infinite;
-}
-@keyframes float-review {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-4px); }
-}
-.review-stars { font-size: 0.6rem; color: #FFB800; margin-bottom: 3px; }
-.review-text { font-size: 0.58rem; color: var(--text-muted); font-style: italic; line-height: 1.4; }
-
-@media (min-width: 768px) {
-  .hero-inner {
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-  }
-  .hero-visual { min-height: 500px; }
-  .phone-mockup { width: 240px; }
-  .float-wa { right: -20px; width: 200px; }
-  .float-notif { left: -30px; width: 190px; }
-  .float-review { left: -25px; width: 175px; }
-}
-
-@media (min-width: 1024px) {
-  .hero-inner { grid-template-columns: 55% 45%; gap: 5rem; }
-  .phone-mockup { width: 255px; }
-}
-
-/* ============================================================
-   SOCIAL PROOF BAR
-   ============================================================ */
-.proof-bar {
-  padding: 2rem 0;
-  background: var(--bg-2);
-  border-top: 1px solid var(--gold-line);
-  border-bottom: 1px solid var(--gold-line);
-  overflow: hidden;
-}
-.proof-bar-label {
-  text-align: center;
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--text-dim);
-  margin-bottom: 1.25rem;
-}
-.marquee-wrapper { overflow: hidden; position: relative; }
-.marquee-track {
-  display: flex;
-  gap: 3rem;
-  width: max-content;
-  animation: marquee 24s linear infinite;
-}
-.marquee-track:hover { animation-play-state: paused; }
-@keyframes marquee {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
-}
-.marquee-item {
-  flex-shrink: 0;
-  font-family: var(--font-display);
-  font-size: 0.85rem;
-  font-weight: 700;
-  color: var(--text-muted);
-  padding: 0.4rem 1.2rem;
-  border: 1px solid rgba(255,255,255,0.07);
-  border-radius: var(--radius-sm);
-  white-space: nowrap;
-  transition: color var(--transition), border-color var(--transition);
-  cursor: default;
-}
-.marquee-item:hover { color: var(--text); border-color: var(--gold-line); }
-.marquee-item.highlight {
-  border-color: var(--gold-line);
-  background: var(--gold-subtle);
-  color: var(--gold);
-}
-
-/* ============================================================
-   EL PROBLEMA
-   ============================================================ */
-.problema {
-  padding: var(--section-py) 0;
-  background: var(--bg);
+  padding: 160px 0 100px;
   text-align: center;
 }
-.problema-grid {
-  display: grid;
-  gap: 1.5rem;
-  margin: 3rem 0 2.5rem;
-}
-.problema-card {
-  background: var(--bg-2);
-  border: 1px solid rgba(255,255,255,0.06);
-  border-radius: var(--radius-lg);
-  padding: 2rem;
-  text-align: left;
-  transition: border-color var(--transition), transform var(--transition);
-}
-.problema-card:hover {
-  border-color: rgba(200,168,78,0.2);
-  transform: translateY(-3px);
-}
-.problema-emoji { font-size: 2rem; margin-bottom: 1rem; display: block; }
-.problema-card p {
-  font-size: 1rem;
-  color: var(--text-muted);
-  line-height: 1.65;
-}
-.problema-card p strong { color: var(--text); }
-.problema-close {
-  font-family: var(--font-display);
-  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
-  font-style: italic;
-  font-weight: 600;
-  color: var(--gold);
-  max-width: 60ch;
+
+.hero__inner {
+  max-width: 780px;
   margin: 0 auto;
-  line-height: 1.4;
+  padding: 0 24px;
 }
 
-@media (min-width: 768px) {
-  .problema-grid { grid-template-columns: repeat(3, 1fr); }
+.hero__label { margin-bottom: 28px; }
+
+.hero h1 { margin-bottom: 28px; }
+
+.hero__sub {
+  font-size: clamp(1rem, 2.2vw, 1.25rem);
+  max-width: 580px;
+  margin: 0 auto 40px;
+  line-height: 1.55;
+  color: var(--text-secondary);
+}
+
+.hero__btns { margin-bottom: 44px; }
+
+.hero__trust {
+  font-size: 13px;
+  color: var(--text-light);
+  letter-spacing: 0.01em;
+  line-height: 1.8;
+}
+
+.hero__image-wrap {
+  max-width: 1200px;
+  margin: 72px auto 0;
+  padding: 0 32px;
+}
+
+.hero__image {
+  width: 100%;
+  aspect-ratio: 21/9;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: var(--shadow-xl);
+}
+
+@media (max-width: 768px) {
+  .hero { padding: 120px 0 80px; }
+  .hero__image-wrap { padding: 0 16px; }
+  .hero__image { aspect-ratio: 4/3; }
 }
 
 /* ============================================================
-   SOLUCIONES
-   ============================================================ */
-.soluciones {
-  padding: var(--section-py) 0;
-  background: var(--bg-3);
-}
-.soluciones-header { margin-bottom: 3.5rem; }
-.soluciones-grid {
-  display: grid;
-  gap: 1.5rem;
-}
-.sol-card {
-  background: rgba(255,255,255,0.025);
-  border: 1px solid rgba(255,255,255,0.07);
-  border-radius: var(--radius-lg);
-  padding: 2.25rem;
-  transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  overflow: hidden;
-}
-.sol-card::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, var(--gold), transparent);
-  opacity: 0;
-  transition: opacity var(--transition);
-}
-.sol-card:hover {
-  border-color: rgba(200,168,78,0.25);
-  transform: translateY(-4px);
-  box-shadow: 0 20px 60px rgba(0,0,0,0.4), 0 0 0 1px rgba(200,168,78,0.1);
-}
-.sol-card:hover::before { opacity: 1; }
-.sol-icon {
-  width: 52px; height: 52px;
-  background: var(--gold-subtle);
-  border-radius: var(--radius-md);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
-  margin-bottom: 1.5rem;
-  border: 1px solid var(--gold-line);
-}
-.sol-title {
-  font-family: var(--font-display);
-  font-size: 1.3rem;
-  font-weight: 800;
-  color: var(--text);
-  margin-bottom: 0.4rem;
-}
-.sol-sub { font-size: 0.875rem; color: var(--text-muted); margin-bottom: 1.5rem; line-height: 1.5; }
-.sol-includes { list-style: none; margin-bottom: 1.75rem; flex: 1; }
-.sol-includes li {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.6rem;
-  font-size: 0.9rem;
-  color: var(--text-muted);
-  padding: 0.35rem 0;
-  border-bottom: 1px solid rgba(255,255,255,0.04);
-}
-.sol-includes li:last-child { border-bottom: none; }
-.sol-check { color: var(--gold); flex-shrink: 0; margin-top: 1px; }
-.sol-result {
-  background: var(--gold-subtle);
-  border: 1px solid var(--gold-line);
-  border-radius: var(--radius-sm);
-  padding: 0.85rem 1rem;
-  font-size: 0.875rem;
-  font-weight: 600;
-  color: var(--gold);
-  font-style: italic;
-  margin-bottom: 1.5rem;
-  line-height: 1.5;
-}
-.sol-price {
-  font-family: var(--font-display);
-  font-size: 1.05rem;
-  font-weight: 700;
-  color: var(--text);
-  margin-bottom: 1rem;
-}
-.sol-price span { font-size: 0.8rem; font-weight: 400; color: var(--text-muted); }
-
-@media (min-width: 768px) {
-  .soluciones-grid { grid-template-columns: repeat(2, 1fr); }
-}
-@media (min-width: 1024px) {
-  .soluciones-grid { grid-template-columns: repeat(3, 1fr); }
+   SECTION DEFAULTS
+============================================================ */
+.section {
+  padding: clamp(80px, 10vw, 140px) 0;
 }
 
-.sol-outro {
+.section--light { background: var(--bg-light); }
+.section--dark { background: #000; }
+
+.section__header {
   text-align: center;
-  margin-top: 3rem;
-  padding-top: 2rem;
-  border-top: 1px solid var(--gold-line);
-  color: var(--text-muted);
-  font-size: 0.95rem;
+  max-width: var(--max-w-text);
+  margin: 0 auto 72px;
 }
-.sol-outro a { color: var(--gold); text-decoration: none; font-weight: 600; }
-.sol-outro a:hover { text-decoration: underline; }
+
+.section__header h2 { margin-bottom: 20px; }
+
+.section__header p {
+  font-size: clamp(1rem, 1.8vw, 1.2rem);
+  line-height: 1.6;
+}
 
 /* ============================================================
-   CÓMO FUNCIONA
-   ============================================================ */
-.proceso {
-  padding: var(--section-py) 0;
-  background: var(--bg);
-}
-.proceso-header { margin-bottom: 4rem; }
-.proceso-steps {
+   PROBLEMA SECTION
+============================================================ */
+.problema__grid {
   display: grid;
-  gap: 2rem;
-  position: relative;
+  grid-template-columns: 1fr;
+  gap: 48px;
+  margin: 0 auto;
+  max-width: var(--max-w);
+  padding: 0 24px;
 }
-.proceso-step {
-  display: grid;
-  grid-template-columns: 56px 1fr;
-  gap: 1.5rem;
-  align-items: flex-start;
-}
-.step-number {
-  width: 56px; height: 56px;
-  background: var(--gold-subtle);
-  border: 1px solid var(--gold-line);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
+.problema__item { text-align: center; }
+
+.problema__num {
   font-family: var(--font-display);
-  font-size: 1.1rem;
+  font-size: clamp(3rem, 6vw, 4.5rem);
   font-weight: 800;
-  color: var(--gold);
-  flex-shrink: 0;
+  color: var(--text-primary);
+  letter-spacing: -0.03em;
+  line-height: 1;
+  margin-bottom: 20px;
 }
-.step-content {}
-.step-title {
+
+.problema__item p {
+  font-size: 16px;
+  max-width: 280px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.problema__close {
+  text-align: center;
+  max-width: 560px;
+  margin: 72px auto 0;
+  padding: 0 24px;
   font-family: var(--font-display);
-  font-size: 1.15rem;
-  font-weight: 800;
-  color: var(--text);
-  margin-bottom: 0.5rem;
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  font-weight: 500;
+  color: var(--text-primary);
+  line-height: 1.35;
   letter-spacing: -0.01em;
 }
-.step-desc { font-size: 0.95rem; color: var(--text-muted); line-height: 1.65; }
 
 @media (min-width: 768px) {
-  .proceso-steps { grid-template-columns: repeat(2, 1fr); gap: 3rem; }
-  .proceso-step { grid-template-columns: 56px 1fr; }
-}
-@media (min-width: 1024px) {
-  .proceso-steps { grid-template-columns: repeat(4, 1fr); }
+  .problema__grid { grid-template-columns: repeat(3, 1fr); gap: 32px; }
 }
 
 /* ============================================================
-   RESULTADOS
-   ============================================================ */
-.resultados {
-  padding: var(--section-py) 0;
-  background: var(--bg-2);
+   SOLUCIONES SECTION
+============================================================ */
+.soluciones__cards {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 24px;
 }
-.resultados-header { margin-bottom: 3rem; }
-.casos-grid {
-  display: grid;
-  gap: 1.5rem;
-  margin-bottom: 3rem;
-}
-.caso-card {
-  background: var(--bg-3);
-  border: 1px solid rgba(255,255,255,0.06);
-  border-radius: var(--radius-lg);
+
+.sol-card {
+  background: var(--bg-light);
+  border-radius: 20px;
   overflow: hidden;
-  transition: border-color var(--transition), transform var(--transition);
+  display: grid;
+  grid-template-columns: 1fr;
 }
-.caso-card:hover { border-color: var(--gold-line); transform: translateY(-3px); }
-.caso-img {
+
+.sol-card__img {
   width: 100%;
-  height: 220px;
+  aspect-ratio: 16/9;
   object-fit: cover;
-  display: block;
 }
-.caso-img-placeholder {
+
+.sol-card__body {
+  padding: clamp(36px, 5vw, 60px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sol-card__tag {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.sol-card__body h3 { margin-bottom: 20px; }
+
+.sol-card__body > p {
+  font-size: 16px;
+  line-height: 1.65;
+  margin-bottom: 20px;
+}
+
+.sol-card__result {
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+.sol-card__price {
+  font-size: 13px;
+  color: var(--text-tertiary);
+  margin-bottom: 28px;
+}
+
+.soluciones__footer {
+  text-align: center;
+  margin-top: 56px;
+  padding: 0 24px;
+  font-size: 17px;
+  color: var(--text-tertiary);
+}
+
+.soluciones__footer a {
+  color: var(--text-primary);
+  font-weight: 500;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: opacity 0.2s;
+}
+.soluciones__footer a:hover { opacity: 0.6; }
+
+@media (min-width: 768px) {
+  .sol-card { grid-template-columns: 1fr 1fr; }
+  .sol-card--reverse { direction: rtl; }
+  .sol-card--reverse > * { direction: ltr; }
+}
+
+/* ============================================================
+   PROCESO SECTION
+============================================================ */
+.proceso__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px 64px;
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.proceso__step { position: relative; }
+
+.proceso__num {
+  font-family: var(--font-display);
+  font-size: clamp(4rem, 8vw, 7rem);
+  font-weight: 800;
+  color: var(--border-light);
+  letter-spacing: -0.04em;
+  line-height: 1;
+  margin-bottom: 4px;
+  user-select: none;
+}
+
+.proceso__step h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: var(--text-primary);
+}
+
+.proceso__step p {
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 600px) {
+  .proceso__grid { grid-template-columns: 1fr; gap: 40px; }
+}
+
+/* ============================================================
+   CASOS SECTION
+============================================================ */
+.casos__cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  max-width: var(--max-w);
+  margin: 0 auto 72px;
+  padding: 0 24px;
+}
+
+.caso-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 36px 40px;
+  box-shadow: var(--shadow-md);
+}
+
+.caso-card__type {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.caso-card h3 {
+  font-size: 22px;
+  margin-bottom: 14px;
+}
+
+.caso-card p {
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.caso-card__link {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-primary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: opacity 0.2s;
+}
+.caso-card__link:hover { opacity: 0.6; }
+
+.casos__stats {
+  background: #fff;
+  border-radius: 20px;
+  padding: clamp(40px, 6vw, 64px) 24px;
+  max-width: var(--max-w);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  text-align: center;
+}
+
+.stat__num {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 5vw, 3.2rem);
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.stat__label {
+  font-size: 13px;
+  color: var(--text-tertiary);
+  margin-top: 6px;
+}
+
+@media (min-width: 600px) {
+  .casos__cards { grid-template-columns: repeat(3, 1fr); }
+  .casos__stats { flex-direction: row; justify-content: center; gap: 80px; }
+}
+
+/* ============================================================
+   PRECIOS SECTION
+============================================================ */
+.precios__tabs {
+  display: flex;
+  justify-content: center;
+  padding: 0 24px;
+  margin-bottom: 56px;
+}
+
+.tab-control {
+  display: flex;
+  align-items: center;
+  background: var(--bg-light);
+  border-radius: 980px;
+  padding: 4px;
+  gap: 2px;
+  overflow-x: auto;
+  max-width: 100%;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.tab-control::-webkit-scrollbar { display: none; }
+
+.tab-btn {
+  padding: 10px 20px;
+  border-radius: 980px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-tertiary);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s;
+  font-family: var(--font-body);
+}
+
+.tab-btn.active {
+  background: #fff;
+  color: var(--text-primary);
+  box-shadow: var(--shadow-sm);
+}
+
+.precios__panel { display: none; }
+.precios__panel.active { display: block; }
+
+.precios__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.price-card {
+  background: #fff;
+  border: 1.5px solid var(--border-light);
+  border-radius: 20px;
+  padding: clamp(28px, 4vw, 40px);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.price-card--featured {
+  border-color: #000;
+  border-width: 2px;
+}
+
+.price-card__badge {
+  position: absolute;
+  top: -13px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #000;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  padding: 4px 16px;
+  border-radius: 980px;
+  white-space: nowrap;
+}
+
+.price-card__name {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+  letter-spacing: -0.01em;
+}
+
+.price-card__price {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.03em;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.price-card__sub {
+  font-size: 13px;
+  color: var(--text-tertiary);
+  margin-bottom: 28px;
+}
+
+.price-card__divider {
+  height: 1px;
+  background: var(--border-light);
+  margin-bottom: 24px;
+}
+
+.price-card__features {
+  flex: 1;
+  margin-bottom: 28px;
+}
+
+.price-card__features li {
+  font-size: 14px;
+  color: var(--text-secondary);
+  padding: 7px 0;
+  padding-left: 20px;
+  position: relative;
+  line-height: 1.45;
+}
+
+.price-card__features li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--border);
+  font-size: 12px;
+}
+
+.precios__footer {
+  text-align: center;
+  margin-top: 48px;
+  padding: 0 24px;
+  font-size: 14px;
+  color: var(--text-tertiary);
+  line-height: 1.7;
+}
+
+@media (min-width: 600px) {
+  .precios__grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* ============================================================
+   POR QUÉ SECTION
+============================================================ */
+.porque__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  max-width: var(--max-w);
+  margin: 0 auto 72px;
+  padding: 0 24px;
+}
+
+.porque__item {
+  border-top: 1px solid var(--border-light);
+  padding: 40px 0;
+}
+
+.porque__item:last-child { border-bottom: 1px solid var(--border-light); }
+
+.porque__item h4 {
+  font-size: 19px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.porque__item p {
+  font-size: 16px;
+  line-height: 1.65;
+  max-width: 480px;
+}
+
+.porque__stats {
+  background: var(--bg-light);
+  border-radius: 20px;
+  padding: clamp(40px, 6vw, 64px) 24px;
+  max-width: var(--max-w);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  text-align: center;
+}
+
+@media (min-width: 600px) {
+  .porque__grid { grid-template-columns: 1fr 1fr; }
+  .porque__item { border-left: none; padding: 40px 32px 40px 0; }
+  .porque__item:nth-child(odd) { border-right: 1px solid var(--border-light); padding-right: 48px; }
+  .porque__item:nth-child(even) { padding-left: 48px; }
+  .porque__stats { flex-direction: row; justify-content: center; gap: 80px; }
+}
+
+/* ============================================================
+   FAQ SECTION
+============================================================ */
+.faq__list {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.faq__item {
+  border-bottom: 1px solid var(--border);
+}
+
+.faq__question {
   width: 100%;
-  height: 220px;
-  background: linear-gradient(135deg, #1a1a1a 0%, #222 100%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 24px 0;
+  text-align: left;
+  font-family: var(--font-body);
+  font-size: clamp(15px, 1.6vw, 17px);
+  font-weight: 500;
+  color: var(--text-primary);
+  cursor: pointer;
+  background: none;
+  border: none;
+  line-height: 1.4;
+}
+
+.faq__icon {
+  width: 22px;
+  height: 22px;
+  min-width: 22px;
+  border: 1.5px solid var(--border);
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 3rem;
+  font-size: 14px;
+  color: var(--text-tertiary);
+  transition: transform 0.3s ease, border-color 0.2s;
+  font-style: normal;
 }
-.caso-body { padding: 1.75rem; }
-.caso-tag {
-  font-size: 0.72rem;
+
+.faq__item.open .faq__icon {
+  transform: rotate(45deg);
+  border-color: var(--text-primary);
+  color: var(--text-primary);
+}
+
+.faq__answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+}
+
+.faq__answer-inner {
+  padding-bottom: 24px;
+  font-size: 15px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  max-width: 600px;
+}
+
+/* ============================================================
+   CTA FINAL
+============================================================ */
+.cta-final {
+  padding: clamp(80px, 12vw, 140px) 24px;
+  text-align: center;
+}
+
+.cta-final h2 {
+  color: #fff;
+  margin-bottom: 24px;
+}
+
+.cta-final p {
+  font-size: clamp(1rem, 1.8vw, 1.2rem);
+  color: rgba(255,255,255,0.65);
+  max-width: 520px;
+  margin: 0 auto 48px;
+  line-height: 1.6;
+}
+
+/* ============================================================
+   CONTACTO SECTION
+============================================================ */
+.contacto__inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 64px;
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.contacto__form-side .label { margin-bottom: 12px; }
+.contacto__form-side h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); margin-bottom: 14px; }
+.contacto__form-side > p {
+  font-size: 16px;
+  color: var(--text-secondary);
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+.form__field {
+  margin-bottom: 20px;
+}
+
+.form__label {
+  display: block;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-tertiary);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.form__input,
+.form__select,
+.form__textarea {
+  width: 100%;
+  border: none;
+  border-bottom: 1.5px solid var(--border);
+  background: transparent;
+  padding: 12px 0;
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: var(--text-primary);
+  outline: none;
+  transition: border-color 0.2s;
+  appearance: none;
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+.form__input:focus,
+.form__select:focus,
+.form__textarea:focus {
+  border-bottom-color: var(--text-primary);
+}
+
+.form__input::placeholder,
+.form__textarea::placeholder {
+  color: var(--text-light);
+}
+
+.form__select { cursor: pointer; color: var(--text-primary); }
+
+.form__textarea { resize: none; min-height: 72px; }
+
+.form__submit-wrap { margin-top: 32px; position: relative; }
+
+.form__spinner {
+  display: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  margin-left: 8px;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.form__message {
+  margin-top: 16px;
+  font-size: 14px;
+  padding: 14px 20px;
+  border-radius: 10px;
+  display: none;
+}
+
+.form__message--ok {
+  background: #f0fdf4;
+  color: #16a34a;
+  border: 1px solid #bbf7d0;
+}
+
+.form__message--err {
+  background: #fff1f2;
+  color: #e11d48;
+  border: 1px solid #fecdd3;
+}
+
+/* Info side */
+.contacto__info {
+  order: -1;
+}
+
+.contacto__info-list { display: flex; flex-direction: column; gap: 32px; }
+
+.info-item__label {
+  font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--gold);
-  margin-bottom: 0.6rem;
-}
-.caso-name {
-  font-family: var(--font-display);
-  font-size: 1.2rem;
-  font-weight: 800;
-  color: var(--text);
-  margin-bottom: 1rem;
-}
-.caso-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem; }
-.caso-field-label { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-dim); margin-bottom: 0.3rem; }
-.caso-field-val { font-size: 0.875rem; color: var(--text-muted); line-height: 1.5; }
-.caso-result-block {
-  background: var(--gold-subtle);
-  border: 1px solid var(--gold-line);
-  border-radius: var(--radius-sm);
-  padding: 0.75rem 1rem;
-  font-size: 0.875rem;
-  font-weight: 600;
-  color: var(--gold);
+  color: var(--text-tertiary);
+  margin-bottom: 6px;
 }
 
-@media (min-width: 768px) { .casos-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (min-width: 1024px) { .casos-grid { grid-template-columns: repeat(3, 1fr); } }
-
-/* Testimonials */
-.testimonials {
-  display: grid;
-  gap: 1.25rem;
-  margin-top: 3rem;
-  padding-top: 2.5rem;
-  border-top: 1px solid var(--gold-line);
-}
-.testimonial-card {
-  background: var(--bg);
-  border: 1px solid rgba(255,255,255,0.06);
-  border-radius: var(--radius-md);
-  padding: 1.5rem;
-  position: relative;
-}
-.testimonial-quote {
-  font-size: 2.5rem;
-  color: var(--gold);
-  line-height: 1;
-  margin-bottom: 0.75rem;
-  font-family: Georgia, serif;
-  opacity: 0.6;
-}
-.testimonial-text {
-  font-size: 0.95rem;
-  color: var(--text-muted);
-  font-style: italic;
-  line-height: 1.65;
-  margin-bottom: 1rem;
-}
-.testimonial-author { font-size: 0.82rem; font-weight: 600; color: var(--text); }
-.testimonial-role { font-size: 0.78rem; color: var(--text-dim); }
-
-@media (min-width: 768px) { .testimonials { grid-template-columns: repeat(2, 1fr); } }
-
-/* ============================================================
-   PRECIOS
-   ============================================================ */
-.precios {
-  padding: var(--section-py) 0;
-  background: var(--bg);
-}
-.precios-header { margin-bottom: 3rem; }
-.tab-nav {
-  display: flex;
-  gap: 0.5rem;
-  overflow-x: auto;
-  scrollbar-width: none;
-  padding-bottom: 0.25rem;
-  margin-bottom: 2.5rem;
-}
-.tab-nav::-webkit-scrollbar { display: none; }
-.tab-btn {
-  flex-shrink: 0;
-  background: none;
-  border: 1px solid rgba(255,255,255,0.08);
-  color: var(--text-muted);
-  font-family: var(--font-body);
-  font-size: 0.85rem;
-  font-weight: 600;
-  padding: 0.55rem 1.1rem;
-  border-radius: var(--radius-sm);
-  cursor: pointer;
-  transition: var(--transition);
-  white-space: nowrap;
-}
-.tab-btn:hover { color: var(--text); border-color: rgba(255,255,255,0.2); }
-.tab-btn.active { background: var(--gold-subtle); border-color: var(--gold); color: var(--gold); }
-
-.tab-panel { display: none; }
-.tab-panel.active { display: block; }
-
-.pricing-grid {
-  display: grid;
-  gap: 1.25rem;
-}
-.price-card {
-  background: var(--bg-2);
-  border: 1px solid rgba(255,255,255,0.07);
-  border-radius: var(--radius-lg);
-  padding: 2rem;
-  position: relative;
-  transition: border-color var(--transition), transform var(--transition);
-}
-.price-card:hover { transform: translateY(-3px); }
-.price-card.featured {
-  border-color: var(--gold);
-  box-shadow: 0 0 0 1px rgba(200,168,78,0.15), 0 20px 60px rgba(0,0,0,0.3);
-}
-.price-badge {
-  position: absolute;
-  top: -11px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: var(--gold);
-  color: #0A0A0A;
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  padding: 0.25rem 0.85rem;
-  border-radius: 100px;
-  white-space: nowrap;
-}
-.price-plan { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.6rem; }
-.price-amount {
-  font-family: var(--font-display);
-  font-size: 2.4rem;
-  font-weight: 800;
-  color: var(--text);
-  line-height: 1;
-  margin-bottom: 0.3rem;
-}
-.price-amount sup { font-size: 1.1rem; vertical-align: super; }
-.price-monthly { font-size: 0.82rem; color: var(--text-muted); margin-bottom: 0.3rem; }
-.price-delivery { font-size: 0.78rem; color: var(--text-dim); margin-bottom: 1.5rem; }
-.price-divider { height: 1px; background: rgba(255,255,255,0.06); margin-bottom: 1.25rem; }
-.price-features { list-style: none; margin-bottom: 1.75rem; }
-.price-features li {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.6rem;
-  font-size: 0.875rem;
-  color: var(--text-muted);
-  padding: 0.3rem 0;
-}
-.price-features li .check { color: var(--gold); flex-shrink: 0; }
-.price-note {
-  text-align: center;
-  margin-top: 2rem;
-  font-size: 0.82rem;
-  color: var(--text-dim);
-  border-top: 1px solid var(--gold-line);
-  padding-top: 1.5rem;
-}
-.price-note strong { color: var(--gold); }
-
-@media (min-width: 768px) { .pricing-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (min-width: 1024px) { .pricing-grid { grid-template-columns: repeat(3, 1fr); } }
-
-/* ============================================================
-   POR QUÉ WOODIA
-   ============================================================ */
-.porque {
-  padding: var(--section-py) 0;
-  background: var(--bg-3);
-}
-.porque-header { margin-bottom: 3.5rem; }
-.porque-grid {
-  display: grid;
-  gap: 1.5rem;
-}
-.porque-card {
-  background: var(--bg-2);
-  border: 1px solid rgba(255,255,255,0.06);
-  border-radius: var(--radius-lg);
-  padding: 2rem;
-  transition: border-color var(--transition), transform var(--transition);
-}
-.porque-card:hover { border-color: var(--gold-line); transform: translateY(-2px); }
-.porque-icon {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  display: block;
-}
-.porque-title {
-  font-family: var(--font-display);
-  font-size: 1.05rem;
-  font-weight: 800;
-  color: var(--text);
-  margin-bottom: 0.6rem;
-  letter-spacing: -0.01em;
-}
-.porque-desc { font-size: 0.9rem; color: var(--text-muted); line-height: 1.65; }
-
-@media (min-width: 768px) { .porque-grid { grid-template-columns: repeat(2, 1fr); } }
-
-/* Stats bar */
-.stats-bar {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1px;
-  background: var(--gold-line);
-  border: 1px solid var(--gold-line);
-  border-radius: var(--radius-md);
-  overflow: hidden;
-  margin-top: 3.5rem;
-}
-.stat-item {
-  background: var(--bg-2);
-  padding: 1.75rem 1.5rem;
-  text-align: center;
-}
-.stat-number {
-  font-family: var(--font-display);
-  font-size: clamp(2rem, 4vw, 2.8rem);
-  font-weight: 800;
-  color: var(--gold);
-  display: block;
-  line-height: 1;
-  margin-bottom: 0.4rem;
-}
-.stat-label { font-size: 0.8rem; color: var(--text-muted); line-height: 1.4; }
-
-/* ============================================================
-   FAQ
-   ============================================================ */
-.faq {
-  padding: var(--section-py) 0;
-  background: var(--bg);
-}
-.faq-header { margin-bottom: 3rem; }
-.faq-list { max-width: 760px; }
-.faq-item {
-  border: 1px solid rgba(255,255,255,0.07);
-  border-radius: var(--radius-md);
-  margin-bottom: 0.75rem;
-  overflow: hidden;
-  transition: border-color var(--transition);
-}
-.faq-item.open, .faq-item:hover { border-color: var(--gold-line); }
-.faq-question {
-  width: 100%;
-  background: none;
-  border: none;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  padding: 1.25rem 1.5rem;
-  cursor: pointer;
-  text-align: left;
-  font-family: var(--font-body);
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: var(--text);
-  transition: color var(--transition);
-}
-.faq-question:hover { color: var(--gold); }
-.faq-icon {
-  flex-shrink: 0;
-  width: 22px; height: 22px;
-  background: var(--gold-subtle);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.9rem;
-  color: var(--gold);
-  transition: transform var(--transition), background var(--transition);
-}
-.faq-item.open .faq-icon { transform: rotate(45deg); background: var(--gold); color: #0A0A0A; }
-.faq-answer {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-}
-.faq-item.open .faq-answer { max-height: 400px; }
-.faq-answer-inner {
-  padding: 0 1.5rem 1.25rem;
-  font-size: 0.9rem;
-  color: var(--text-muted);
-  line-height: 1.7;
+.info-item__value {
+  font-size: 17px;
+  font-weight: 500;
+  color: var(--text-primary);
 }
 
-/* ============================================================
-   CONTACTO
-   ============================================================ */
-.contacto {
-  padding: var(--section-py) 0;
-  background: var(--bg-2);
+.info-item__value a {
+  color: var(--text-primary);
+  transition: opacity 0.2s;
 }
-.contacto-header { margin-bottom: 3rem; }
-.contacto-grid {
-  display: grid;
-  gap: 3rem;
-}
-.contact-form-wrap {
-  background: var(--bg);
-  border: 1px solid rgba(255,255,255,0.07);
-  border-radius: var(--radius-lg);
-  padding: 2.25rem;
-}
-.form-row { display: grid; gap: 1rem; margin-bottom: 1rem; }
-.form-group { display: flex; flex-direction: column; gap: 0.45rem; }
-.form-label { font-size: 0.8rem; font-weight: 600; color: var(--text-muted); }
-.form-input, .form-select, .form-textarea {
-  background: var(--bg-2);
-  border: 1px solid rgba(255,255,255,0.1);
-  border-radius: var(--radius-sm);
-  padding: 0.75rem 1rem;
-  font-family: var(--font-body);
-  font-size: 0.9rem;
-  color: var(--text);
-  transition: border-color var(--transition), box-shadow var(--transition);
-  appearance: none;
-  -webkit-appearance: none;
-}
-.form-input::placeholder, .form-textarea::placeholder { color: var(--text-dim); }
-.form-input:focus, .form-select:focus, .form-textarea:focus {
-  outline: none;
-  border-color: var(--gold);
-  box-shadow: 0 0 0 3px rgba(200,168,78,0.12);
-}
-.form-select {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%238A8A80' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 1rem center;
-  padding-right: 2.5rem;
-  cursor: pointer;
-}
-.form-select option { background: #1a1a1a; color: var(--text); }
-.form-textarea { resize: vertical; min-height: 120px; }
-.form-submit-wrap { margin-top: 1.25rem; }
-.form-msg {
-  margin-top: 1rem;
-  padding: 0.75rem 1rem;
-  border-radius: var(--radius-sm);
-  font-size: 0.875rem;
-  font-weight: 600;
-  display: none;
-}
-.form-msg.success { background: rgba(74,124,89,0.15); border: 1px solid rgba(74,124,89,0.4); color: #6fcf97; display: block; }
-.form-msg.error { background: rgba(200,50,50,0.12); border: 1px solid rgba(200,50,50,0.3); color: #e07070; display: block; }
+.info-item__value a:hover { opacity: 0.6; }
 
-@media (min-width: 640px) { .form-row.two-col { grid-template-columns: 1fr 1fr; } }
+.info-item__note {
+  font-size: 13px;
+  color: var(--text-tertiary);
+  margin-top: 4px;
+}
 
-.contact-info { padding: 1rem 0; }
-.contact-info-title {
-  font-family: var(--font-display);
-  font-size: 1.2rem;
-  font-weight: 800;
-  color: var(--text);
-  margin-bottom: 1.75rem;
+@media (min-width: 768px) {
+  .contacto__inner { grid-template-columns: 55fr 45fr; gap: 80px; }
+  .contacto__info { order: 0; }
 }
-.contact-method {
-  display: flex;
-  align-items: flex-start;
-  gap: 1rem;
-  margin-bottom: 1.5rem;
-}
-.contact-method-icon {
-  width: 42px; height: 42px;
-  background: var(--gold-subtle);
-  border: 1px solid var(--gold-line);
-  border-radius: var(--radius-sm);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.1rem;
-  flex-shrink: 0;
-}
-.contact-method-text {}
-.contact-method-label { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-dim); margin-bottom: 0.25rem; }
-.contact-method-val { font-size: 0.95rem; color: var(--text); font-weight: 500; }
-.contact-method-val a { color: inherit; text-decoration: none; }
-.contact-method-val a:hover { color: var(--gold); }
-.contact-method-note { font-size: 0.78rem; color: var(--text-muted); margin-top: 0.2rem; }
-.contact-wa-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.6rem;
-  background: #25D366;
-  color: #fff;
-  font-weight: 700;
-  font-size: 0.9rem;
-  padding: 0.8rem 1.4rem;
-  border-radius: var(--radius-sm);
-  text-decoration: none;
-  margin-top: 2rem;
-  transition: opacity var(--transition), transform var(--transition);
-}
-.contact-wa-btn:hover { opacity: 0.9; transform: translateY(-1px); }
-
-@media (min-width: 1024px) { .contacto-grid { grid-template-columns: 1.1fr 0.9fr; } }
 
 /* ============================================================
    FOOTER
-   ============================================================ */
-.footer {
-  background: var(--bg);
-  border-top: 1px solid var(--gold-line);
-  padding: 2.5rem 0;
+============================================================ */
+footer {
+  border-top: 1px solid var(--border-light);
+  padding: 32px 0;
 }
-.footer-inner {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1.25rem;
-}
-.footer-logo img { height: 28px; width: auto; }
-.footer-logo-text {
-  font-family: var(--font-display);
-  font-size: 1.1rem;
-  font-weight: 800;
-  color: var(--text);
-}
-.footer-tagline { font-size: 0.8rem; color: var(--text-dim); margin-top: 0.25rem; }
-.footer-copy { font-size: 0.78rem; color: var(--text-dim); }
-.footer-links {
-  display: flex;
-  gap: 1.25rem;
-}
-.footer-links a { font-size: 0.78rem; color: var(--text-dim); text-decoration: none; transition: color var(--transition); }
-.footer-links a:hover { color: var(--gold); }
 
-/* ============================================================
-   LEGAL SECTIONS
-   ============================================================ */
-.legal-section {
-  position: fixed;
-  inset: 0;
-  background: var(--bg);
-  z-index: 9000;
-  overflow-y: auto;
-  padding: 3rem 1.5rem;
-  display: none;
+.footer__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  text-align: center;
 }
-.legal-section.visible { display: block; }
-.legal-inner { max-width: 760px; margin: 0 auto; }
-.legal-back {
-  background: var(--gold-subtle);
-  border: 1px solid var(--gold-line);
-  color: var(--gold);
-  font-family: var(--font-body);
-  font-size: 0.875rem;
+
+.footer__logo img {
+  height: 22px;
+  width: auto;
+  opacity: 0.5;
+}
+.footer__logo-fallback {
+  font-family: var(--font-display);
+  font-size: 15px;
   font-weight: 600;
-  padding: 0.5rem 1rem;
-  border-radius: var(--radius-sm);
-  cursor: pointer;
-  margin-bottom: 2rem;
-  display: inline-block;
-  transition: background var(--transition);
+  color: var(--text-tertiary);
 }
-.legal-back:hover { background: rgba(200,168,78,0.2); }
-.legal-inner h2 { font-family: var(--font-display); font-size: 2rem; font-weight: 800; margin-bottom: 2rem; color: var(--text); }
-.legal-inner h3 { font-size: 1rem; font-weight: 700; color: var(--text); margin-top: 1.5rem; margin-bottom: 0.5rem; }
-.legal-inner p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.7; }
+
+.footer__links {
+  display: flex;
+  gap: 20px;
+}
+
+.footer__links a {
+  font-size: 13px;
+  color: var(--text-tertiary);
+  transition: color 0.2s;
+}
+.footer__links a:hover { color: var(--text-primary); }
+
+.footer__copy {
+  font-size: 13px;
+  color: var(--text-light);
+}
+
+@media (min-width: 768px) {
+  .footer__inner { flex-direction: row; justify-content: space-between; text-align: left; }
+}
 
 /* ============================================================
    WHATSAPP FLOAT
-   ============================================================ */
+============================================================ */
 .wa-float {
   position: fixed;
   bottom: 24px;
   right: 24px;
-  z-index: 800;
-  width: 54px;
-  height: 54px;
+  z-index: 999;
+  width: 56px;
+  height: 56px;
   background: #25D366;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: var(--shadow-lg);
+  transition: transform 0.2s ease;
   text-decoration: none;
-  box-shadow: 0 4px 20px rgba(37,211,102,0.4);
-  transition: transform var(--transition), box-shadow var(--transition);
 }
-.wa-float:hover { transform: scale(1.1); box-shadow: 0 8px 32px rgba(37,211,102,0.5); }
+
+.wa-float:hover { transform: scale(1.06); }
+
+.wa-float svg { width: 28px; height: 28px; fill: #fff; }
+
 .wa-float::before {
   content: '';
   position: absolute;
-  inset: -6px;
-  border: 2px solid rgba(37,211,102,0.3);
+  inset: -4px;
   border-radius: 50%;
-  animation: wa-pulse 2.5s ease infinite;
+  border: 2px solid #25D366;
+  opacity: 0;
+  animation: wa-pulse 4s ease-out infinite;
 }
+
 @keyframes wa-pulse {
-  0%, 100% { transform: scale(1); opacity: 0.6; }
-  50% { transform: scale(1.2); opacity: 0; }
+  0%   { opacity: 0; transform: scale(1); }
+  30%  { opacity: 0.4; }
+  100% { opacity: 0; transform: scale(1.6); }
 }
-.wa-float svg { width: 26px; height: 26px; fill: #fff; }
 
 /* ============================================================
-   CTA FINAL
-   ============================================================ */
-.cta-final {
-  padding: var(--section-py) 0;
-  background: var(--bg-3);
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-.cta-final::before {
-  content: '';
-  position: absolute;
+   MODALS (Legal)
+============================================================ */
+.modal-overlay {
+  position: fixed;
   inset: 0;
-  background: radial-gradient(ellipse 80% 60% at 50% 50%, rgba(200,168,78,0.07) 0%, transparent 70%);
+  background: rgba(0,0,0,0.5);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  opacity: 0;
   pointer-events: none;
+  transition: opacity 0.3s;
 }
-.cta-final-title {
-  font-family: var(--font-display);
-  font-size: clamp(2rem, 5vw, 3.5rem);
-  font-weight: 800;
-  letter-spacing: -0.03em;
-  color: var(--text);
-  margin-bottom: 1rem;
-  line-height: 1.1;
+
+.modal-overlay.open {
+  opacity: 1;
+  pointer-events: all;
 }
-.cta-final-sub { font-size: 1.05rem; color: var(--text-muted); max-width: 48ch; margin: 0 auto 2.25rem; line-height: 1.65; }
-.cta-final-ctas { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin-bottom: 1.5rem; }
-.cta-final-note { font-size: 0.82rem; color: var(--text-dim); }
+
+.modal {
+  background: #fff;
+  border-radius: 20px;
+  max-width: 640px;
+  width: 100%;
+  max-height: 80vh;
+  overflow-y: auto;
+  padding: 48px;
+  position: relative;
+  transform: translateY(16px);
+  transition: transform 0.3s ease;
+}
+
+.modal-overlay.open .modal { transform: translateY(0); }
+
+.modal__close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: var(--bg-light);
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  transition: background 0.2s;
+}
+.modal__close:hover { background: var(--border-light); }
+
+.modal h3 {
+  font-size: 24px;
+  margin-bottom: 24px;
+}
+
+.modal p, .modal li {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.75;
+  margin-bottom: 12px;
+}
+
+/* ============================================================
+   ANIMATIONS — GSAP handles initial states in JS, not CSS
+============================================================ */
+
+/* Prefers reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .wa-float::before { animation: none; }
+  .form__spinner { animation: none; }
+}
+
+/* ============================================================
+   MISC
+============================================================ */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
 </style>
 </head>
-
 <body>
 
 <!-- ============================================================
      NAVBAR
-     ============================================================ -->
-<nav class="navbar" id="navbar" aria-label="Navegación principal">
-  <div class="container navbar-inner">
-    <a href="#" class="nav-logo" aria-label="Woodia Spain - Inicio">
-      <img src="logo.png" alt="Woodia Spain" height="32"
+============================================================ -->
+<nav class="nav" id="nav" role="navigation" aria-label="Navegación principal">
+  <div class="nav__inner">
+    <a href="#" class="nav__logo" aria-label="Woodia Spain — inicio">
+      <img src="logo-removebg-preview (1).png" alt="Woodia Spain" height="60"
            onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
-      <span class="nav-logo-text" style="display:none">Woodia Spain</span>
+      <span class="nav__logo-fallback" style="display:none">Woodia Spain</span>
     </a>
-    <ul class="nav-links" role="list">
+
+    <ul class="nav__links" role="list">
       <li><a href="#soluciones">Soluciones</a></li>
-      <li><a href="#proceso">Cómo funciona</a></li>
-      <li><a href="#resultados">Casos reales</a></li>
+      <li><a href="#proceso">Proceso</a></li>
       <li><a href="#precios">Precios</a></li>
       <li><a href="#faq">FAQ</a></li>
+      <li>
+        <a href="#contacto" class="nav__cta">Contacto →</a>
+      </li>
     </ul>
-    <a href="#contacto" class="btn btn-outline btn-sm nav-cta">Hablemos →</a>
-    <button class="hamburger" id="hamburger" aria-label="Menú" aria-expanded="false">
+
+    <button class="nav__hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </div>
 </nav>
 
 <!-- Mobile menu -->
-<div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Menú de navegación">
-  <a href="#soluciones" class="menu-link">Soluciones</a>
-  <a href="#proceso" class="menu-link">Cómo funciona</a>
-  <a href="#resultados" class="menu-link">Casos reales</a>
-  <a href="#precios" class="menu-link">Precios</a>
-  <a href="#faq" class="menu-link">FAQ</a>
-  <a href="#contacto" class="btn btn-gold menu-cta">Hablemos →</a>
+<div class="nav__mobile" id="mobileMenu" role="dialog" aria-label="Menú de navegación">
+  <a href="#soluciones" class="mobile-link">Soluciones</a>
+  <a href="#proceso" class="mobile-link">Proceso</a>
+  <a href="#precios" class="mobile-link">Precios</a>
+  <a href="#faq" class="mobile-link">FAQ</a>
+  <a href="#contacto" class="mobile-link">Contacto</a>
 </div>
 
 <!-- ============================================================
      HERO
-     ============================================================ -->
+============================================================ -->
 <main>
 <section class="hero" aria-labelledby="hero-title">
-  <div class="container hero-inner">
-    <div class="hero-content">
-      <div class="hero-badge" id="hero-badge">
-        <span class="pulse-dot"></span>
-        Diseño web + IA para negocios locales
-      </div>
-      <h1 class="hero-title" id="hero-title">
-        Tu negocio en A Coruña,<br>
-        funcionando <span class="highlight">24 horas</span><br>
-        sin que estés tú delante
-      </h1>
-      <p class="hero-sub">
-        Diseñamos tu web y la conectamos con inteligencia artificial para que atienda clientes, gestione reservas y conteste reseñas. Mientras tú descansas.
-      </p>
-      <div class="hero-ctas">
-        <a href="#soluciones" class="btn btn-gold btn-lg">Ver qué hacemos →</a>
-        <a href="https://wa.me/34624594551" class="btn btn-outline btn-lg" target="_blank" rel="noopener noreferrer">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-          Hablar por WhatsApp
-        </a>
-      </div>
-      <div class="hero-trust">
-        <span><span class="check">✓</span> Entrega en 7-14 días</span>
-        <span><span class="check">✓</span> Pago fraccionado</span>
-        <span><span class="check">✓</span> Soporte incluido</span>
-      </div>
+  <div class="hero__inner" id="heroContent">
+    <span class="label hero__label">DISEÑO WEB · INTELIGENCIA ARTIFICIAL · A CORUÑA</span>
+    <h1 id="hero-title">Tu negocio,<br>funcionando 24 horas<br>sin que estés tú delante</h1>
+    <p class="hero__sub">Diseñamos tu web y la conectamos con inteligencia artificial. Tu bar recibe reservas a medianoche. Tu tienda vende mientras duermes. Tu negocio contesta solo.</p>
+    <div class="btn-group btn-group--center hero__btns">
+      <a href="#soluciones" class="btn btn--primary">Ver soluciones</a>
+      <a href="https://wa.me/34624594551" class="btn btn--outline" target="_blank" rel="noopener noreferrer">Hablar por WhatsApp →</a>
     </div>
+    <p class="hero__trust">Entrega en 7–14 días &nbsp;·&nbsp; Pago fraccionable &nbsp;·&nbsp; Soporte incluido &nbsp;·&nbsp; Formación incluida</p>
+  </div>
 
-    <!-- Hero visual: CSS phone mockup -->
-    <div class="hero-visual" aria-hidden="true">
-      <!-- Main phone -->
-      <div class="phone-mockup">
-        <div class="phone-body">
-          <div class="phone-notch"></div>
-          <div class="phone-screen">
-            <div class="phone-nav">
-              <div class="phone-nav-dot"></div>
-              <div class="phone-nav-links">
-                <div class="phone-nav-link"></div>
-                <div class="phone-nav-link"></div>
-                <div class="phone-nav-link"></div>
-              </div>
-            </div>
-            <div class="phone-hero-img"></div>
-            <div class="phone-content">
-              <div class="phone-rest-name">La Taberna do Mar</div>
-              <div class="phone-rest-sub">Carta · Reservas · Eventos</div>
-              <div class="phone-cta-btn">Reservar mesa →</div>
-              <div class="phone-divider"></div>
-              <div class="phone-row">
-                <div class="phone-chip">Cocina gallega</div>
-                <div class="phone-chip">Vinos</div>
-              </div>
-              <div class="phone-row">
-                <div class="phone-chip">📍 A Coruña</div>
-                <div class="phone-chip">⭐ 4.9</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Floating WhatsApp card -->
-      <div class="float-wa">
-        <div class="float-wa-header">
-          <div class="wa-avatar">🤖</div>
-          <div>
-            <div class="wa-name">Bot Reservas</div>
-            <div class="wa-status">● En línea</div>
-          </div>
-        </div>
-        <div class="wa-bubble-in">¡Hola! ¿Para cuántas personas y qué día?</div>
-        <div class="wa-bubble-out">Para 4, mañana a las 21h 🙏</div>
-        <div class="wa-bubble-in">✓ Reserva confirmada para 4 personas. ¡Hasta pronto!</div>
-        <div class="wa-tick">✓✓ Leído</div>
-      </div>
-
-      <!-- Floating notification -->
-      <div class="float-notif">
-        <div class="notif-icon">📅</div>
-        <div class="notif-text">
-          <strong>Nueva reserva</strong>
-          Mesa 4 · Hoy 21:00
-        </div>
-      </div>
-
-      <!-- Floating review -->
-      <div class="float-review">
-        <div class="review-stars">★★★★★</div>
-        <div class="review-text">"Súper cómodo reservar por WhatsApp, sin llamar"</div>
-      </div>
-    </div>
+  <div class="hero__image-wrap">
+    <img
+      src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1400&q=80"
+      alt="Interior de restaurante elegante con luz cálida"
+      class="hero__image"
+      width="1400"
+      height="600"
+      loading="eager"
+      onerror="this.parentElement.style.display='none'"
+    >
   </div>
 </section>
-
-<!-- ============================================================
-     PROOF BAR
-     ============================================================ -->
-<div class="proof-bar">
-  <div class="proof-bar-label">Negocios en A Coruña que ya trabajan con nosotros</div>
-  <div class="marquee-wrapper">
-    <div class="marquee-track" aria-hidden="true">
-      <!-- Repeated twice for seamless loop -->
-      <div class="marquee-item">Laboratorio Vintage</div>
-      <div class="marquee-item">Qkinhas Café</div>
-      <div class="marquee-item">Bar A Pedralba</div>
-      <div class="marquee-item">Estudio Navia</div>
-      <div class="marquee-item highlight">Tu negocio aquí →</div>
-      <div class="marquee-item">O Cantón</div>
-      <div class="marquee-item">Clínica Ares</div>
-      <div class="marquee-item">Floristería Sol</div>
-      <!-- Duplicate -->
-      <div class="marquee-item">Laboratorio Vintage</div>
-      <div class="marquee-item">Qkinhas Café</div>
-      <div class="marquee-item">Bar A Pedralba</div>
-      <div class="marquee-item">Estudio Navia</div>
-      <div class="marquee-item highlight">Tu negocio aquí →</div>
-      <div class="marquee-item">O Cantón</div>
-      <div class="marquee-item">Clínica Ares</div>
-      <div class="marquee-item">Floristería Sol</div>
-    </div>
-  </div>
-</div>
 
 <!-- ============================================================
      EL PROBLEMA
-     ============================================================ -->
-<section class="problema" id="problema" aria-labelledby="problema-title">
-  <div class="container">
-    <span class="section-label reveal">La realidad</span>
-    <h2 class="section-title reveal" id="problema-title">¿Te suena esto?</h2>
-    <div class="problema-grid">
-      <div class="problema-card reveal">
-        <span class="problema-emoji">📱</span>
-        <p>Son las 11 de la noche y un cliente te escribe por Instagram preguntando si mañana abrís. <strong>No contestas. Se va a la competencia.</strong></p>
-      </div>
-      <div class="problema-card reveal">
-        <span class="problema-emoji">⭐</span>
-        <p>Te dejan una reseña negativa en Google. <strong>La ves 4 días después.</strong> El daño ya está hecho.</p>
-      </div>
-      <div class="problema-card reveal">
-        <span class="problema-emoji">🕐</span>
-        <p>Pasas más tiempo <strong>contestando WhatsApps</strong> que atendiendo a los clientes que tienes delante.</p>
-      </div>
-    </div>
-    <p class="problema-close reveal">
-      "No necesitas más horas en el día. Necesitas que tu negocio trabaje cuando tú no estás."
-    </p>
+============================================================ -->
+<section class="section section--light reveal" aria-labelledby="problema-title">
+  <div class="container text-center" style="margin-bottom:64px">
+    <span class="label">LA REALIDAD</span>
+    <h2 id="problema-title">Mientras no estás, tu negocio pierde clientes</h2>
   </div>
-</section>
 
-<hr class="divider">
+  <div class="problema__grid reveal-group">
+    <div class="problema__item">
+      <div class="problema__num">11PM</div>
+      <p>Un cliente escribe por WhatsApp preguntando si mañana abrís. No contestas. Se va a la competencia.</p>
+    </div>
+    <div class="problema__item">
+      <div class="problema__num">4 días</div>
+      <p>Te dejan una reseña negativa en Google. La ves cuatro días después. El daño ya está hecho.</p>
+    </div>
+    <div class="problema__item">
+      <div class="problema__num">3h/día</div>
+      <p>Las horas que pierdes contestando mensajes repetitivos en vez de atender a quien tienes delante.</p>
+    </div>
+  </div>
+
+  <p class="problema__close reveal">No necesitas más horas. Necesitas que tu negocio trabaje cuando tú no estás.</p>
+</section>
 
 <!-- ============================================================
      SOLUCIONES
-     ============================================================ -->
-<section class="soluciones" id="soluciones" aria-labelledby="sol-title">
-  <div class="container">
-    <div class="soluciones-header">
-      <span class="section-label reveal">Soluciones</span>
-      <h2 class="section-title reveal" id="sol-title">No vendemos webs.<br>Digitalizamos tu negocio entero.</h2>
-      <p class="section-sub reveal">Web profesional + inteligencia artificial + automatización. Todo junto, todo conectado.</p>
-    </div>
-    <div class="soluciones-grid">
-
-      <!-- Card 1: Hostelería -->
-      <div class="sol-card reveal">
-        <div class="sol-icon">🍽️</div>
-        <div class="sol-title">Paquete Hostelería Digital</div>
-        <p class="sol-sub">Tu bar o restaurante, abierto en internet las 24 horas</p>
-        <ul class="sol-includes">
-          <li><span class="sol-check">✓</span> Web con tu carta actualizable desde el móvil</li>
-          <li><span class="sol-check">✓</span> Bot de WhatsApp que gestiona reservas 24h</li>
-          <li><span class="sol-check">✓</span> Respuesta automática a reseñas de Google</li>
-          <li><span class="sol-check">✓</span> Menú del día publicado automáticamente</li>
-          <li><span class="sol-check">✓</span> Formación para que lo gestiones tú</li>
-        </ul>
-        <div class="sol-result">"Tus clientes reservan solos. Tú solo cocinas."</div>
-        <div class="sol-price">Desde 1.500€ <span>+ 150€/mes</span></div>
-        <a href="#contacto" class="btn btn-gold btn-sm">Quiero esto para mi bar →</a>
-      </div>
-
-      <!-- Card 2: Tiendas -->
-      <div class="sol-card reveal">
-        <div class="sol-icon">🛍️</div>
-        <div class="sol-title">Paquete Tienda Online</div>
-        <p class="sol-sub">Tus productos en internet, vendiendo mientras duermes</p>
-        <ul class="sol-includes">
-          <li><span class="sol-check">✓</span> Tienda Shopify profesional con tus productos reales</li>
-          <li><span class="sol-check">✓</span> Chatbot WhatsApp para atención al cliente</li>
-          <li><span class="sol-check">✓</span> Automatización de pedidos y notificaciones</li>
-          <li><span class="sol-check">✓</span> Diseño adaptado a tu marca y estilo</li>
-          <li><span class="sol-check">✓</span> Formación completa incluida</li>
-        </ul>
-        <div class="sol-result">"Tus clientes compran a las 3AM. Tú te enteras por la mañana."</div>
-        <div class="sol-price">Desde 1.500€ <span>+ 100€/mes</span></div>
-        <a href="#contacto" class="btn btn-gold btn-sm">Quiero mi tienda online →</a>
-      </div>
-
-      <!-- Card 3: Servicios -->
-      <div class="sol-card reveal">
-        <div class="sol-icon">📅</div>
-        <div class="sol-title">Paquete Negocio de Servicios</div>
-        <p class="sol-sub">Citas, consultas y atención gestionadas por IA</p>
-        <ul class="sol-includes">
-          <li><span class="sol-check">✓</span> Web profesional con sistema de citas</li>
-          <li><span class="sol-check">✓</span> Bot WhatsApp para agendar automáticamente</li>
-          <li><span class="sol-check">✓</span> Recordatorios automáticos a tus clientes</li>
-          <li><span class="sol-check">✓</span> Respuesta a consultas frecuentes 24h</li>
-          <li><span class="sol-check">✓</span> Panel de control sencillo</li>
-        </ul>
-        <div class="sol-result">"Tus clientes piden cita solos. Tú solo haces tu trabajo."</div>
-        <div class="sol-price">Desde 1.200€ <span>+ 100€/mes</span></div>
-        <a href="#contacto" class="btn btn-gold btn-sm">Quiero automatizar mi negocio →</a>
-      </div>
-
-    </div>
-    <p class="sol-outro reveal">
-      ¿Tu negocio no encaja en estas categorías? No pasa nada. <a href="#contacto">Cuéntanos qué necesitas →</a>
-    </p>
+============================================================ -->
+<section class="section" id="soluciones" aria-labelledby="soluciones-title">
+  <div class="section__header reveal">
+    <span class="label">SOLUCIONES</span>
+    <h2 id="soluciones-title">No vendemos webs. Digitalizamos tu negocio entero.</h2>
+    <p>Web profesional + inteligencia artificial + automatización. Un proveedor, todo conectado.</p>
   </div>
-</section>
 
-<hr class="divider">
+  <div class="soluciones__cards">
+
+    <!-- Hostelería -->
+    <article class="sol-card reveal">
+      <img
+        src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=900&q=80"
+        alt="Plato gourmet en restaurante con iluminación elegante"
+        class="sol-card__img"
+        loading="lazy"
+        width="900" height="506"
+        onerror="this.style.display='none'"
+      >
+      <div class="sol-card__body">
+        <span class="sol-card__tag">BARES Y RESTAURANTES</span>
+        <h3>Tu bar, abierto en internet las 24 horas</h3>
+        <p>Diseñamos tu web con carta digital actualizable desde el móvil. Montamos un bot de WhatsApp que gestiona reservas a cualquier hora. Automatizamos las respuestas a reseñas de Google. Y publicamos tu menú del día sin que toques nada.</p>
+        <p class="sol-card__result">Tus clientes reservan solos. Tú solo cocinas.</p>
+        <p class="sol-card__price">Desde 1.500€ + 150€/mes</p>
+        <a href="#contacto" class="btn btn--primary">Quiero esto →</a>
+      </div>
+    </article>
+
+    <!-- Tiendas -->
+    <article class="sol-card sol-card--reverse reveal">
+      <img
+        src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=900&q=80"
+        alt="Interior de tienda de ropa boutique moderna"
+        class="sol-card__img"
+        loading="lazy"
+        width="900" height="506"
+        onerror="this.style.display='none'"
+      >
+      <div class="sol-card__body">
+        <span class="sol-card__tag">TIENDAS Y RETAIL</span>
+        <h3>Tus productos, vendiendo mientras duermes</h3>
+        <p>Creamos tu tienda online en Shopify con tus productos reales y un diseño que representa tu marca. Añadimos un chatbot de WhatsApp para atención al cliente y automatizamos las notificaciones de pedidos.</p>
+        <p class="sol-card__result">Vendes a las 3AM. Te enteras por la mañana.</p>
+        <p class="sol-card__price">Desde 1.500€ + 100€/mes</p>
+        <a href="#contacto" class="btn btn--primary">Quiero mi tienda →</a>
+      </div>
+    </article>
+
+    <!-- Servicios -->
+    <article class="sol-card reveal">
+      <img
+        src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=900&q=80"
+        alt="Salón de peluquería moderno y luminoso"
+        class="sol-card__img"
+        loading="lazy"
+        width="900" height="506"
+        onerror="this.style.display='none'"
+      >
+      <div class="sol-card__body">
+        <span class="sol-card__tag">PELUQUERÍAS, CLÍNICAS, GESTORÍAS</span>
+        <h3>Citas y consultas gestionadas por IA</h3>
+        <p>Web profesional con sistema de citas online. Bot de WhatsApp que agenda automáticamente. Recordatorios a tus clientes. Respuesta a las consultas frecuentes las 24 horas.</p>
+        <p class="sol-card__result">Tus clientes piden cita solos. Tú haces tu trabajo.</p>
+        <p class="sol-card__price">Desde 1.200€ + 100€/mes</p>
+        <a href="#contacto" class="btn btn--primary">Automatizar mi negocio →</a>
+      </div>
+    </article>
+
+  </div>
+
+  <p class="soluciones__footer reveal">¿Tu negocio no encaja aquí? No pasa nada. <a href="https://wa.me/34624594551" target="_blank" rel="noopener noreferrer">Cuéntanos qué necesitas →</a></p>
+</section>
 
 <!-- ============================================================
-     CÓMO FUNCIONA
-     ============================================================ -->
-<section class="proceso" id="proceso" aria-labelledby="proceso-title">
-  <div class="container">
-    <div class="proceso-header">
-      <span class="section-label reveal">El proceso</span>
-      <h2 class="section-title reveal" id="proceso-title">De la primera llamada a tu negocio digital en 14 días</h2>
+     PROCESO
+============================================================ -->
+<section class="section section--light" id="proceso" aria-labelledby="proceso-title">
+  <div class="section__header reveal">
+    <span class="label">CÓMO FUNCIONA</span>
+    <h2 id="proceso-title">De tu primer mensaje a tu negocio digital. 14 días.</h2>
+  </div>
+
+  <div class="proceso__grid reveal-group">
+    <div class="proceso__step">
+      <div class="proceso__num" aria-hidden="true">01</div>
+      <h4>Nos escribes</h4>
+      <p>Un WhatsApp de 2 minutos. Sin reuniones previas, sin formularios largos.</p>
     </div>
-    <div class="proceso-steps">
-      <div class="proceso-step reveal">
-        <div class="step-number">01</div>
-        <div class="step-content">
-          <div class="step-title">Nos escribes</div>
-          <p class="step-desc">Un WhatsApp de 2 minutos. Nos cuentas qué negocio tienes y qué necesitas. Sin reuniones, sin formularios eternos.</p>
-        </div>
-      </div>
-      <div class="proceso-step reveal">
-        <div class="step-number">02</div>
-        <div class="step-content">
-          <div class="step-title">Te proponemos</div>
-          <p class="step-desc">En 24-48h te enviamos una propuesta clara: qué hacemos, cuánto cuesta, y cuándo lo tienes. Sin sorpresas.</p>
-        </div>
-      </div>
-      <div class="proceso-step reveal">
-        <div class="step-number">03</div>
-        <div class="step-content">
-          <div class="step-title">Lo construimos</div>
-          <p class="step-desc">Diseñamos tu web y configuramos la IA. Te mantenemos al día en cada paso. Tú solo validas.</p>
-        </div>
-      </div>
-      <div class="proceso-step reveal">
-        <div class="step-number">04</div>
-        <div class="step-content">
-          <div class="step-title">Lo encendemos</div>
-          <p class="step-desc">Tu negocio digital queda operativo. Te formamos en 30 minutos y te damos soporte continuo.</p>
-        </div>
-      </div>
+    <div class="proceso__step">
+      <div class="proceso__num" aria-hidden="true">02</div>
+      <h4>Te proponemos</h4>
+      <p>En 24h tienes propuesta clara: qué hacemos, cuánto cuesta, cuándo lo tienes.</p>
+    </div>
+    <div class="proceso__step">
+      <div class="proceso__num" aria-hidden="true">03</div>
+      <h4>Lo construimos</h4>
+      <p>Diseñamos tu web, configuramos la IA. Te mantenemos informado en cada paso.</p>
+    </div>
+    <div class="proceso__step">
+      <div class="proceso__num" aria-hidden="true">04</div>
+      <h4>Lo encendemos</h4>
+      <p>Tu negocio digital queda operativo. Te formamos en 30 minutos. Soporte continuo.</p>
     </div>
   </div>
 </section>
-
-<hr class="divider">
 
 <!-- ============================================================
-     RESULTADOS / CASOS REALES
-     ============================================================ -->
-<section class="resultados" id="resultados" aria-labelledby="resultados-title">
-  <div class="container">
-    <div class="resultados-header">
-      <span class="section-label reveal">Resultados</span>
-      <h2 class="section-title reveal" id="resultados-title">Negocios reales. Resultados reales.</h2>
-      <p class="section-sub reveal">Próximamente añadimos los casos de nuestros primeros clientes. Por ahora, aquí van los proyectos demo que construimos para mostrar lo que podemos hacer.</p>
-    </div>
-    <div class="casos-grid">
-      <article class="caso-card reveal">
-        <div class="caso-img-placeholder">🍷</div>
-        <div class="caso-body">
-          <div class="caso-tag">Hostelería · A Coruña</div>
-          <div class="caso-name">Taberna do Mar</div>
-          <div class="caso-row">
-            <div>
-              <div class="caso-field-label">Problema</div>
-              <div class="caso-field-val">Sin presencia online. Reservas solo por teléfono. Clientes perdidos fuera de horario.</div>
-            </div>
-            <div>
-              <div class="caso-field-label">Solución</div>
-              <div class="caso-field-val">Web con carta + bot WhatsApp de reservas + respuesta automática reseñas.</div>
-            </div>
-          </div>
-          <div class="caso-result-block">🎯 Primera reserva online en las primeras 2 horas de apertura</div>
-        </div>
-      </article>
-      <article class="caso-card reveal">
-        <div class="caso-img-placeholder">👗</div>
-        <div class="caso-body">
-          <div class="caso-tag">Retail · A Coruña</div>
-          <div class="caso-name">Laboratorio Vintage</div>
-          <div class="caso-row">
-            <div>
-              <div class="caso-field-label">Problema</div>
-              <div class="caso-field-val">Vendían solo en tienda física. Sin forma de llegar a clientes fuera de la ciudad.</div>
-            </div>
-            <div>
-              <div class="caso-field-label">Solución</div>
-              <div class="caso-field-val">Tienda Shopify + chatbot WhatsApp + automatización de pedidos.</div>
-            </div>
-          </div>
-          <div class="caso-result-block">🎯 Primera venta online en 48h tras el lanzamiento</div>
-        </div>
-      </article>
-      <article class="caso-card reveal">
-        <div class="caso-img-placeholder">✂️</div>
-        <div class="caso-body">
-          <div class="caso-tag">Servicios · A Coruña</div>
-          <div class="caso-name">Estudio Navia</div>
-          <div class="caso-row">
-            <div>
-              <div class="caso-field-label">Problema</div>
-              <div class="caso-field-val">Gestión de citas por teléfono. Muchas cancelaciones sin aviso. Agenda descontrolada.</div>
-            </div>
-            <div>
-              <div class="caso-field-label">Solución</div>
-              <div class="caso-field-val">Web con reservas online + bot de WhatsApp + recordatorios automáticos.</div>
-            </div>
-          </div>
-          <div class="caso-result-block">🎯 Cero cancelaciones sin aviso en el primer mes</div>
-        </div>
-      </article>
-    </div>
+     CASOS REALES
+============================================================ -->
+<section class="section section--light" id="casos" aria-labelledby="casos-title">
+  <div class="section__header reveal">
+    <span class="label">CASOS REALES</span>
+    <h2 id="casos-title">Negocios reales. Resultados reales.</h2>
+    <p>Algunos de los negocios de A Coruña que ya trabajan con nosotros.</p>
+  </div>
 
-    <!-- Testimonials -->
-    <div class="testimonials">
-      <div class="testimonial-card reveal">
-        <div class="testimonial-quote">"</div>
-        <p class="testimonial-text">Lo mejor fue que en dos semanas ya teníamos todo funcionando. Sin complicaciones técnicas, sin tener que saber de informática. Ahora el bot de WhatsApp gestiona las reservas solo.</p>
-        <div class="testimonial-author">Cliente Woodia Spain</div>
-        <div class="testimonial-role">Hostelería · A Coruña</div>
-      </div>
-      <div class="testimonial-card reveal">
-        <div class="testimonial-quote">"</div>
-        <p class="testimonial-text">Tenía miedo de que fuera muy complicado gestionar la tienda online, pero la formación que me dieron fue clarísima. Ahora actualizo los productos yo sola desde el móvil.</p>
-        <div class="testimonial-author">Cliente Woodia Spain</div>
-        <div class="testimonial-role">Retail · Galicia</div>
-      </div>
+  <div class="casos__cards reveal-group">
+    <article class="caso-card">
+      <p class="caso-card__type">TIENDA VINTAGE</p>
+      <h3>Laboratorio Vintage</h3>
+      <p>Tienda de ropa vintage en A Coruña. Shopify profesional con integración WhatsApp y automatización de pedidos.</p>
+      <a href="https://wa.me/34624594551" class="caso-card__link" target="_blank" rel="noopener noreferrer">Ver proyecto →</a>
+    </article>
+    <article class="caso-card">
+      <p class="caso-card__type">CAFETERÍA</p>
+      <h3>Qkinhas Café</h3>
+      <p>Cafetería en A Coruña. Web con carta digital, menú actualizable y presencia online optimizada.</p>
+      <a href="https://wa.me/34624594551" class="caso-card__link" target="_blank" rel="noopener noreferrer">Ver proyecto →</a>
+    </article>
+    <article class="caso-card">
+      <p class="caso-card__type">HOSTELERÍA</p>
+      <h3>Bar A Pedralba</h3>
+      <p>Bar tradicional gallego. Web con carta dinámica actualizable por WhatsApp y sistema de automatización.</p>
+      <a href="https://wa.me/34624594551" class="caso-card__link" target="_blank" rel="noopener noreferrer">Ver proyecto →</a>
+    </article>
+  </div>
+
+  <div class="casos__stats reveal">
+    <div>
+      <div class="stat__num">30+</div>
+      <div class="stat__label">proyectos entregados</div>
+    </div>
+    <div>
+      <div class="stat__num">14 días</div>
+      <div class="stat__label">tiempo medio de entrega</div>
+    </div>
+    <div>
+      <div class="stat__num">4.9/5</div>
+      <div class="stat__label">satisfacción de clientes</div>
     </div>
   </div>
 </section>
-
-<hr class="divider">
 
 <!-- ============================================================
      PRECIOS
-     ============================================================ -->
-<section class="precios" id="precios" aria-labelledby="precios-title">
-  <div class="container">
-    <div class="precios-header">
-      <span class="section-label reveal">Precios</span>
-      <h2 class="section-title reveal" id="precios-title">Transparentes. Sin letra pequeña.</h2>
-      <p class="section-sub reveal">Todo incluye web profesional + IA integrada + formación + soporte</p>
-    </div>
+============================================================ -->
+<section class="section" id="precios" aria-labelledby="precios-title">
+  <div class="section__header reveal">
+    <span class="label">PRECIOS</span>
+    <h2 id="precios-title">Transparentes. Sin letra pequeña.</h2>
+    <p>Web profesional + IA integrada + formación + soporte. Todo incluido.</p>
+  </div>
 
-    <!-- Tab nav -->
-    <div class="tab-nav" role="tablist" aria-label="Categorías de precios">
+  <div class="precios__tabs reveal">
+    <div class="tab-control" role="tablist" aria-label="Categorías de precios">
       <button class="tab-btn active" role="tab" aria-selected="true" data-tab="hosteleria">Hostelería</button>
       <button class="tab-btn" role="tab" aria-selected="false" data-tab="tiendas">Tiendas</button>
       <button class="tab-btn" role="tab" aria-selected="false" data-tab="servicios">Servicios</button>
       <button class="tab-btn" role="tab" aria-selected="false" data-tab="solo-web">Solo Web</button>
       <button class="tab-btn" role="tab" aria-selected="false" data-tab="solo-ia">Solo IA</button>
     </div>
-
-    <!-- HOSTELERÍA -->
-    <div class="tab-panel active" id="tab-hosteleria" role="tabpanel">
-      <div class="pricing-grid">
-        <div class="price-card reveal">
-          <div class="price-plan">Esencial</div>
-          <div class="price-amount"><sup>€</sup>1.500</div>
-          <div class="price-monthly">+ 150€/mes</div>
-          <div class="price-delivery">Entrega en 10 días</div>
-          <div class="price-divider"></div>
-          <ul class="price-features">
-            <li><span class="check">✓</span> Web con carta digital actualizable</li>
-            <li><span class="check">✓</span> Bot WhatsApp básico (horarios, ubicación, reservas simples)</li>
-            <li><span class="check">✓</span> SEO local básico</li>
-            <li><span class="check">✓</span> 1 mes soporte incluido</li>
-          </ul>
-          <a href="#contacto" class="btn btn-outline" style="width:100%;justify-content:center">Empezar →</a>
-        </div>
-        <div class="price-card featured reveal">
-          <div class="price-badge">Más popular</div>
-          <div class="price-plan">Profesional</div>
-          <div class="price-amount"><sup>€</sup>2.500</div>
-          <div class="price-monthly">+ 250€/mes</div>
-          <div class="price-delivery">Entrega en 10-14 días</div>
-          <div class="price-divider"></div>
-          <ul class="price-features">
-            <li><span class="check">✓</span> Todo lo del plan Esencial</li>
-            <li><span class="check">✓</span> Bot WhatsApp avanzado (reservas completas, menú del día)</li>
-            <li><span class="check">✓</span> Respuesta automática a reseñas Google</li>
-            <li><span class="check">✓</span> Publicación automática de menú del día en RRSS</li>
-            <li><span class="check">✓</span> 3 meses soporte incluido</li>
-          </ul>
-          <a href="#contacto" class="btn btn-gold" style="width:100%;justify-content:center">Quiero este plan →</a>
-        </div>
-        <div class="price-card reveal">
-          <div class="price-plan">Premium</div>
-          <div class="price-amount"><sup>€</sup>4.000</div>
-          <div class="price-monthly">+ 350€/mes</div>
-          <div class="price-delivery">Entrega en 14-21 días</div>
-          <div class="price-divider"></div>
-          <ul class="price-features">
-            <li><span class="check">✓</span> Todo lo del plan Profesional</li>
-            <li><span class="check">✓</span> Diseño web completamente personalizado</li>
-            <li><span class="check">✓</span> Sistema de pedidos/delivery</li>
-            <li><span class="check">✓</span> Dashboard de analíticas</li>
-            <li><span class="check">✓</span> IA entrenada con contexto completo del negocio</li>
-            <li><span class="check">✓</span> 6 meses soporte prioritario</li>
-          </ul>
-          <a href="#contacto" class="btn btn-outline" style="width:100%;justify-content:center">Empezar →</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- TIENDAS -->
-    <div class="tab-panel" id="tab-tiendas" role="tabpanel">
-      <div class="pricing-grid">
-        <div class="price-card reveal">
-          <div class="price-plan">Starter</div>
-          <div class="price-amount"><sup>€</sup>1.500</div>
-          <div class="price-monthly">+ 100€/mes</div>
-          <div class="price-delivery">Entrega en 7-10 días</div>
-          <div class="price-divider"></div>
-          <ul class="price-features">
-            <li><span class="check">✓</span> Shopify profesional (hasta 25 productos)</li>
-            <li><span class="check">✓</span> Diseño adaptado a tu marca</li>
-            <li><span class="check">✓</span> Chatbot WhatsApp básico</li>
-            <li><span class="check">✓</span> SEO básico</li>
-          </ul>
-          <a href="#contacto" class="btn btn-outline" style="width:100%;justify-content:center">Empezar →</a>
-        </div>
-        <div class="price-card featured reveal">
-          <div class="price-badge">Más popular</div>
-          <div class="price-plan">Growth</div>
-          <div class="price-amount"><sup>€</sup>2.500</div>
-          <div class="price-monthly">+ 200€/mes</div>
-          <div class="price-delivery">Entrega en 10-14 días</div>
-          <div class="price-divider"></div>
-          <ul class="price-features">
-            <li><span class="check">✓</span> Todo lo del plan Starter</li>
-            <li><span class="check">✓</span> Hasta 60 productos</li>
-            <li><span class="check">✓</span> Bot WhatsApp avanzado (seguimiento pedidos, atención)</li>
-            <li><span class="check">✓</span> Automatización de emails post-compra</li>
-            <li><span class="check">✓</span> Diseño premium personalizado</li>
-            <li><span class="check">✓</span> 3 meses soporte</li>
-          </ul>
-          <a href="#contacto" class="btn btn-gold" style="width:100%;justify-content:center">Quiero este plan →</a>
-        </div>
-        <div class="price-card reveal">
-          <div class="price-plan">Scale</div>
-          <div class="price-amount"><sup>€</sup>4.500</div>
-          <div class="price-monthly">+ 300€/mes</div>
-          <div class="price-delivery">Entrega en 14-21 días</div>
-          <div class="price-divider"></div>
-          <ul class="price-features">
-            <li><span class="check">✓</span> Todo lo del plan Growth</li>
-            <li><span class="check">✓</span> Productos ilimitados</li>
-            <li><span class="check">✓</span> Integraciones avanzadas</li>
-            <li><span class="check">✓</span> IA de recomendación de productos</li>
-            <li><span class="check">✓</span> Dashboard completo</li>
-            <li><span class="check">✓</span> 6 meses soporte prioritario</li>
-          </ul>
-          <a href="#contacto" class="btn btn-outline" style="width:100%;justify-content:center">Empezar →</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- SERVICIOS -->
-    <div class="tab-panel" id="tab-servicios" role="tabpanel">
-      <div class="pricing-grid">
-        <div class="price-card reveal">
-          <div class="price-plan">Básico</div>
-          <div class="price-amount"><sup>€</sup>1.200</div>
-          <div class="price-monthly">+ 100€/mes</div>
-          <div class="price-delivery">Entrega en 7-10 días</div>
-          <div class="price-divider"></div>
-          <ul class="price-features">
-            <li><span class="check">✓</span> Web profesional con sistema de citas</li>
-            <li><span class="check">✓</span> Bot WhatsApp (citas + consultas frecuentes)</li>
-            <li><span class="check">✓</span> Recordatorios automáticos</li>
-            <li><span class="check">✓</span> SEO local</li>
-          </ul>
-          <a href="#contacto" class="btn btn-outline" style="width:100%;justify-content:center">Empezar →</a>
-        </div>
-        <div class="price-card featured reveal">
-          <div class="price-badge">Más popular</div>
-          <div class="price-plan">Profesional</div>
-          <div class="price-amount"><sup>€</sup>2.000</div>
-          <div class="price-monthly">+ 175€/mes</div>
-          <div class="price-delivery">Entrega en 10-14 días</div>
-          <div class="price-divider"></div>
-          <ul class="price-features">
-            <li><span class="check">✓</span> Todo lo del plan Básico</li>
-            <li><span class="check">✓</span> Agenda online integrada</li>
-            <li><span class="check">✓</span> Bot avanzado multicanal (WhatsApp + Instagram)</li>
-            <li><span class="check">✓</span> Gestión automática de cancelaciones</li>
-            <li><span class="check">✓</span> 3 meses soporte</li>
-          </ul>
-          <a href="#contacto" class="btn btn-gold" style="width:100%;justify-content:center">Quiero este plan →</a>
-        </div>
-        <div class="price-card reveal">
-          <div class="price-plan">Premium</div>
-          <div class="price-amount"><sup>€</sup>3.500</div>
-          <div class="price-monthly">+ 250€/mes</div>
-          <div class="price-delivery">Entrega en 14-21 días</div>
-          <div class="price-divider"></div>
-          <ul class="price-features">
-            <li><span class="check">✓</span> Todo lo del plan Profesional</li>
-            <li><span class="check">✓</span> CRM integrado</li>
-            <li><span class="check">✓</span> Automatización de seguimiento de clientes</li>
-            <li><span class="check">✓</span> Dashboard de métricas</li>
-            <li><span class="check">✓</span> 6 meses soporte prioritario</li>
-          </ul>
-          <a href="#contacto" class="btn btn-outline" style="width:100%;justify-content:center">Empezar →</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- SOLO WEB -->
-    <div class="tab-panel" id="tab-solo-web" role="tabpanel">
-      <div class="pricing-grid">
-        <div class="price-card reveal">
-          <div class="price-plan">Web Básica</div>
-          <div class="price-amount"><sup>€</sup>800</div>
-          <div class="price-monthly">Pago único</div>
-          <div class="price-delivery">Entrega en 5-7 días</div>
-          <div class="price-divider"></div>
-          <ul class="price-features">
-            <li><span class="check">✓</span> Hasta 5 páginas</li>
-            <li><span class="check">✓</span> Diseño responsive</li>
-            <li><span class="check">✓</span> SEO básico</li>
-            <li><span class="check">✓</span> Formulario de contacto</li>
-          </ul>
-          <a href="#contacto" class="btn btn-outline" style="width:100%;justify-content:center">Empezar →</a>
-        </div>
-        <div class="price-card featured reveal">
-          <div class="price-badge">Más popular</div>
-          <div class="price-plan">Web Profesional</div>
-          <div class="price-amount"><sup>€</sup>1.500</div>
-          <div class="price-monthly">Pago único</div>
-          <div class="price-delivery">Entrega en 7-10 días</div>
-          <div class="price-divider"></div>
-          <ul class="price-features">
-            <li><span class="check">✓</span> Hasta 10 páginas + blog</li>
-            <li><span class="check">✓</span> Diseño a medida</li>
-            <li><span class="check">✓</span> SEO avanzado</li>
-            <li><span class="check">✓</span> Analytics integrado</li>
-            <li><span class="check">✓</span> 1 mes soporte</li>
-          </ul>
-          <a href="#contacto" class="btn btn-gold" style="width:100%;justify-content:center">Quiero este plan →</a>
-        </div>
-        <div class="price-card reveal">
-          <div class="price-plan">Web Premium</div>
-          <div class="price-amount"><sup>€</sup>3.000</div>
-          <div class="price-monthly">Pago único</div>
-          <div class="price-delivery">Entrega en 14-21 días</div>
-          <div class="price-divider"></div>
-          <ul class="price-features">
-            <li><span class="check">✓</span> Páginas ilimitadas + CMS</li>
-            <li><span class="check">✓</span> Diseño premium + branding</li>
-            <li><span class="check">✓</span> Animaciones avanzadas</li>
-            <li><span class="check">✓</span> SEO técnico completo</li>
-            <li><span class="check">✓</span> Integraciones externas</li>
-            <li><span class="check">✓</span> 3 meses soporte</li>
-          </ul>
-          <a href="#contacto" class="btn btn-outline" style="width:100%;justify-content:center">Empezar →</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- SOLO IA -->
-    <div class="tab-panel" id="tab-solo-ia" role="tabpanel">
-      <div class="pricing-grid">
-        <div class="price-card reveal">
-          <div class="price-plan">IA Comunicación</div>
-          <div class="price-amount"><sup>€</sup>600</div>
-          <div class="price-monthly">+ 75€/mes</div>
-          <div class="price-delivery">Configuración en 3-5 días</div>
-          <div class="price-divider"></div>
-          <ul class="price-features">
-            <li><span class="check">✓</span> Agente IA para emails</li>
-            <li><span class="check">✓</span> Respuesta automática a reseñas</li>
-            <li><span class="check">✓</span> Clasificación de mensajes</li>
-          </ul>
-          <a href="#contacto" class="btn btn-outline" style="width:100%;justify-content:center">Empezar →</a>
-        </div>
-        <div class="price-card featured reveal">
-          <div class="price-badge">Más popular</div>
-          <div class="price-plan">IA Social</div>
-          <div class="price-amount"><sup>€</sup>1.000</div>
-          <div class="price-monthly">+ 125€/mes</div>
-          <div class="price-delivery">Configuración en 5-7 días</div>
-          <div class="price-divider"></div>
-          <ul class="price-features">
-            <li><span class="check">✓</span> Todo lo del plan IA Comunicación</li>
-            <li><span class="check">✓</span> Bot WhatsApp inteligente</li>
-            <li><span class="check">✓</span> Bot Instagram Direct</li>
-            <li><span class="check">✓</span> Derivación a humano cuando hace falta</li>
-          </ul>
-          <a href="#contacto" class="btn btn-gold" style="width:100%;justify-content:center">Quiero este plan →</a>
-        </div>
-        <div class="price-card reveal">
-          <div class="price-plan">IA Completo</div>
-          <div class="price-amount"><sup>€</sup>1.800</div>
-          <div class="price-monthly">+ 200€/mes</div>
-          <div class="price-delivery">Configuración en 7-10 días</div>
-          <div class="price-divider"></div>
-          <ul class="price-features">
-            <li><span class="check">✓</span> Todos los canales</li>
-            <li><span class="check">✓</span> Dashboard unificado</li>
-            <li><span class="check">✓</span> IA entrenada con el contexto de tu negocio</li>
-            <li><span class="check">✓</span> Prioridad en soporte</li>
-          </ul>
-          <a href="#contacto" class="btn btn-outline" style="width:100%;justify-content:center">Empezar →</a>
-        </div>
-      </div>
-    </div>
-
-    <p class="price-note reveal"><strong>Pago fraccionable en 3 mensualidades sin intereses.</strong> ¿Tienes dudas sobre qué plan encaja con tu negocio? <a href="#contacto" style="color:var(--gold);text-decoration:none">Cuéntanos tu caso →</a></p>
   </div>
-</section>
 
-<hr class="divider">
+  <!-- Hostelería -->
+  <div class="precios__panel active" id="tab-hosteleria" role="tabpanel">
+    <div class="precios__grid">
+      <div class="price-card">
+        <div class="price-card__name">Esencial</div>
+        <div class="price-card__price">1.500€</div>
+        <div class="price-card__sub">+ 150€/mes</div>
+        <div class="price-card__divider"></div>
+        <ul class="price-card__features">
+          <li>Web con carta digital actualizable</li>
+          <li>Bot WhatsApp básico (horarios, ubicación, reservas)</li>
+          <li>SEO local básico</li>
+          <li>Entrega en 10 días</li>
+          <li>1 mes de soporte incluido</li>
+        </ul>
+        <a href="#contacto" class="btn btn--outline btn--full">Empezar →</a>
+      </div>
+      <div class="price-card price-card--featured">
+        <div class="price-card__badge">Más popular</div>
+        <div class="price-card__name">Profesional</div>
+        <div class="price-card__price">2.500€</div>
+        <div class="price-card__sub">+ 250€/mes</div>
+        <div class="price-card__divider"></div>
+        <ul class="price-card__features">
+          <li>Todo lo del plan Esencial</li>
+          <li>Bot WhatsApp avanzado con reservas completas</li>
+          <li>Menú del día publicado automáticamente</li>
+          <li>Respuesta automática a reseñas Google</li>
+          <li>3 meses de soporte incluido</li>
+        </ul>
+        <a href="#contacto" class="btn btn--primary btn--full">Contratar →</a>
+      </div>
+      <div class="price-card">
+        <div class="price-card__name">Premium</div>
+        <div class="price-card__price">4.000€</div>
+        <div class="price-card__sub">+ 350€/mes</div>
+        <div class="price-card__divider"></div>
+        <ul class="price-card__features">
+          <li>Todo lo del plan Profesional</li>
+          <li>Diseño completamente personalizado</li>
+          <li>Sistema de pedidos/delivery propio</li>
+          <li>Dashboard de analíticas</li>
+          <li>IA entrenada con el contexto de tu negocio</li>
+          <li>6 meses de soporte prioritario</li>
+        </ul>
+        <a href="#contacto" class="btn btn--outline btn--full">Contratar →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tiendas -->
+  <div class="precios__panel" id="tab-tiendas" role="tabpanel">
+    <div class="precios__grid">
+      <div class="price-card">
+        <div class="price-card__name">Starter</div>
+        <div class="price-card__price">1.500€</div>
+        <div class="price-card__sub">+ 100€/mes</div>
+        <div class="price-card__divider"></div>
+        <ul class="price-card__features">
+          <li>Shopify profesional (hasta 25 productos)</li>
+          <li>Diseño adaptado a tu marca</li>
+          <li>Chatbot WhatsApp básico</li>
+          <li>SEO básico</li>
+          <li>Entrega en 7–10 días</li>
+        </ul>
+        <a href="#contacto" class="btn btn--outline btn--full">Empezar →</a>
+      </div>
+      <div class="price-card price-card--featured">
+        <div class="price-card__badge">Más popular</div>
+        <div class="price-card__name">Growth</div>
+        <div class="price-card__price">2.500€</div>
+        <div class="price-card__sub">+ 200€/mes</div>
+        <div class="price-card__divider"></div>
+        <ul class="price-card__features">
+          <li>Todo lo del plan Starter</li>
+          <li>Hasta 60 productos</li>
+          <li>Bot WhatsApp avanzado</li>
+          <li>Automatización de emails post-compra</li>
+          <li>Diseño premium personalizado</li>
+          <li>3 meses de soporte</li>
+        </ul>
+        <a href="#contacto" class="btn btn--primary btn--full">Contratar →</a>
+      </div>
+      <div class="price-card">
+        <div class="price-card__name">Scale</div>
+        <div class="price-card__price">4.500€</div>
+        <div class="price-card__sub">+ 300€/mes</div>
+        <div class="price-card__divider"></div>
+        <ul class="price-card__features">
+          <li>Todo lo del plan Growth</li>
+          <li>Productos ilimitados</li>
+          <li>Integraciones avanzadas</li>
+          <li>IA de recomendación de productos</li>
+          <li>Dashboard completo</li>
+          <li>6 meses de soporte prioritario</li>
+        </ul>
+        <a href="#contacto" class="btn btn--outline btn--full">Contratar →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Servicios -->
+  <div class="precios__panel" id="tab-servicios" role="tabpanel">
+    <div class="precios__grid">
+      <div class="price-card">
+        <div class="price-card__name">Básico</div>
+        <div class="price-card__price">1.200€</div>
+        <div class="price-card__sub">+ 100€/mes</div>
+        <div class="price-card__divider"></div>
+        <ul class="price-card__features">
+          <li>Web profesional con citas online</li>
+          <li>Bot WhatsApp (citas + consultas frecuentes)</li>
+          <li>Recordatorios automáticos a clientes</li>
+          <li>SEO local</li>
+          <li>Entrega en 7–10 días</li>
+        </ul>
+        <a href="#contacto" class="btn btn--outline btn--full">Empezar →</a>
+      </div>
+      <div class="price-card price-card--featured">
+        <div class="price-card__badge">Más popular</div>
+        <div class="price-card__name">Profesional</div>
+        <div class="price-card__price">2.000€</div>
+        <div class="price-card__sub">+ 175€/mes</div>
+        <div class="price-card__divider"></div>
+        <ul class="price-card__features">
+          <li>Todo lo del plan Básico</li>
+          <li>Agenda online integrada</li>
+          <li>Bot multicanal (WhatsApp + Instagram)</li>
+          <li>Gestión automatizada de cancelaciones</li>
+          <li>3 meses de soporte</li>
+        </ul>
+        <a href="#contacto" class="btn btn--primary btn--full">Contratar →</a>
+      </div>
+      <div class="price-card">
+        <div class="price-card__name">Premium</div>
+        <div class="price-card__price">3.500€</div>
+        <div class="price-card__sub">+ 250€/mes</div>
+        <div class="price-card__divider"></div>
+        <ul class="price-card__features">
+          <li>Todo lo del plan Profesional</li>
+          <li>CRM integrado</li>
+          <li>Automatización de seguimiento de clientes</li>
+          <li>Dashboard de métricas</li>
+          <li>6 meses de soporte prioritario</li>
+        </ul>
+        <a href="#contacto" class="btn btn--outline btn--full">Contratar →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Solo Web -->
+  <div class="precios__panel" id="tab-solo-web" role="tabpanel">
+    <div class="precios__grid">
+      <div class="price-card">
+        <div class="price-card__name">Básica</div>
+        <div class="price-card__price">800€</div>
+        <div class="price-card__sub">pago único</div>
+        <div class="price-card__divider"></div>
+        <ul class="price-card__features">
+          <li>Hasta 5 páginas</li>
+          <li>Diseño responsive</li>
+          <li>SEO básico</li>
+          <li>Formulario de contacto</li>
+          <li>Entrega en 5–7 días</li>
+        </ul>
+        <a href="#contacto" class="btn btn--outline btn--full">Empezar →</a>
+      </div>
+      <div class="price-card price-card--featured">
+        <div class="price-card__badge">Más popular</div>
+        <div class="price-card__name">Profesional</div>
+        <div class="price-card__price">1.500€</div>
+        <div class="price-card__sub">pago único</div>
+        <div class="price-card__divider"></div>
+        <ul class="price-card__features">
+          <li>Hasta 10 páginas + blog</li>
+          <li>Diseño a medida</li>
+          <li>SEO avanzado</li>
+          <li>Analytics integrado</li>
+          <li>1 mes de soporte incluido</li>
+        </ul>
+        <a href="#contacto" class="btn btn--primary btn--full">Contratar →</a>
+      </div>
+      <div class="price-card">
+        <div class="price-card__name">Premium</div>
+        <div class="price-card__price">3.000€</div>
+        <div class="price-card__sub">pago único</div>
+        <div class="price-card__divider"></div>
+        <ul class="price-card__features">
+          <li>Páginas ilimitadas + CMS</li>
+          <li>Diseño premium + branding</li>
+          <li>Animaciones avanzadas</li>
+          <li>SEO técnico completo</li>
+          <li>Integraciones externas</li>
+          <li>3 meses de soporte</li>
+        </ul>
+        <a href="#contacto" class="btn btn--outline btn--full">Contratar →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Solo IA -->
+  <div class="precios__panel" id="tab-solo-ia" role="tabpanel">
+    <div class="precios__grid">
+      <div class="price-card">
+        <div class="price-card__name">Comunicación</div>
+        <div class="price-card__price">600€</div>
+        <div class="price-card__sub">+ 75€/mes</div>
+        <div class="price-card__divider"></div>
+        <ul class="price-card__features">
+          <li>Agente IA para emails</li>
+          <li>Respuesta automática a reseñas</li>
+          <li>Clasificación de mensajes</li>
+          <li>Configuración en 3–5 días</li>
+        </ul>
+        <a href="#contacto" class="btn btn--outline btn--full">Empezar →</a>
+      </div>
+      <div class="price-card price-card--featured">
+        <div class="price-card__badge">Más popular</div>
+        <div class="price-card__name">Social</div>
+        <div class="price-card__price">1.000€</div>
+        <div class="price-card__sub">+ 125€/mes</div>
+        <div class="price-card__divider"></div>
+        <ul class="price-card__features">
+          <li>Todo lo de Comunicación</li>
+          <li>Bot WhatsApp inteligente</li>
+          <li>Bot Instagram Direct</li>
+          <li>Derivación a humano cuando se necesita</li>
+          <li>Configuración en 5–7 días</li>
+        </ul>
+        <a href="#contacto" class="btn btn--primary btn--full">Contratar →</a>
+      </div>
+      <div class="price-card">
+        <div class="price-card__name">Completo</div>
+        <div class="price-card__price">1.800€</div>
+        <div class="price-card__sub">+ 200€/mes</div>
+        <div class="price-card__divider"></div>
+        <ul class="price-card__features">
+          <li>Todos los canales</li>
+          <li>Dashboard unificado</li>
+          <li>IA entrenada con el contexto de tu negocio</li>
+          <li>Soporte prioritario</li>
+          <li>Configuración en 7–10 días</li>
+        </ul>
+        <a href="#contacto" class="btn btn--outline btn--full">Contratar →</a>
+      </div>
+    </div>
+  </div>
+
+  <p class="precios__footer reveal">Todos los planes se pueden fraccionar en 3 mensualidades sin intereses.<br>Pago al contado = primer mes de mantenimiento gratis.</p>
+</section>
 
 <!-- ============================================================
      POR QUÉ WOODIA
-     ============================================================ -->
-<section class="porque" id="porque" aria-labelledby="porque-title">
-  <div class="container">
-    <div class="porque-header">
-      <span class="section-label reveal">Por qué nosotros</span>
-      <h2 class="section-title reveal" id="porque-title">Somos de aquí.<br>Hacemos las cosas de aquí.</h2>
-    </div>
-    <div class="porque-grid">
-      <div class="porque-card reveal">
-        <span class="porque-icon">🏠</span>
-        <div class="porque-title">De A Coruña, para A Coruña</div>
-        <p class="porque-desc">No somos una agencia de Madrid que vende paquetes genéricos. Conocemos el barrio, conocemos a tus clientes, sabemos cómo funciona un negocio aquí.</p>
-      </div>
-      <div class="porque-card reveal">
-        <span class="porque-icon">🤖</span>
-        <div class="porque-title">Web + IA = todo conectado</div>
-        <p class="porque-desc">Otras agencias te hacen la web. Punto. Nosotros te hacemos la web, montamos el bot de WhatsApp, automatizamos las reseñas y lo conectamos todo. Un solo proveedor.</p>
-      </div>
-      <div class="porque-card reveal">
-        <span class="porque-icon">💬</span>
-        <div class="porque-title">Hablas con quien hace el trabajo</div>
-        <p class="porque-desc">Nada de gestores de cuenta ni intermediarios. Nos escribes, te contestamos, y somos los mismos que tocan el código. Sin intermediarios.</p>
-      </div>
-      <div class="porque-card reveal">
-        <span class="porque-icon">📱</span>
-        <div class="porque-title">Soporte real, no un ticket</div>
-        <p class="porque-desc">Nos mandas un WhatsApp y te contestamos. Así de simple. Sin sistemas de tickets, sin esperas de 48h, sin bots irónicos.</p>
-      </div>
-    </div>
+============================================================ -->
+<section class="section" aria-labelledby="porque-title">
+  <div class="section__header reveal">
+    <span class="label">POR QUÉ NOSOTROS</span>
+    <h2 id="porque-title">Somos de aquí. Hacemos las cosas de aquí.</h2>
+  </div>
 
-    <!-- Stats -->
-    <div class="stats-bar reveal">
-      <div class="stat-item">
-        <span class="stat-number" data-target="30" data-suffix="+">0+</span>
-        <span class="stat-label">Negocios digitalizados</span>
-      </div>
-      <div class="stat-item">
-        <span class="stat-number" data-target="14" data-suffix=" días">0 días</span>
-        <span class="stat-label">Tiempo medio de entrega</span>
-      </div>
-      <div class="stat-item">
-        <span class="stat-number" data-target="4.9" data-suffix="/5" data-decimal="1">0/5</span>
-        <span class="stat-label">Valoración media clientes</span>
-      </div>
+  <div class="porque__grid reveal-group">
+    <div class="porque__item">
+      <h4>De A Coruña, para A Coruña</h4>
+      <p>No somos una agencia de Madrid vendiendo paquetes. Conocemos el barrio, conocemos a tus clientes, sabemos cómo funciona un negocio aquí.</p>
+    </div>
+    <div class="porque__item">
+      <h4>Web + IA. Todo conectado.</h4>
+      <p>Otras agencias te hacen la web. Punto. Nosotros te montamos la web, el bot de WhatsApp, la gestión de reseñas y lo conectamos todo bajo un proveedor.</p>
+    </div>
+    <div class="porque__item">
+      <h4>Hablas con quien hace el trabajo</h4>
+      <p>Sin gestores de cuenta. Sin intermediarios. Nos escribes, te contestamos, y somos los mismos que tocan el código.</p>
+    </div>
+    <div class="porque__item">
+      <h4>Soporte real. No un ticket.</h4>
+      <p>Nos mandas un WhatsApp y te contestamos. Sin sistemas de tickets, sin esperas de 48 horas.</p>
+    </div>
+  </div>
+
+  <div class="porque__stats reveal">
+    <div>
+      <div class="stat__num">30+</div>
+      <div class="stat__label">proyectos entregados</div>
+    </div>
+    <div>
+      <div class="stat__num">14 días</div>
+      <div class="stat__label">entrega media</div>
+    </div>
+    <div>
+      <div class="stat__num">4.9/5</div>
+      <div class="stat__label">satisfacción</div>
     </div>
   </div>
 </section>
-
-<hr class="divider">
 
 <!-- ============================================================
      FAQ
-     ============================================================ -->
-<section class="faq" id="faq" aria-labelledby="faq-title">
-  <div class="container">
-    <div class="faq-header">
-      <span class="section-label reveal">Preguntas frecuentes</span>
-      <h2 class="section-title reveal" id="faq-title">Lo que nos preguntan todos</h2>
+============================================================ -->
+<section class="section section--light" id="faq" aria-labelledby="faq-title">
+  <div class="section__header reveal">
+    <span class="label">PREGUNTAS FRECUENTES</span>
+    <h2 id="faq-title">Lo que nos preguntan todos</h2>
+  </div>
+
+  <div class="faq__list reveal">
+
+    <div class="faq__item">
+      <button class="faq__question" aria-expanded="false">
+        ¿Cuánto tarda en estar todo listo?
+        <span class="faq__icon" aria-hidden="true">+</span>
+      </button>
+      <div class="faq__answer" role="region">
+        <p class="faq__answer-inner">Depende del paquete. Una web sencilla, 5–7 días. Un paquete completo con web + IA, 10–14 días. Te decimos el plazo exacto antes de empezar y lo cumplimos.</p>
+      </div>
     </div>
-    <div class="faq-list reveal">
 
-      <div class="faq-item">
-        <button class="faq-question" aria-expanded="false">
-          ¿Cuánto tarda en estar todo listo?
-          <span class="faq-icon">+</span>
-        </button>
-        <div class="faq-answer"><div class="faq-answer-inner">Depende del paquete. Una web sencilla, 5-7 días. Un paquete completo con web + IA, 10-14 días. Siempre te decimos el plazo exacto antes de empezar y lo cumplimos.</div></div>
+    <div class="faq__item">
+      <button class="faq__question" aria-expanded="false">
+        ¿Tengo que pagar todo de golpe?
+        <span class="faq__icon" aria-hidden="true">+</span>
+      </button>
+      <div class="faq__answer" role="region">
+        <p class="faq__answer-inner">No. Puedes fraccionar en 3 meses sin intereses. Y si pagas al contado, el primer mes de mantenimiento es gratis.</p>
       </div>
-
-      <div class="faq-item">
-        <button class="faq-question" aria-expanded="false">
-          ¿Tengo que pagar todo de golpe?
-          <span class="faq-icon">+</span>
-        </button>
-        <div class="faq-answer"><div class="faq-answer-inner">No. Puedes fraccionar el pago en 3 mensualidades sin intereses. Y si pagas al contado, el primer mes de mantenimiento es gratis.</div></div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-question" aria-expanded="false">
-          ¿Necesito saber de tecnología para gestionar todo esto?
-          <span class="faq-icon">+</span>
-        </button>
-        <div class="faq-answer"><div class="faq-answer-inner">Para nada. Te formamos en 30 minutos por videollamada y te dejamos todo listo para que lo gestiones tú. Si algún día te atascas, nos escribes un WhatsApp.</div></div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-question" aria-expanded="false">
-          ¿Qué pasa si no me gusta el resultado?
-          <span class="faq-icon">+</span>
-        </button>
-        <div class="faq-answer"><div class="faq-answer-inner">Trabajamos contigo en cada fase. Ves avances, validas, y ajustamos. No entregamos "sorpresas". Si hay algo que cambiar, lo cambiamos sin coste extra dentro de las rondas de revisión incluidas.</div></div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-question" aria-expanded="false">
-          ¿La IA realmente funciona para un negocio pequeño?
-          <span class="faq-icon">+</span>
-        </button>
-        <div class="faq-answer"><div class="faq-answer-inner">Especialmente para negocios pequeños. Si eres un bar y pierdes 5 reservas al día porque no contestas fuera de horario, un bot de WhatsApp se paga solo en la primera semana.</div></div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-question" aria-expanded="false">
-          ¿Qué incluye el mantenimiento mensual?
-          <span class="faq-icon">+</span>
-        </button>
-        <div class="faq-answer"><div class="faq-answer-inner">Soporte técnico, actualizaciones, supervisión de los bots de IA, corrección de errores y ajustes menores. No tienes que preocuparte de nada técnico.</div></div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-question" aria-expanded="false">
-          ¿Puedo contratar solo la web sin la parte de IA?
-          <span class="faq-icon">+</span>
-        </button>
-        <div class="faq-answer"><div class="faq-answer-inner">Claro. Tenemos planes de solo web desde 800€. Pero te recomendamos al menos el bot básico de WhatsApp — la diferencia es brutal para un negocio local.</div></div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-question" aria-expanded="false">
-          ¿Trabajáis fuera de A Coruña?
-          <span class="faq-icon">+</span>
-        </button>
-        <div class="faq-answer"><div class="faq-answer-inner">Sí, trabajamos con negocios de toda Galicia y España. Pero nuestro foco está en A Coruña y alrededores porque es donde podemos dar un servicio más cercano.</div></div>
-      </div>
-
     </div>
+
+    <div class="faq__item">
+      <button class="faq__question" aria-expanded="false">
+        ¿Necesito saber de tecnología?
+        <span class="faq__icon" aria-hidden="true">+</span>
+      </button>
+      <div class="faq__answer" role="region">
+        <p class="faq__answer-inner">Cero. Te formamos en 30 minutos y lo gestionas tú solo. Si te atascas en algo, nos escribes un WhatsApp y listo.</p>
+      </div>
+    </div>
+
+    <div class="faq__item">
+      <button class="faq__question" aria-expanded="false">
+        ¿Qué pasa si no me gusta el resultado?
+        <span class="faq__icon" aria-hidden="true">+</span>
+      </button>
+      <div class="faq__answer" role="region">
+        <p class="faq__answer-inner">Trabajamos contigo en cada fase. Ves los avances, validas y ajustamos. Sin sorpresas finales.</p>
+      </div>
+    </div>
+
+    <div class="faq__item">
+      <button class="faq__question" aria-expanded="false">
+        ¿La IA funciona para un negocio pequeño?
+        <span class="faq__icon" aria-hidden="true">+</span>
+      </button>
+      <div class="faq__answer" role="region">
+        <p class="faq__answer-inner">Especialmente para negocios pequeños. Si pierdes 5 reservas al día porque no contestas fuera de horario, un bot de WhatsApp se paga solo en una semana.</p>
+      </div>
+    </div>
+
+    <div class="faq__item">
+      <button class="faq__question" aria-expanded="false">
+        ¿Qué incluye el mantenimiento mensual?
+        <span class="faq__icon" aria-hidden="true">+</span>
+      </button>
+      <div class="faq__answer" role="region">
+        <p class="faq__answer-inner">Soporte técnico, actualizaciones, supervisión de bots, corrección de errores y ajustes menores. Todo lo que necesitas para que funcione bien cada día.</p>
+      </div>
+    </div>
+
+    <div class="faq__item">
+      <button class="faq__question" aria-expanded="false">
+        ¿Puedo contratar solo la web sin IA?
+        <span class="faq__icon" aria-hidden="true">+</span>
+      </button>
+      <div class="faq__answer" role="region">
+        <p class="faq__answer-inner">Claro. Tenemos planes desde 800€ solo web. Pero te recomendamos al menos el bot básico de WhatsApp — la diferencia en conversión es brutal.</p>
+      </div>
+    </div>
+
+    <div class="faq__item">
+      <button class="faq__question" aria-expanded="false">
+        ¿Trabajáis fuera de A Coruña?
+        <span class="faq__icon" aria-hidden="true">+</span>
+      </button>
+      <div class="faq__answer" role="region">
+        <p class="faq__answer-inner">Sí, toda Galicia y España. Pero nuestro foco es A Coruña porque es donde damos mejor servicio y conocemos el mercado local.</p>
+      </div>
+    </div>
+
   </div>
 </section>
-
-<hr class="divider">
 
 <!-- ============================================================
      CTA FINAL
-     ============================================================ -->
-<section class="cta-final" aria-labelledby="cta-final-title">
-  <div class="container">
-    <span class="section-label reveal">¿Empezamos?</span>
-    <h2 class="cta-final-title reveal" id="cta-final-title">Tu negocio puede estar<br>online en 14 días</h2>
-    <p class="cta-final-sub reveal">Un WhatsApp de 2 minutos. Te respondemos en menos de 2 horas con una propuesta real para tu negocio.</p>
-    <div class="cta-final-ctas reveal">
-      <a href="#contacto" class="btn btn-gold btn-lg">Pedir presupuesto →</a>
-      <a href="https://wa.me/34624594551" class="btn btn-outline btn-lg" target="_blank" rel="noopener noreferrer">
-        Escribir por WhatsApp
-      </a>
-    </div>
-    <p class="cta-final-note reveal">Sin compromiso. Sin reuniones eternas. Respuesta en &lt;2 horas.</p>
+============================================================ -->
+<section class="section section--dark cta-final reveal" aria-labelledby="cta-title">
+  <h2 id="cta-title">Tu negocio puede estar<br>online en 14 días</h2>
+  <p>Escríbenos. Sin compromiso, sin reuniones de 3 horas.<br>Un WhatsApp y te respondemos con una propuesta clara.</p>
+  <div class="btn-group btn-group--center">
+    <a href="https://wa.me/34624594551" class="btn btn--white" target="_blank" rel="noopener noreferrer">Hablar por WhatsApp →</a>
+    <a href="mailto:info@woodiaspain.com" class="btn btn--outline-white">Enviar email →</a>
   </div>
 </section>
-
-<hr class="divider">
 
 <!-- ============================================================
      CONTACTO
-     ============================================================ -->
-<section class="contacto" id="contacto" aria-labelledby="contacto-title">
-  <div class="container">
-    <div class="contacto-header">
-      <span class="section-label reveal">Contacto</span>
-      <h2 class="section-title reveal" id="contacto-title">Cuéntanos qué necesitas</h2>
-      <p class="section-sub reveal">Escríbenos por WhatsApp o rellena el formulario. Te respondemos en menos de 2 horas.</p>
-    </div>
-    <div class="contacto-grid">
-      <div class="contact-form-wrap reveal">
-        <form id="contact-form" novalidate>
-          <div class="form-row two-col">
-            <div class="form-group">
-              <label class="form-label" for="nombre">Nombre *</label>
-              <input type="text" id="nombre" name="nombre" class="form-input" placeholder="Tu nombre" required autocomplete="name">
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="negocio">Negocio</label>
-              <input type="text" id="negocio" name="negocio" class="form-input" placeholder="Nombre de tu negocio">
-            </div>
-          </div>
-          <div class="form-row two-col">
-            <div class="form-group">
-              <label class="form-label" for="telefono">Teléfono *</label>
-              <input type="tel" id="telefono" name="telefono" class="form-input" placeholder="+34 600 000 000" required autocomplete="tel">
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="email">Email</label>
-              <input type="email" id="email" name="email" class="form-input" placeholder="tu@email.com" autocomplete="email">
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label class="form-label" for="tipo">Tipo de negocio</label>
-              <select id="tipo" name="tipo" class="form-select">
-                <option value="" disabled selected>Selecciona tu sector</option>
-                <option value="hosteleria">Restaurante / Bar / Cafetería</option>
-                <option value="retail">Tienda / Retail / Moda</option>
-                <option value="servicios">Servicios (peluquería, clínica, gestoría…)</option>
-                <option value="otro">Otro</option>
-              </select>
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label class="form-label" for="mensaje">Cuéntanos qué necesitas</label>
-              <textarea id="mensaje" name="mensaje" class="form-textarea" placeholder="Qué tienes, qué necesitas, cualquier duda que tengas..."></textarea>
-            </div>
-          </div>
-          <div class="form-submit-wrap">
-            <button type="submit" class="btn btn-gold" style="width:100%;justify-content:center;font-size:1rem;padding:0.9rem 1.5rem" id="form-submit">
-              Enviar consulta →
-            </button>
-          </div>
-          <div class="form-msg" id="form-msg"></div>
-        </form>
-      </div>
+============================================================ -->
+<section class="section" id="contacto" aria-labelledby="contacto-title">
+  <div class="contacto__inner">
 
-      <div class="contact-info reveal">
-        <div class="contact-info-title">También puedes encontrarnos aquí</div>
-        <div class="contact-method">
-          <div class="contact-method-icon">📱</div>
-          <div class="contact-method-text">
-            <div class="contact-method-label">WhatsApp</div>
-            <div class="contact-method-val"><a href="https://wa.me/34624594551" target="_blank" rel="noopener noreferrer">+34 624 594 551</a></div>
-            <div class="contact-method-note">El bot contesta 24h, nosotros a partir de las 9:00</div>
-          </div>
+    <div class="contacto__form-side reveal">
+      <span class="label">CONTACTO</span>
+      <h2 id="contacto-title">Cuéntanos qué necesitas</h2>
+      <p>Respondemos en menos de 2 horas con un presupuesto sin compromiso.</p>
+
+      <!-- Sustituir YOUR_WEBHOOK_URL por la URL real del webhook n8n -->
+      <form id="contactForm" action="YOUR_WEBHOOK_URL" method="POST" novalidate>
+        <div class="form__field">
+          <label class="form__label" for="nombre">Nombre</label>
+          <input class="form__input" type="text" id="nombre" name="nombre" placeholder="Tu nombre" required autocomplete="name">
         </div>
-        <div class="contact-method">
-          <div class="contact-method-icon">✉️</div>
-          <div class="contact-method-text">
-            <div class="contact-method-label">Email</div>
-            <div class="contact-method-val"><a href="mailto:info@woodiaspain.com">info@woodiaspain.com</a></div>
-          </div>
+        <div class="form__field">
+          <label class="form__label" for="negocio">Negocio</label>
+          <input class="form__input" type="text" id="negocio" name="negocio" placeholder="Nombre de tu negocio" required>
         </div>
-        <div class="contact-method">
-          <div class="contact-method-icon">📍</div>
-          <div class="contact-method-text">
-            <div class="contact-method-label">Ubicación</div>
-            <div class="contact-method-val">A Coruña, Galicia</div>
-          </div>
+        <div class="form__field">
+          <label class="form__label" for="telefono">Teléfono</label>
+          <input class="form__input" type="tel" id="telefono" name="telefono" placeholder="+34 600 000 000" autocomplete="tel">
         </div>
-        <div class="contact-method">
-          <div class="contact-method-icon">🕐</div>
-          <div class="contact-method-text">
-            <div class="contact-method-label">Horario</div>
-            <div class="contact-method-val">L-V 9:00 – 19:00</div>
-            <div class="contact-method-note">El bot atiende 24h 😉</div>
-          </div>
+        <div class="form__field">
+          <label class="form__label" for="email">Email</label>
+          <input class="form__input" type="email" id="email" name="email" placeholder="tu@email.com" required autocomplete="email">
         </div>
-        <a href="https://wa.me/34624594551" class="contact-wa-btn" target="_blank" rel="noopener noreferrer">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-          Escribir por WhatsApp ahora
-        </a>
+        <div class="form__field">
+          <label class="form__label" for="tipo">Tipo de negocio</label>
+          <select class="form__select" id="tipo" name="tipo" required>
+            <option value="" disabled selected>Selecciona...</option>
+            <option value="restaurante">Restaurante / Bar</option>
+            <option value="tienda">Tienda / Retail</option>
+            <option value="servicios">Servicios (peluquería, clínica...)</option>
+            <option value="otro">Otro</option>
+          </select>
+        </div>
+        <div class="form__field">
+          <label class="form__label" for="mensaje">Mensaje</label>
+          <textarea class="form__textarea" id="mensaje" name="mensaje" placeholder="Cuéntanos qué necesitas..." rows="3"></textarea>
+        </div>
+        <div class="form__submit-wrap">
+          <button type="submit" class="btn btn--primary btn--full" id="submitBtn">
+            <span id="btnText">Solicitar presupuesto</span>
+            <span class="form__spinner" id="btnSpinner" aria-hidden="true"></span>
+          </button>
+        </div>
+        <div class="form__message form__message--ok" id="formOk" role="alert">
+          ¡Mensaje recibido! Te respondemos en menos de 2 horas.
+        </div>
+        <div class="form__message form__message--err" id="formErr" role="alert">
+          Algo salió mal. Escríbenos directamente a <a href="mailto:info@woodiaspain.com">info@woodiaspain.com</a>
+        </div>
+      </form>
+    </div>
+
+    <div class="contacto__info reveal">
+      <div class="contacto__info-list">
+        <div>
+          <p class="info-item__label">WhatsApp</p>
+          <p class="info-item__value"><a href="https://wa.me/34624594551">+34 624 594 551</a></p>
+        </div>
+        <div>
+          <p class="info-item__label">Email</p>
+          <p class="info-item__value"><a href="mailto:info@woodiaspain.com">info@woodiaspain.com</a></p>
+        </div>
+        <div>
+          <p class="info-item__label">Ubicación</p>
+          <p class="info-item__value">A Coruña, Galicia</p>
+        </div>
+        <div>
+          <p class="info-item__label">Horario</p>
+          <p class="info-item__value">L–V 9:00–19:00</p>
+          <p class="info-item__note">(Pero el bot contesta 24h)</p>
+        </div>
       </div>
     </div>
+
   </div>
 </section>
+
 </main>
 
 <!-- ============================================================
      FOOTER
-     ============================================================ -->
-<footer class="footer">
-  <div class="container footer-inner">
-    <div>
-      <div class="footer-logo">
-        <img src="logo.png" alt="Woodia Spain" height="28"
-             onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
-        <span class="footer-logo-text" style="display:none">Woodia Spain</span>
-      </div>
-      <div class="footer-tagline">Diseño web e IA para negocios locales en Galicia</div>
+============================================================ -->
+<footer role="contentinfo">
+  <div class="footer__inner">
+    <div class="footer__logo">
+      <img src="logo-removebg-preview (1).png" alt="Woodia Spain" height="32"
+           onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+      <span class="footer__logo-fallback" style="display:none">Woodia Spain</span>
     </div>
-    <p class="footer-copy">© 2026 Woodia Spain — A Coruña, Galicia</p>
-    <nav class="footer-links" aria-label="Enlaces legales">
-      <a href="#" onclick="showLegal('aviso-legal');return false;">Aviso legal</a>
-      <a href="#" onclick="showLegal('politica-privacidad');return false;">Política de privacidad</a>
+    <nav aria-label="Links legales">
+      <ul class="footer__links" role="list">
+        <li><a href="#" data-modal="aviso-legal">Aviso legal</a></li>
+        <li><a href="#" data-modal="privacidad">Política de privacidad</a></li>
+      </ul>
     </nav>
+    <p class="footer__copy">© 2026 Woodia Spain — A Coruña, Galicia</p>
   </div>
 </footer>
 
 <!-- ============================================================
-     LEGAL SECTIONS
-     ============================================================ -->
-<section class="legal-section" id="aviso-legal" aria-labelledby="aviso-title">
-  <div class="legal-inner">
-    <button class="legal-back" onclick="hideLegal('aviso-legal')">← Volver</button>
-    <h2 id="aviso-title">Aviso Legal</h2>
-    <h3>Titular</h3>
-    <p>Woodia Spain<br>Actividad: Diseño web e inteligencia artificial para negocios locales<br>Contacto: info@woodiaspain.com | +34 624 594 551<br>Domicilio: A Coruña, Galicia, España</p>
-    <h3>Condiciones de uso</h3>
-    <p>El acceso y uso de este sitio web implica la aceptación de las presentes condiciones. Woodia Spain se reserva el derecho de modificar los contenidos del sitio web sin previo aviso.</p>
-    <h3>Propiedad intelectual</h3>
-    <p>Los contenidos de esta web están protegidos por derechos de propiedad intelectual. Queda prohibida su reproducción total o parcial sin autorización expresa de Woodia Spain.</p>
-  </div>
-</section>
-
-<section class="legal-section" id="politica-privacidad" aria-labelledby="privacidad-title">
-  <div class="legal-inner">
-    <button class="legal-back" onclick="hideLegal('politica-privacidad')">← Volver</button>
-    <h2 id="privacidad-title">Política de Privacidad</h2>
-    <h3>Responsable</h3>
-    <p>Woodia Spain — info@woodiaspain.com</p>
-    <h3>Datos que recogemos</h3>
-    <p>Nombre, email, teléfono y mensaje enviado a través del formulario de contacto.</p>
-    <h3>Finalidad</h3>
-    <p>Responder a tu consulta y gestionar la relación comercial.</p>
-    <h3>Legitimación</h3>
-    <p>Consentimiento del interesado.</p>
-    <h3>Conservación</h3>
-    <p>Los datos se conservan durante el tiempo necesario para gestionar tu solicitud.</p>
-    <h3>Derechos</h3>
-    <p>Puedes ejercer tus derechos de acceso, rectificación, supresión y portabilidad escribiendo a info@woodiaspain.com. No cedemos tus datos a terceros salvo obligación legal.</p>
-  </div>
-</section>
-
-<!-- WhatsApp float button -->
+     WHATSAPP FLOAT
+============================================================ -->
 <a href="https://wa.me/34624594551" class="wa-float" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
-  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
 </a>
 
 <!-- ============================================================
-     SCRIPTS
-     ============================================================ -->
+     MODALS
+============================================================ -->
+<div class="modal-overlay" id="modal-aviso-legal" role="dialog" aria-modal="true" aria-labelledby="modal-aviso-title">
+  <div class="modal">
+    <button class="modal__close" data-close aria-label="Cerrar">×</button>
+    <h3 id="modal-aviso-title">Aviso Legal</h3>
+    <p><strong>Titular:</strong> Woodia Spain</p>
+    <p><strong>Dirección:</strong> A Coruña, Galicia, España</p>
+    <p><strong>Email:</strong> info@woodiaspain.com</p>
+    <p><strong>Teléfono:</strong> +34 624 594 551</p>
+    <p>El acceso y uso de este sitio web implica la aceptación de las condiciones de uso. Woodia Spain se reserva el derecho a modificar cualquier información contenida en el sitio web sin previo aviso.</p>
+    <p>Todos los contenidos de este sitio web (textos, fotografías, gráficos, imágenes, tecnología, software, enlaces y demás contenidos audiovisuales o sonoros) son propiedad de Woodia Spain o de terceros. Queda prohibida su reproducción, distribución, comunicación pública y transformación sin autorización previa y por escrito.</p>
+    <p>Woodia Spain no se responsabiliza de los daños o perjuicios que puedan derivarse del acceso o uso del sitio web ni del contenido de sitios web de terceros enlazados desde este.</p>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-privacidad" role="dialog" aria-modal="true" aria-labelledby="modal-privacidad-title">
+  <div class="modal">
+    <button class="modal__close" data-close aria-label="Cerrar">×</button>
+    <h3 id="modal-privacidad-title">Política de Privacidad</h3>
+    <p><strong>Responsable del tratamiento:</strong> Woodia Spain (info@woodiaspain.com)</p>
+    <p><strong>Finalidad:</strong> Los datos personales recogidos a través del formulario de contacto se utilizan exclusivamente para responder a sus consultas y enviarle información sobre nuestros servicios, siempre con su consentimiento.</p>
+    <p><strong>Base legal:</strong> Consentimiento del interesado.</p>
+    <p><strong>Destinatarios:</strong> No se ceden datos a terceros, salvo obligación legal.</p>
+    <p><strong>Derechos:</strong> Puede ejercer sus derechos de acceso, rectificación, cancelación y oposición escribiendo a info@woodiaspain.com, adjuntando copia de su documento de identidad.</p>
+    <p><strong>Conservación:</strong> Los datos se conservarán durante el tiempo necesario para prestar el servicio o mientras no solicite su supresión.</p>
+    <p>En cumplimiento del Reglamento General de Protección de Datos (RGPD) y la Ley Orgánica 3/2018 de Protección de Datos Personales (LOPDGDD).</p>
+  </div>
+</div>
+
+<!-- ============================================================
+     GSAP CDN
+============================================================ -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
 
-<script>
+<script defer>
 (function() {
   'use strict';
 
-  /* ---- NAVBAR ---- */
-  const navbar = document.getElementById('navbar');
-  window.addEventListener('scroll', () => {
-    navbar.classList.toggle('scrolled', window.scrollY > 50);
+  /* ---- NAV scroll class ---- */
+  const nav = document.getElementById('nav');
+  let lastY = 0;
+
+  window.addEventListener('scroll', function() {
+    const y = window.scrollY;
+    if (y > 20) {
+      nav.classList.add('scrolled');
+    } else {
+      nav.classList.remove('scrolled');
+    }
+    lastY = y;
   }, { passive: true });
 
-  /* ---- MOBILE MENU ---- */
+  /* ---- Hamburger / Mobile menu ---- */
   const hamburger = document.getElementById('hamburger');
-  const mobileMenu = document.getElementById('mobile-menu');
-  const menuLinks = mobileMenu.querySelectorAll('a');
+  const mobileMenu = document.getElementById('mobileMenu');
 
-  function closeMenu() {
-    hamburger.classList.remove('active');
+  function closeMobile() {
+    hamburger.classList.remove('open');
+    mobileMenu.classList.remove('open');
     hamburger.setAttribute('aria-expanded', 'false');
-    mobileMenu.classList.remove('active');
-    document.body.classList.remove('menu-open');
+    document.body.style.overflow = '';
   }
 
-  hamburger.addEventListener('click', () => {
-    const isOpen = mobileMenu.classList.contains('active');
-    if (isOpen) {
-      closeMenu();
-    } else {
-      hamburger.classList.add('active');
-      hamburger.setAttribute('aria-expanded', 'true');
-      mobileMenu.classList.add('active');
-      document.body.classList.add('menu-open');
-    }
+  hamburger.addEventListener('click', function() {
+    const isOpen = mobileMenu.classList.toggle('open');
+    hamburger.classList.toggle('open', isOpen);
+    hamburger.setAttribute('aria-expanded', String(isOpen));
+    document.body.style.overflow = isOpen ? 'hidden' : '';
   });
 
-  menuLinks.forEach(link => link.addEventListener('click', closeMenu));
-
-  /* ---- SCROLL REVEAL (IntersectionObserver fallback) ---- */
-  const revealIO = new IntersectionObserver(
-    entries => entries.forEach(e => {
-      if (e.isIntersecting) {
-        e.target.classList.add('visible');
-        revealIO.unobserve(e.target);
-      }
-    }),
-    { threshold: 0.08, rootMargin: '0px 0px -40px 0px' }
-  );
-  document.querySelectorAll('.reveal').forEach(el => revealIO.observe(el));
-
-  /* ---- GSAP HERO ANIMATION ---- */
-  window.addEventListener('load', () => {
-    if (typeof gsap !== 'undefined') {
-      gsap.registerPlugin(ScrollTrigger);
-
-      // Hero entrance
-      gsap.from('#hero-badge', { y: 20, opacity: 0, duration: 0.6, ease: 'power3.out', delay: 0.2 });
-      gsap.from('.hero-title', { y: 30, opacity: 0, duration: 0.8, ease: 'power3.out', delay: 0.35 });
-      gsap.from('.hero-sub', { y: 20, opacity: 0, duration: 0.7, ease: 'power3.out', delay: 0.5 });
-      gsap.from('.hero-ctas', { y: 20, opacity: 0, duration: 0.6, ease: 'power3.out', delay: 0.65 });
-      gsap.from('.hero-trust', { y: 15, opacity: 0, duration: 0.6, ease: 'power3.out', delay: 0.8 });
-      gsap.from('.hero-visual', { x: 30, opacity: 0, duration: 1, ease: 'power3.out', delay: 0.4 });
-
-      // Section reveals with GSAP
-      ScrollTrigger.batch('.sol-card, .porque-card, .caso-card, .price-card, .testimonial-card', {
-        onEnter: elements => gsap.from(elements, {
-          y: 30, opacity: 0, duration: 0.55, stagger: 0.1, ease: 'power2.out'
-        }),
-        start: 'top 88%',
-        once: true
-      });
-
-      ScrollTrigger.batch('.proceso-step', {
-        onEnter: elements => gsap.from(elements, {
-          y: 30, opacity: 0, duration: 0.55, stagger: 0.15, ease: 'power2.out'
-        }),
-        start: 'top 88%',
-        once: true
-      });
-    }
+  document.querySelectorAll('.mobile-link').forEach(function(link) {
+    link.addEventListener('click', closeMobile);
   });
 
-  /* ---- PRICING TABS ---- */
+  /* ---- Pricing tabs ---- */
   const tabBtns = document.querySelectorAll('.tab-btn');
-  const tabPanels = document.querySelectorAll('.tab-panel');
+  const panels  = document.querySelectorAll('.precios__panel');
 
-  // Mark initial active tab cards as visible
-  document.querySelectorAll('.tab-panel.active .reveal').forEach(el => el.classList.add('visible'));
-
-  tabBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const target = btn.dataset.tab;
-      tabBtns.forEach(b => { b.classList.remove('active'); b.setAttribute('aria-selected', 'false'); });
-      tabPanels.forEach(p => p.classList.remove('active'));
+  tabBtns.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      const tab = btn.dataset.tab;
+      tabBtns.forEach(function(b) {
+        b.classList.remove('active');
+        b.setAttribute('aria-selected', 'false');
+      });
+      panels.forEach(function(p) { p.classList.remove('active'); });
       btn.classList.add('active');
       btn.setAttribute('aria-selected', 'true');
-      const panel = document.getElementById('tab-' + target);
-      if (panel) {
-        panel.classList.add('active');
-        // Reveal cards in newly shown tab
-        panel.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
-      }
+      const panel = document.getElementById('tab-' + tab);
+      if (panel) panel.classList.add('active');
     });
   });
 
-  /* ---- FAQ ACCORDION ---- */
-  document.querySelectorAll('.faq-question').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const item = btn.closest('.faq-item');
+  /* ---- FAQ accordions ---- */
+  document.querySelectorAll('.faq__question').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      const item   = btn.closest('.faq__item');
+      const answer = item.querySelector('.faq__answer');
       const isOpen = item.classList.contains('open');
-      document.querySelectorAll('.faq-item').forEach(i => {
+
+      /* close all */
+      document.querySelectorAll('.faq__item').forEach(function(i) {
         i.classList.remove('open');
-        i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+        i.querySelector('.faq__answer').style.maxHeight = '0';
+        i.querySelector('.faq__question').setAttribute('aria-expanded', 'false');
       });
+
       if (!isOpen) {
         item.classList.add('open');
+        answer.style.maxHeight = answer.scrollHeight + 'px';
         btn.setAttribute('aria-expanded', 'true');
       }
     });
   });
 
-  /* ---- COUNTER ANIMATION ---- */
-  function animateCounter(el) {
-    const target = parseFloat(el.dataset.target);
-    const suffix = el.dataset.suffix || '';
-    const isDecimal = el.dataset.decimal === '1';
-    const duration = 2000;
-    const start = performance.now();
-
-    const update = (time) => {
-      const elapsed = Math.min(time - start, duration);
-      const progress = elapsed / duration;
-      const eased = 1 - Math.pow(1 - progress, 3);
-      const current = eased * target;
-      el.textContent = (isDecimal ? current.toFixed(1) : Math.round(current)) + suffix;
-      if (progress < 1) requestAnimationFrame(update);
-    };
-    requestAnimationFrame(update);
-  }
-
-  const counterIO = new IntersectionObserver(
-    entries => entries.forEach(e => {
-      if (e.isIntersecting) {
-        animateCounter(e.target);
-        counterIO.unobserve(e.target);
+  /* ---- Modals ---- */
+  document.querySelectorAll('[data-modal]').forEach(function(trigger) {
+    trigger.addEventListener('click', function(e) {
+      e.preventDefault();
+      const id = trigger.dataset.modal;
+      const overlay = document.getElementById('modal-' + id);
+      if (overlay) {
+        overlay.classList.add('open');
+        document.body.style.overflow = 'hidden';
       }
-    }),
-    { threshold: 0.5 }
-  );
-  document.querySelectorAll('.stat-number[data-target]').forEach(el => counterIO.observe(el));
-
-  /* ---- CONTACT FORM ---- */
-  const form = document.getElementById('contact-form');
-  const formMsg = document.getElementById('form-msg');
-  const formSubmit = document.getElementById('form-submit');
-
-  form.addEventListener('submit', e => {
-    e.preventDefault();
-
-    const nombre = form.nombre.value.trim();
-    const telefono = form.telefono.value.trim();
-
-    if (!nombre) { showMsg('Por favor, escribe tu nombre.', 'error'); return; }
-    if (!telefono) { showMsg('Por favor, escribe tu teléfono.', 'error'); return; }
-
-    formSubmit.disabled = true;
-    formSubmit.textContent = 'Enviando…';
-
-    const payload = {
-      nombre,
-      negocio: form.negocio.value.trim(),
-      telefono,
-      email: form.email.value.trim(),
-      tipo: form.tipo.value,
-      mensaje: form.mensaje.value.trim(),
-      fuente: 'woodiaspain.com',
-      fecha: new Date().toISOString()
-    };
-
-    fetch('https://woodia-spain-n8n.zify4h.easypanel.host/webhook/woodia-contact', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload)
-    })
-    .then(res => {
-      if (res.ok) {
-        showMsg('¡Mensaje enviado! Te respondemos en menos de 2 horas.', 'success');
-        form.reset();
-      } else {
-        throw new Error('Error en el servidor');
-      }
-    })
-    .catch(() => {
-      showMsg('Algo fue mal. Escríbenos directamente a info@woodiaspain.com o por WhatsApp.', 'error');
-    })
-    .finally(() => {
-      formSubmit.disabled = false;
-      formSubmit.textContent = 'Enviar consulta →';
     });
   });
 
-  function showMsg(text, type) {
-    formMsg.textContent = text;
-    formMsg.className = 'form-msg ' + type;
-    formMsg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  document.querySelectorAll('.modal-overlay').forEach(function(overlay) {
+    overlay.addEventListener('click', function(e) {
+      if (e.target === overlay || e.target.closest('[data-close]')) {
+        overlay.classList.remove('open');
+        document.body.style.overflow = '';
+      }
+    });
+  });
+
+  /* Esc key */
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      document.querySelectorAll('.modal-overlay.open').forEach(function(o) {
+        o.classList.remove('open');
+      });
+      closeMobile();
+      document.body.style.overflow = '';
+    }
+  });
+
+  /* ---- Contact form ---- */
+  const form      = document.getElementById('contactForm');
+  const submitBtn = document.getElementById('submitBtn');
+  const btnText   = document.getElementById('btnText');
+  const spinner   = document.getElementById('btnSpinner');
+  const okMsg     = document.getElementById('formOk');
+  const errMsg    = document.getElementById('formErr');
+
+  if (form) {
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const webhookUrl = form.action;
+      if (!webhookUrl || webhookUrl === 'YOUR_WEBHOOK_URL') {
+        errMsg.textContent = 'Webhook no configurado. Escríbenos a info@woodiaspain.com';
+        errMsg.style.display = 'block';
+        return;
+      }
+
+      /* loading state */
+      submitBtn.disabled = true;
+      btnText.textContent = 'Enviando...';
+      spinner.style.display = 'inline-block';
+      okMsg.style.display = 'none';
+      errMsg.style.display = 'none';
+
+      const data = new FormData(form);
+      const body = {};
+      data.forEach(function(v, k) { body[k] = v; });
+
+      fetch(webhookUrl, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(body)
+      })
+      .then(function(res) {
+        if (res.ok) {
+          form.reset();
+          okMsg.style.display = 'block';
+        } else {
+          throw new Error('Server error');
+        }
+      })
+      .catch(function() {
+        errMsg.style.display = 'block';
+      })
+      .finally(function() {
+        submitBtn.disabled = false;
+        btnText.textContent = 'Solicitar presupuesto';
+        spinner.style.display = 'none';
+      });
+    });
   }
 
-  /* ---- LEGAL MODALS ---- */
-  window.showLegal = function(id) {
-    document.getElementById(id).classList.add('visible');
-    document.body.style.overflow = 'hidden';
-    window.scrollTo(0, 0);
-  };
-  window.hideLegal = function(id) {
-    document.getElementById(id).classList.remove('visible');
-    document.body.style.overflow = '';
-  };
+  /* ---- GSAP animations ---- */
+  // Fallback: garantiza visibilidad si GSAP no carga o falla
+  document.querySelectorAll('.reveal, .reveal-group > *').forEach(function(el) {
+    el.style.opacity = '1';
+    el.style.transform = 'none';
+  });
+
+  window.addEventListener('load', function() {
+    if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Resetear los elementos al estado inicial para que GSAP los anime
+    document.querySelectorAll('.reveal, .reveal-group > *').forEach(function(el) {
+      el.style.opacity = '';
+      el.style.transform = '';
+    });
+
+    /* Hero entrance */
+    gsap.from('#heroContent > *', {
+      y: 20,
+      opacity: 0,
+      duration: 0.7,
+      stagger: 0.11,
+      ease: 'power2.out',
+      delay: 0.1
+    });
+
+    gsap.from('.hero__image-wrap', {
+      y: 26,
+      opacity: 0,
+      duration: 0.8,
+      ease: 'power2.out',
+      delay: 0.5
+    });
+
+    /* Scroll reveals — single elements */
+    document.querySelectorAll('.reveal').forEach(function(el) {
+      gsap.from(el, {
+        scrollTrigger: {
+          trigger: el,
+          start: 'top 90%',
+          once: true
+        },
+        y: 18,
+        opacity: 0,
+        duration: 0.6,
+        ease: 'power2.out'
+      });
+    });
+
+    /* Scroll reveals — grouped children */
+    document.querySelectorAll('.reveal-group').forEach(function(group) {
+      gsap.from(group.children, {
+        scrollTrigger: {
+          trigger: group,
+          start: 'top 88%',
+          once: true
+        },
+        y: 18,
+        opacity: 0,
+        duration: 0.55,
+        stagger: 0.08,
+        ease: 'power2.out'
+      });
+    });
+  });
 
 })();
 </script>
