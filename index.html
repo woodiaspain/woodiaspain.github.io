@@ -47,6 +47,18 @@
 ============================================================ */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+* {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+input, textarea, [contenteditable] {
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  user-select: text;
+}
+
 :root {
   --bg-white:   #FFFFFF;
   --bg-light:   #F5F5F7;
