@@ -334,12 +334,22 @@ section { width: 100%; }
 .hero {
   padding: 160px 0 100px;
   text-align: center;
+  background: #fff;
+  position: relative;
+  overflow: hidden;
 }
 
 .hero__inner {
   max-width: 780px;
   margin: 0 auto;
   padding: 0 24px;
+  position: relative;
+  z-index: 1;
+}
+
+.hero__image-wrap {
+  position: relative;
+  z-index: 1;
 }
 
 .hero__label { margin-bottom: 28px; }
@@ -1274,18 +1284,19 @@ footer {
 #hero-wrapper {
   position: relative;
   overflow: hidden;
+  background: #fff;
 }
 
 #particles-bg {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: auto;
   height: 100%;
   z-index: 0;
   pointer-events: none;
-  object-fit: cover;
-  opacity: 0.6;
+  opacity: 1;
 }
 
 #hero-wrapper .hero,
@@ -1294,17 +1305,6 @@ footer {
   z-index: 1;
 }
 
-#hero-wrapper::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 200px;
-  background: linear-gradient(to bottom, transparent, var(--bg-light));
-  z-index: 0;
-  pointer-events: none;
-}
 
 /* ============================================================
    MISC
@@ -1364,11 +1364,9 @@ footer {
 ============================================================ -->
 <main>
 <div id="hero-wrapper">
-  <video id="particles-bg" autoplay loop muted playsinline aria-hidden="true">
-    <source src="hover-1769612397784-zbja14bl4fb.mp4" type="video/mp4">
-  </video>
 
 <section class="hero" aria-labelledby="hero-title">
+  <img id="particles-bg" src="hover-nobg.gif" alt="" aria-hidden="true">
   <div class="hero__inner" id="heroContent">
     <span class="label hero__label">DISEÑO WEB · INTELIGENCIA ARTIFICIAL · A CORUÑA</span>
     <h1 id="hero-title">Tu negocio,<br>funcionando 24 horas<br>sin que estés tú delante</h1>
@@ -1392,6 +1390,7 @@ footer {
     >
   </div>
 </section>
+</div><!-- /#hero-wrapper -->
 
 <!-- ============================================================
      EL PROBLEMA
@@ -1419,8 +1418,6 @@ footer {
 
   <p class="problema__close reveal">No necesitas más horas. Necesitas que tu negocio trabaje cuando tú no estás.</p>
 </section>
-
-</div><!-- /#hero-wrapper -->
 
 <!-- ============================================================
      SOLUCIONES
