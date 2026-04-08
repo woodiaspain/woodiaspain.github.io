@@ -334,6 +334,28 @@ section { width: 100%; }
 .hero {
   padding: 160px 0 100px;
   text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero__bg-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  pointer-events: none;
+  mix-blend-mode: screen;
+  opacity: 0.85;
+}
+
+.hero__inner,
+.hero__image-wrap {
+  position: relative;
+  z-index: 1;
 }
 
 .hero__inner {
@@ -1327,6 +1349,9 @@ footer {
 ============================================================ -->
 <main>
 <section class="hero" aria-labelledby="hero-title">
+  <video class="hero__bg-video" autoplay loop muted playsinline aria-hidden="true">
+    <source src="hf_20260408_030053_4ce2a477-416a-429a-bdad-3bb394e53b2c.mp4" type="video/mp4">
+  </video>
   <div class="hero__inner" id="heroContent">
     <span class="label hero__label">DISEÑO WEB · INTELIGENCIA ARTIFICIAL · A CORUÑA</span>
     <h1 id="hero-title">Tu negocio,<br>funcionando 24 horas<br>sin que estés tú delante</h1>
