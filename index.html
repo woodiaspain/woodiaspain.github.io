@@ -87,7 +87,7 @@ body {
   font-family: var(--font-body);
   font-weight: 400;
   color: var(--text-primary);
-  background: var(--bg-white);
+  background: #EEECEA;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
@@ -336,18 +336,21 @@ section { width: 100%; }
   text-align: center;
   position: relative;
   overflow: hidden;
+  background: #EEECEA;
 }
 
 .hero__bg-video {
   position: absolute;
-  top: 35%;
+  top: 50%;
   left: 50%;
-  transform: translate(-50%, -35%);
-  width: 45%;
-  height: auto;
+  transform: translate(-50%, -50%);
+  width: auto;
+  height: 90%;
+  max-width: 50%;
   z-index: 0;
   pointer-events: none;
   opacity: 1;
+  object-fit: contain;
 }
 
 .hero__inner,
@@ -1348,7 +1351,7 @@ footer {
 <main>
 <section class="hero" aria-labelledby="hero-title">
   <video class="hero__bg-video" autoplay loop muted playsinline aria-hidden="true">
-    <source src="Video Project 7.mp4" type="video/mp4">
+    <source src="hf_20260408_030053_4ce2a477-416a-429a-bdad-3bb394e53b2c.mp4" type="video/mp4">
   </video>
   <div class="hero__inner" id="heroContent">
     <span class="label hero__label">DISEÑO WEB · INTELIGENCIA ARTIFICIAL · A CORUÑA</span>
